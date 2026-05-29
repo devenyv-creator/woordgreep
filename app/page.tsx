@@ -1,510 +1,170 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { puzzles } from "./data/puzzles";
+import { useState } from "react";
+import { Alegreya } from "next/font/google";
 
-type SavedGame = {
-  dateKey: string;
-  isSolved: boolean;
-  guess: string;
-  hintCount: number;
-  showExplanation: boolean;
-};
-
-type StreakData = {
-  currentStreak: number;
-  bestStreak: number;
-  lastSolvedDate: string | null;
-};
-
-function getDateKey(date: Date) {
-  return date.toISOString().split("T")[0];
-}
-
-function getYesterdayDateKey(date: Date) {
-  const yesterday = new Date(date);
-  yesterday.setDate(yesterday.getDate() - 1);
-  return getDateKey(yesterday);
-}
+const alegreya = Alegreya({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function Home() {
-  const startDate = new Date("2026-01-01");
-  const today = new Date();
-
-  const todayKey = getDateKey(today);
-  const yesterdayKey = getYesterdayDateKey(today);
-
-  const diffTime = today.getTime() - startDate.getTime();
-  const dayIndex = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-  const puzzle = puzzles[dayIndex % puzzles.length];
-
-  const answer = puzzle.answer.toLowerCase();
-  const hints = puzzle.hints;
-  const explanation = puzzle.explanation;
-
   const [guess, setGuess] = useState("");
   const [message, setMessage] = useState("");
-  const [isSolved, setIsSolved] = useState(false);
-  const [showExplanation, setShowExplanation] = useState(false);
-  const [hintCount, setHintCount] = useState(0);
-
-  const [currentStreak, setCurrentStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(0);
-  const [installPrompt, setInstallPrompt] = useState<any>(null);
-
-  useEffect(() => {
-    const savedGameText = localStorage.getItem("woordgreep-game");
-    const savedStreakText = localStorage.getItem("woordgreep-streak");
-
-    if (savedGameText) {
-      const savedGame: SavedGame = JSON.parse(savedGameText);
-
-      if (savedGame.dateKey === todayKey) {
-        setGuess(savedGame.guess);
-        setIsSolved(savedGame.isSolved);
-        setHintCount(savedGame.hintCount);
-        setShowExplanation(savedGame.showExplanation);
-      }
-    }
-
-    if (savedStreakText) {
-      const savedStreak: StreakData = JSON.parse(savedStreakText);
-      setCurrentStreak(savedStreak.currentStreak);
-      setBestStreak(savedStreak.bestStreak);
-    }
-  }, [todayKey]);
-
-  useEffect(() => {
-  const handler = (event: any) => {
-    event.preventDefault();
-    setInstallPrompt(event);
-  };
-
-  window.addEventListener("beforeinstallprompt", handler);
-
-  return () => {
-    window.removeEventListener("beforeinstallprompt", handler);
-  };
-}, []);
-
-  function saveGame(newGame: SavedGame) {
-    localStorage.setItem("woordgreep-game", JSON.stringify(newGame));
-  }
-
-  function updateStreakAfterSolve() {
-    const savedStreakText = localStorage.getItem("woordgreep-streak");
-
-    let streakData: StreakData = {
-      currentStreak: 0,
-      bestStreak: 0,
-      lastSolvedDate: null,
-    };
-
-    if (savedStreakText) {
-      streakData = JSON.parse(savedStreakText);
-    }
-
-    if (streakData.lastSolvedDate === todayKey) return;
-
-    let newCurrentStreak = 1;
-
-    if (streakData.lastSolvedDate === yesterdayKey) {
-      newCurrentStreak = streakData.currentStreak + 1;
-    }
-
-    const newBestStreak = Math.max(streakData.bestStreak, newCurrentStreak);
-
-    const newStreakData: StreakData = {
-      currentStreak: newCurrentStreak,
-      bestStreak: newBestStreak,
-      lastSolvedDate: todayKey,
-    };
-
-    localStorage.setItem("woordgreep-streak", JSON.stringify(newStreakData));
-
-    setCurrentStreak(newCurrentStreak);
-    setBestStreak(newBestStreak);
-  }
-
-async function installApp() {
-  if (installPrompt) {
-    installPrompt.prompt();
-
-    const choice = await installPrompt.userChoice;
-
-    if (choice.outcome === "accepted") {
-      setInstallPrompt(null);
-    }
-  } else {
-    alert(
-  "Gebruik de deelknop van je browser en kies 'Zet op beginscherm' 📲"
-);
-  }
-}
+  const [solved, setSolved] = useState(false);
 
   function checkAnswer() {
-    if (guess.trim().toLowerCase() === answer) {
+    if (guess.trim().toLowerCase() === "wissel") {
+      setSolved(true);
       setMessage("Goed! 🎉");
-      setIsSolved(true);
-      setShowExplanation(true);
-
-      saveGame({
-        dateKey: todayKey,
-        isSolved: true,
-        guess,
-        hintCount,
-        showExplanation: true,
-      });
-
-      updateStreakAfterSolve();
     } else {
       setMessage("Nog niet...");
     }
   }
 
-  function showNextHint() {
-    const newHintCount = hintCount + 1;
-
-    if (hintCount < hints.length) {
-      setHintCount(newHintCount);
-      setMessage("");
-
-      saveGame({
-        dateKey: todayKey,
-        isSolved,
-        guess,
-        hintCount: newHintCount,
-        showExplanation,
-      });
-    }
-  }
-
-  function giveUp() {
-    setMessage(`Het antwoord is ${puzzle.answer.toUpperCase()}.`);
-    setIsSolved(true);
-    setShowExplanation(true);
-
-    saveGame({
-      dateKey: todayKey,
-      isSolved: true,
-      guess,
-      hintCount,
-      showExplanation: true,
-    });
-  }
-
-  async function shareResult(platform: "TikTok" | "Instagram") {
-    const shareText = `Ik speelde Woordgreep vandaag 🔥
-Streak ${currentStreak}
-Beste streak ${bestStreak}
-
-Speel mee op woordgreep.nl`;
-
-    if (navigator.share) {
-      await navigator.share({
-        title: "Woordgreep",
-        text: shareText,
-        url: "https://woordgreep.nl",
-      });
-    } else {
-      await navigator.clipboard.writeText(shareText);
-      setMessage(`Tekst gekopieerd voor ${platform}!`);
-    }
-  }
-
   return (
     <main
+      className={alegreya.className}
       style={{
         minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         backgroundColor: "#fffdf7",
         backgroundImage:
           "linear-gradient(#d7e8ff 1px, transparent 1px), linear-gradient(90deg, #ffd6dc 1px, transparent 1px)",
         backgroundSize: "100% 34px, 80px 100%",
-        fontFamily: "var(--font-alegreya), serif",
-        padding: "16px",
-        overflow: "hidden",
+        padding: "24px",
+        textAlign: "center",
       }}
     >
       <section
         style={{
-          width: "min(94vw, 680px)",
-          margin: "0 auto",
-          textAlign: "center",
-          position: "relative",
+          maxWidth: "600px",
+          background: "#ffe66d",
+          padding: "42px 34px",
+          boxShadow: "0 14px 28px rgba(0,0,0,0.18)",
+          transform: "rotate(-1deg)",
         }}
       >
         <h1
           style={{
-            fontSize: "clamp(42px, 9vw, 74px)",
-            margin: "0 0 6px",
+            fontSize: "58px",
+            margin: "0 0 16px",
             color: "#6d28d9",
-            fontWeight: 800,
-            lineHeight: 0.95,
-            textDecoration: "underline",
-            textDecorationThickness: "4px",
-            textUnderlineOffset: "8px",
+            fontWeight: 700,
           }}
         >
           Woordgreep
         </h1>
 
-        <div
+        <p
           style={{
-            color: "#6d28d9",
-            fontSize: "24px",
-            marginBottom: "14px",
-            fontWeight: 800,
-            display: "flex",
-            justifyContent: "center",
-            gap: "16px",
-            alignItems: "center",
-            flexWrap: "wrap",
+            fontSize: "28px",
+            lineHeight: 1.3,
+            color: "#2b2118",
+            margin: "0 0 24px",
           }}
         >
-          <span>🔥 {currentStreak}</span>
-          <span>👑 {bestStreak}</span>
-        </div>
+          Binnenkort kun je hier dagelijks spelen.
+        </p>
 
-       <div
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    marginBottom: "22px",
-  }}
->
-  <button
-    onClick={installApp}
-    style={{
-      background: "linear-gradient(135deg, #7c3aed, #9333ea)",
-      color: "white",
-      border: "none",
-      padding: "12px 22px",
-      borderRadius: "16px",
-      fontSize: "18px",
-      cursor: "pointer",
-      fontFamily: "var(--font-alegreya), serif",
-      fontWeight: 800,
-      boxShadow: "0 6px 16px rgba(76, 29, 149, 0.25)",
-    }}
-  >
-    📲 Voeg toe aan beginscherm
-  </button>
-</div>
+        <p
+          style={{
+            fontSize: "21px",
+            color: "#2b2118",
+            margin: "0 0 30px",
+          }}
+        >
+          Volg ondertussen de hints op TikTok, Instagram of Facebook ♡
+        </p>
 
         <div
           style={{
-            background: "linear-gradient(135deg, #fff176, #ffe45c)",
-            padding: "34px 28px",
-            minHeight: "180px",
-            boxShadow: "0 16px 30px rgba(76, 29, 149, 0.18)",
-            transform: "rotate(-1deg)",
-            marginBottom: "24px",
-            position: "relative",
-            borderRadius: "2px",
+            background: "rgba(255,255,255,0.75)",
+            border: "2px solid #c4b5fd",
+            borderRadius: "18px",
+            padding: "22px",
           }}
         >
-          <div
-            style={{
-              position: "absolute",
-              top: "-20px",
-              left: "-18px",
-              background: "#c4b5fd",
-              width: "86px",
-              height: "30px",
-              transform: "rotate(-18deg)",
-              opacity: 0.85,
-            }}
-          />
-
           <p
             style={{
+              fontSize: "22px",
+              lineHeight: 1.35,
               color: "#2b2118",
-              fontSize: "clamp(24px, 5vw, 34px)",
-              lineHeight: 1.2,
-              margin: "0 0 34px",
+              margin: "0 0 18px",
               fontWeight: 700,
             }}
           >
-            {puzzle.clue}
+            Start WK is de laatste voor Memphis, selectie incompleet na
+            last-minute verandering (6).
           </p>
 
-          <div
+          <input
+            value={guess}
+            onChange={(event) => setGuess(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") checkAnswer();
+            }}
+            placeholder="Typ je antwoord..."
+            disabled={solved}
             style={{
-              fontSize: "34px",
-              letterSpacing: "11px",
-              color: "#2b2118",
-              fontWeight: 800,
+              width: "100%",
+              boxSizing: "border-box",
+              padding: "14px 16px",
+              borderRadius: "14px",
+              border: "2px solid #c4b5fd",
+              fontSize: "20px",
+              marginBottom: "14px",
+              fontFamily: "inherit",
+            }}
+          />
+
+          <button
+            onClick={checkAnswer}
+            disabled={solved}
+            style={{
+              background: solved ? "#a78bfa" : "#6d28d9",
+              color: "white",
+              border: "none",
+              padding: "13px 26px",
+              borderRadius: "16px",
+              fontSize: "20px",
+              cursor: solved ? "default" : "pointer",
+              boxShadow: "0 6px 0 #4c1d95",
+              fontFamily: "inherit",
+              fontWeight: 700,
             }}
           >
-            {isSolved
-              ? puzzle.answer.toUpperCase().split("").join(" ")
-              : puzzle.answer
-                  .split("")
-                  .map(() => "_")
-                  .join(" ")}
-          </div>
-        </div>
-
-        <input
-          value={guess}
-          onChange={(event) => setGuess(event.target.value)}
-          onKeyDown={(event) => {
-            if (event.key === "Enter") checkAnswer();
-          }}
-          placeholder="Typ je antwoord..."
-          disabled={isSolved}
-          style={{
-            width: "100%",
-            boxSizing: "border-box",
-            padding: "14px 18px",
-            borderRadius: "14px",
-            border: "2px solid #8b5cf6",
-            fontSize: "21px",
-            marginBottom: "10px",
-            background: "rgba(255,255,255,0.96)",
-            fontFamily: "var(--font-alegreya), serif",
-          }}
-        />
-
-        <div
-          style={{
-            minHeight: "28px",
-            color: "#6d28d9",
-            fontSize: "22px",
-            marginBottom: "12px",
-            fontWeight: 700,
-          }}
-        >
-          {message}
-        </div>
-
-        <div>
-          <button onClick={checkAnswer} disabled={isSolved} style={primaryButton}>
             Controleer
           </button>
 
-          {!isSolved && hintCount < hints.length && (
-            <button onClick={showNextHint} style={secondaryButton}>
-              💡 Hint
-            </button>
-          )}
-
-          {!isSolved && hintCount === hints.length && (
-            <button onClick={giveUp} style={secondaryButton}>
-              🚩 Geef op
-            </button>
-          )}
-        </div>
-
-        {hintCount > 0 && (
-          <div style={infoBox}>
-            {hints.slice(0, hintCount).map((hint) => (
-              <div key={hint}>{hint}</div>
-            ))}
-          </div>
-        )}
-
-        {showExplanation ? (
-          <div style={infoBox}>{explanation}</div>
-        ) : (
-          <div style={infoBox}>🔒 Los de puzzel op om de uitleg te zien.</div>
-        )}
-
-        {isSolved && (
           <div
             style={{
-              marginTop: "16px",
-              background: "rgba(255,255,255,0.92)",
-              border: "1px solid #ddd6fe",
-              borderRadius: "22px",
-              padding: "18px",
-              boxShadow: "0 8px 18px rgba(76, 29, 149, 0.08)",
+              minHeight: "28px",
+              marginTop: "14px",
+              color: "#6d28d9",
+              fontSize: "20px",
+              fontWeight: 700,
             }}
           >
-            <h2
-              style={{
-                color: "#6d28d9",
-                fontSize: "26px",
-                margin: "0 0 6px",
-                textDecoration: "underline",
-                textUnderlineOffset: "6px",
-              }}
-            >
-              Share jouw resultaat
-            </h2>
+            {message}
+          </div>
 
+          {solved && (
             <p
               style={{
-                color: "#3b235f",
-                fontSize: "17px",
-                margin: "0 0 14px",
+                fontSize: "19px",
+                lineHeight: 1.35,
+                color: "#2b2118",
+                margin: "10px 0 0",
               }}
             >
-              Laat je vrienden zien dat je de Woordgreep van vandaag hebt opgelost!
+              Antwoord: <strong>WISSEL</strong>
             </p>
-
-            <button onClick={() => shareResult("Instagram")} style={shareButton}>
-            ↗ Deel resultaat
-            </button>
-          </div>
-        )}
+          )}
+        </div>
       </section>
     </main>
   );
 }
-
-const primaryButton = {
-  background: "linear-gradient(135deg, #7c3aed, #5b21b6)",
-  color: "white",
-  border: "none",
-  padding: "14px 28px",
-  borderRadius: "16px",
-  fontSize: "21px",
-  cursor: "pointer",
-  boxShadow: "0 6px 0 #4c1d95",
-  fontFamily: "var(--font-alegreya), serif",
-  margin: "0 6px 12px",
-  fontWeight: 800,
-};
-
-const secondaryButton = {
-  background: "rgba(255,255,255,0.96)",
-  color: "#6d28d9",
-  border: "2px solid #8b5cf6",
-  padding: "12px 22px",
-  borderRadius: "16px",
-  fontSize: "20px",
-  cursor: "pointer",
-  boxShadow: "0 5px 0 #ddd6fe",
-  fontFamily: "var(--font-alegreya), serif",
-  margin: "0 6px 12px",
-  fontWeight: 800,
-};
-
-const infoBox = {
-  marginTop: "14px",
-  background: "rgba(255,255,255,0.9)",
-  border: "1px solid #ddd6fe",
-  borderRadius: "18px",
-  padding: "14px 18px",
-  color: "#3b235f",
-  fontSize: "19px",
-  lineHeight: 1.35,
-  boxShadow: "0 6px 18px rgba(76, 29, 149, 0.08)",
-};
-
-const shareButton = {
-  background: "linear-gradient(135deg, #7c3aed, #9333ea)",
-  color: "white",
-  border: "none",
-  padding: "14px 24px",
-  borderRadius: "16px",
-  fontSize: "20px",
-  cursor: "pointer",
-  fontFamily: "var(--font-alegreya), serif",
-  fontWeight: 800,
-  marginTop: "6px",
-  boxShadow: "0 6px 16px rgba(76, 29, 149, 0.25)",
-};
-
