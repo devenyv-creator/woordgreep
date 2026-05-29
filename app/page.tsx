@@ -51,6 +51,7 @@ export default function Home() {
 
   const [currentStreak, setCurrentStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [installPrompt, setInstallPrompt] = useState<any>(null);
 
   useEffect(() => {
     const savedGameText = localStorage.getItem("woordgreep-game");
@@ -73,6 +74,19 @@ export default function Home() {
       setBestStreak(savedStreak.bestStreak);
     }
   }, [todayKey]);
+
+  useEffect(() => {
+  const handler = (event: any) => {
+    event.preventDefault();
+    setInstallPrompt(event);
+  };
+
+  window.addEventListener("beforeinstallprompt", handler);
+
+  return () => {
+    window.removeEventListener("beforeinstallprompt", handler);
+  };
+}, []);
 
   function saveGame(newGame: SavedGame) {
     localStorage.setItem("woordgreep-game", JSON.stringify(newGame));
@@ -112,6 +126,22 @@ export default function Home() {
     setCurrentStreak(newCurrentStreak);
     setBestStreak(newBestStreak);
   }
+
+async function installApp() {
+  if (installPrompt) {
+    installPrompt.prompt();
+
+    const choice = await installPrompt.userChoice;
+
+    if (choice.outcome === "accepted") {
+      setInstallPrompt(null);
+    }
+  } else {
+    alert(
+  "Gebruik de deelknop van je browser en kies 'Zet op beginscherm' 📲"
+);
+  }
+}
 
   function checkAnswer() {
     if (guess.trim().toLowerCase() === answer) {
@@ -236,38 +266,30 @@ Speel mee op woordgreep.nl`;
           <span>👑 {bestStreak}</span>
         </div>
 
-        <div
+       <div
   style={{
-    background: "rgba(255,255,255,0.82)",
-    border: "2px solid #ddd6fe",
-    borderRadius: "18px",
-    padding: "12px 16px",
-    marginBottom: "20px",
-    boxShadow: "0 8px 18px rgba(76, 29, 149, 0.08)",
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "22px",
   }}
 >
-  <p
+  <button
+    onClick={installApp}
     style={{
-      margin: "0 0 6px",
-      color: "#6d28d9",
-      fontSize: "20px",
-      fontWeight: 700,
+      background: "linear-gradient(135deg, #7c3aed, #9333ea)",
+      color: "white",
+      border: "none",
+      padding: "12px 22px",
+      borderRadius: "16px",
+      fontSize: "18px",
+      cursor: "pointer",
+      fontFamily: "var(--font-alegreya), serif",
+      fontWeight: 800,
+      boxShadow: "0 6px 16px rgba(76, 29, 149, 0.25)",
     }}
   >
-    📲 Voeg Woordgreep toe aan je beginscherm
-  </p>
-
-  <p
-    style={{
-      margin: 0,
-      color: "#2b2118",
-      fontSize: "15px",
-      lineHeight: 1.4,
-    }}
-  >
-    Open in Safari of Chrome en kies
-    <strong> “Zet op beginscherm”</strong>.
-  </p>
+    📲 Voeg toe aan beginscherm
+  </button>
 </div>
 
         <div
