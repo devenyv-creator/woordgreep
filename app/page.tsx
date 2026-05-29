@@ -237,6 +237,40 @@ Speel mee op woordgreep.nl`;
         </div>
 
         <div
+  style={{
+    background: "rgba(255,255,255,0.82)",
+    border: "2px solid #ddd6fe",
+    borderRadius: "18px",
+    padding: "12px 16px",
+    marginBottom: "20px",
+    boxShadow: "0 8px 18px rgba(76, 29, 149, 0.08)",
+  }}
+>
+  <p
+    style={{
+      margin: "0 0 6px",
+      color: "#6d28d9",
+      fontSize: "20px",
+      fontWeight: 700,
+    }}
+  >
+    📲 Voeg Woordgreep toe aan je beginscherm
+  </p>
+
+  <p
+    style={{
+      margin: 0,
+      color: "#2b2118",
+      fontSize: "15px",
+      lineHeight: 1.4,
+    }}
+  >
+    Open in Safari of Chrome en kies
+    <strong> “Zet op beginscherm”</strong>.
+  </p>
+</div>
+
+        <div
           style={{
             background: "linear-gradient(135deg, #fff176, #ffe45c)",
             padding: "34px 28px",
@@ -388,12 +422,8 @@ Speel mee op woordgreep.nl`;
               Laat je vrienden zien dat je de Woordgreep van vandaag hebt opgelost!
             </p>
 
-            <button onClick={() => shareResult("TikTok")} style={tiktokButton}>
-              ♪ Delen op TikTok
-            </button>
-
-            <button onClick={() => shareResult("Instagram")} style={instagramButton}>
-              ◎ Delen op Instagram
+            <button onClick={() => shareResult("Instagram")} style={shareButton}>
+            ↗ Deel resultaat
             </button>
           </div>
         )}
@@ -442,30 +472,17 @@ const infoBox = {
   boxShadow: "0 6px 18px rgba(76, 29, 149, 0.08)",
 };
 
-const tiktokButton = {
-  background: "black",
+const shareButton = {
+  background: "linear-gradient(135deg, #7c3aed, #9333ea)",
   color: "white",
   border: "none",
-  padding: "13px 20px",
-  borderRadius: "15px",
-  fontSize: "19px",
+  padding: "14px 24px",
+  borderRadius: "16px",
+  fontSize: "20px",
   cursor: "pointer",
   fontFamily: "var(--font-alegreya), serif",
   fontWeight: 800,
-  margin: "6px",
+  marginTop: "6px",
+  boxShadow: "0 6px 16px rgba(76, 29, 149, 0.25)",
 };
-
-const instagramButton = {
-  background: "linear-gradient(135deg, #f97316, #ec4899, #9333ea)",
-  color: "white",
-  border: "none",
-  padding: "13px 20px",
-  borderRadius: "15px",
-  fontSize: "19px",
-  cursor: "pointer",
-  fontFamily: "var(--font-alegreya), serif",
-  fontWeight: 800,
-  margin: "6px",
-};
-
 
