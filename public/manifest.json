@@ -1,0 +1,16 @@
+{
+  "name": "Woordgreep",
+  "short_name": "Woordgreep",
+  "description": "Dagelijkse Nederlandse woordpuzzel",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#6d28d9",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
