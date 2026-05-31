@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Alegreya } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const alegreya = Alegreya({
   subsets: ["latin"],
   variable: "--font-alegreya",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Woordgreep",
   description: "Dagelijkse Nederlandse woordpuzzel",
   manifest: "/manifest.json",
@@ -23,7 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className={alegreya.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
