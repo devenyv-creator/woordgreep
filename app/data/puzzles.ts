@@ -64,7 +64,7 @@ export const puzzles = [
     clue: "Koploper schaatste beperkt en behaalde een slecht resultaat. (7)",
     answer: "laatste",
     hints: {
-      definitie: ["behaalde", "slecht", "resultaat"],
+      definitie: ["behaalde een slecht resultaat"],
       indicatoren: ["Kop", "beperkt"],
       bouwstenen: ["loper", "schaatste"],
     },
@@ -76,7 +76,7 @@ export const puzzles = [
     clue: "U kunt niet in uw eentje zonder radio en dit is een feit. (6)",
     answer: "weetje",
     hints: {
-      definitie: ["dit", "is", "een", "feit"],
+      definitie: ["dit is een feit"],
       indicatoren: ["kunt", "niet", "in", "zonder", "radio"],
       bouwstenen: ["U", "uw", "eentje", "en"],
     },
@@ -124,9 +124,9 @@ export const puzzles = [
     clue: "Kind van moeder zonder strandbal is erg warm in dit weer. (3)",
     answer: "zon",
     hints: {
-      definitie: ["is", "erg", "warm", "in", "dit", "weer"],
+      definitie: ["is", "erg", "warm in dit weer"],
       indicatoren: ["zonder"],
-      bouwstenen: ["Kind", "van", "moeder", "strandbal"],
+      bouwstenen: ["Kind van moeder", "strandbal"],
     },
     explanation:
       '"Kind van moeder" moet met een substitutie vervangen worden voor "zoon". "Zonder" is een weglaatindicator die aangeeft dat uit dat woord iets weggehaald moet worden. Een "strandbal" is een rond voorwerp net als de letter "o" en daar kan daarom een substitutie plaatsvinden. Als we "zoon" zonder de letter "o" krijgen we het woord "zon" en dit past bij de definitie "is erg warm in dit weer".',
