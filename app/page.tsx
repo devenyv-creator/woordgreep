@@ -430,22 +430,28 @@ Speel mee op woordgreep.nl`;
 
     let parts: React.ReactNode[] = [puzzle.clue];
 
-    wordsToHighlight.forEach(({ word, style }) => {
-      parts = parts.flatMap((part, index) => {
-        if (typeof part !== "string") return [part];
+wordsToHighlight.forEach(({ word, style }) => {
+  let hasHighlighted = false;
 
-        return part.split(word).flatMap((piece, pieceIndex, array) => {
-          if (pieceIndex === array.length - 1) return [piece];
+  parts = parts.flatMap((part, index) => {
+    if (typeof part !== "string") return [part];
+    if (hasHighlighted) return [part];
 
-          return [
-            piece,
-            <span key={`${word}-${index}-${pieceIndex}`} style={style}>
-              {word}
-            </span>,
-          ];
-        });
-      });
-    });
+    const wordIndex = part.indexOf(word);
+
+    if (wordIndex === -1) return [part];
+
+    hasHighlighted = true;
+
+    return [
+      part.slice(0, wordIndex),
+      <span key={`${word}-${index}`} style={style}>
+        {word}
+      </span>,
+      part.slice(wordIndex + word.length),
+    ];
+  });
+});
 
     return parts;
   }
@@ -940,19 +946,19 @@ const letterInputWrapper: CSSProperties = {
 
 const letterInputStyle: CSSProperties = {
   display: "grid",
-  gap: "7px",
-  width: "100%",
-  maxWidth: "430px",
+  gap: "10px",
+  justifyContent: "center",
+  width: "fit-content",
+  margin: "0 auto",
 };
 
 const letterBoxStyle: CSSProperties = {
-  width: "100%",
+  width: "clamp(48px, 11vw, 64px)",
   aspectRatio: "1 / 1",
-  minWidth: 0,
   border: "3px solid #8b5cf6",
   borderRadius: "14px",
   textAlign: "center",
-  fontSize: "clamp(20px, 7vw, 30px)",
+  fontSize: "clamp(22px, 6vw, 30px)",
   fontWeight: 800,
   color: "#2b2118",
   background: "white",

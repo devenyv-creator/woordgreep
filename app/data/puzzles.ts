@@ -4,8 +4,8 @@ export const puzzles = [
     clue: "Naar verluidt is Leiden er slecht aan toe. (6)",
     answer: "LIJDEN",
     hints: {
-      definitie: ["er", "slecht", "aan", "toe"],
       indicatoren: ["Naar", "verluidt"],
+      definitie: ["er slecht aan toe"],
       bouwstenen: ["Leiden"],
     },
     explanation:
@@ -76,8 +76,8 @@ export const puzzles = [
     clue: "U kunt niet in uw eentje zonder radio en dit is een feit. (6)",
     answer: "weetje",
     hints: {
-      definitie: ["feit"],
-      indicatoren: ["kunt", "niet", "zonder", "radio"],
+      definitie: ["dit", "is", "een", "feit"],
+      indicatoren: ["kunt", "niet", "in", "zonder", "radio"],
       bouwstenen: ["U", "uw", "eentje", "en"],
     },
     explanation:
@@ -114,7 +114,7 @@ export const puzzles = [
     hints: {
       definitie: ["Verfrommel"],
       indicatoren: ["eerst", "stop", "daarna", "erin"],
-      bouwstenen: ["as"],
+      bouwstenen: ["karton","waspapier", "toiletpapier", "as"],
     },
     explanation:
       '"Eerst" is een selectie-indicator die aangeeft dat we de eerste letter van de bouwstenen "karton", "waspapier" en "toiletpapier" nodig hebben, dan krijg je "kwt". "Stop erin" is een insluitindicator die aangeeft dat het woord "as" in die drie letters moet. Dan krijg je "kwast" en dit past bij de definitie "verfrommel" ("verf rommel").',
@@ -124,9 +124,9 @@ export const puzzles = [
     clue: "Kind van moeder zonder strandbal is erg warm in dit weer. (3)",
     answer: "zon",
     hints: {
-      definitie: ["erg", "warm", "weer"],
+      definitie: ["is", "erg", "warm", "in", "dit", "weer"],
       indicatoren: ["zonder"],
-      bouwstenen: ["Kind", "moeder", "strandbal"],
+      bouwstenen: ["Kind", "van", "moeder", "strandbal"],
     },
     explanation:
       '"Kind van moeder" moet met een substitutie vervangen worden voor "zoon". "Zonder" is een weglaatindicator die aangeeft dat uit dat woord iets weggehaald moet worden. Een "strandbal" is een rond voorwerp net als de letter "o" en daar kan daarom een substitutie plaatsvinden. Als we "zoon" zonder de letter "o" krijgen we het woord "zon" en dit past bij de definitie "is erg warm in dit weer".',
@@ -136,7 +136,7 @@ export const puzzles = [
     clue: "Nog niet klaar met tekenen, hapjes uit beschuit en tango in Spanje. (6)",
     answer: "schets",
     hints: {
-      definitie: ["Nog", "niet", "klaar", "tekenen"],
+      definitie: ["Nog", "niet", "klaar", "met", "tekenen"],
       indicatoren: ["hapjes", "uit", "in"],
       bouwstenen: ["beschuit", "tango", "Spanje"],
     },
