@@ -75,7 +75,9 @@ export default function Home() {
 
   const latestPuzzle = playablePuzzles[playablePuzzles.length - 1];
 
-  const [selectedDateKey, setSelectedDateKey] = useState(todayKey);
+  const [selectedDateKey, setSelectedDateKey] = useState(
+    latestPuzzle?.date ?? FIRST_PUZZLE_DATE
+  );
   const [guess, setGuess] = useState("");
   const [notes, setNotes] = useState("");
   const [showNotes, setShowNotes] = useState(false);
@@ -448,52 +450,50 @@ Speel mee op woordgreep.nl`;
     return parts;
   }
 
-function resetAnswer() {
-  if (!puzzle || archiveIsLocked || isSolved) return;
+  function resetAnswer() {
+    if (!puzzle || archiveIsLocked || isSolved) return;
 
-  setGuess("");
-  setMessage("");
+    setGuess("");
+    setMessage("");
+    inputRefs.current[0]?.focus();
+    saveCurrentGame("", notes, shownHints);
 
-  inputRefs.current[0]?.focus();
+    track("answer_reset", {
+      date: selectedDateKey,
+      isToday: String(isToday),
+    });
+  }
 
-  saveCurrentGame("", notes, shownHints);
+  function replayPuzzle() {
+    if (!puzzle) return;
 
-  track("answer_reset", {
-    date: selectedDateKey,
-    isToday: String(isToday),
-  });
-}
+    setGuess("");
+    setMessage("");
+    setIsSolved(false);
+    setShowExplanation(false);
 
-function replayPuzzle() {
-  if (!puzzle) return;
+    const resetHints = {
+      definitie: false,
+      indicatoren: false,
+      bouwstenen: false,
+    };
 
-  setGuess("");
-  setMessage("");
-  setIsSolved(false);
-  setShowExplanation(false);
+    setShownHints(resetHints);
 
-  const resetHints = {
-    definitie: false,
-    indicatoren: false,
-    bouwstenen: false,
-  };
+    saveGame({
+      isSolved: false,
+      guess: "",
+      shownHints: resetHints,
+      showExplanation: false,
+      notes,
+    });
 
-  setShownHints(resetHints);
+    track("puzzle_replayed", {
+      date: selectedDateKey,
+      isToday: String(isToday),
+    });
+  }
 
-  saveGame({
-    isSolved: false,
-    guess: "",
-    shownHints: resetHints,
-    showExplanation: false,
-    notes,
-  });
-
-  track("puzzle_replayed", {
-    date: selectedDateKey,
-    isToday: String(isToday),
-  });
-}
-  
   return (
     <main style={mainStyle}>
       <section style={sectionStyle}>
@@ -506,7 +506,7 @@ function replayPuzzle() {
 
         <div style={installWrapStyle}>
           <button onClick={installApp} style={installButton}>
-            📲 Voeg toe
+            📲 Voeg toe aan beginscherm
           </button>
         </div>
 
@@ -608,74 +608,77 @@ function replayPuzzle() {
               <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
             )}
 
-            <div style={letterInputWrapper}>
-  <div style={letterInputStyle}>
-    {!isSolved && (
-  <button
-    onClick={checkAnswer}
-    style={wideCheckButton}
-  >
-    Controleer
-  </button>
-)}
-    {puzzle.answer.split("").map((_, index) => (
-      <input
-        key={`${puzzle.date}-input-${index}`}
-        ref={(element) => {
-          inputRefs.current[index] = element;
-        }}
-        value={guess[index] ?? ""}
-        onChange={(event) => updateLetter(event.target.value, index)}
-        onKeyDown={(event) => handleLetterKeyDown(event, index)}
-        maxLength={1}
-        disabled={isSolved}
-        style={letterBoxStyle}
-        aria-label={`Letter ${index + 1}`}
-      />
-    ))}
-  </div>
+            {!isSolved && (
+              <button onClick={checkAnswer} style={wideCheckButton}>
+                Controleer
+              </button>
+            )}
 
-  {!isSolved && guess.length > 0 && (
-    <button onClick={resetAnswer} style={smallResetButton}>
-      ↺
-    </button>
-  )}
-</div>
+            <div style={letterInputWrapper}>
+              <div
+                style={{
+                  ...letterInputStyle,
+                  gridTemplateColumns: `repeat(${puzzle.answer.length}, minmax(0, 1fr))`,
+                }}
+              >
+                {puzzle.answer.split("").map((_, index) => (
+                  <input
+                    key={`${puzzle.date}-input-${index}`}
+                    ref={(element) => {
+                      inputRefs.current[index] = element;
+                    }}
+                    value={guess[index] ?? ""}
+                    onChange={(event) => updateLetter(event.target.value, index)}
+                    onKeyDown={(event) => handleLetterKeyDown(event, index)}
+                    maxLength={1}
+                    disabled={isSolved}
+                    style={letterBoxStyle}
+                    aria-label={`Letter ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {!isSolved && guess.length > 0 && (
+                <button onClick={resetAnswer} style={smallResetButton}>
+                  ↺
+                </button>
+              )}
+            </div>
 
             <div style={hintRowStyle}>
-  <button
-    onClick={() => revealHint("definitie")}
-    disabled={isSolved || shownHints.definitie}
-    style={{
-      ...hintButton,
-      ...(shownHints.definitie ? activeMeaningHintButton : {}),
-    }}
-  >
-    Definitie
-  </button>
+              <button
+                onClick={() => revealHint("definitie")}
+                disabled={isSolved || shownHints.definitie}
+                style={{
+                  ...hintButton,
+                  ...(shownHints.definitie ? activeMeaningHintButton : {}),
+                }}
+              >
+                Definitie
+              </button>
 
-  <button
-    onClick={() => revealHint("indicatoren")}
-    disabled={isSolved || shownHints.indicatoren}
-    style={{
-      ...hintButton,
-      ...(shownHints.indicatoren ? activeIndicatorHintButton : {}),
-    }}
-  >
-    Indicatoren
-  </button>
+              <button
+                onClick={() => revealHint("indicatoren")}
+                disabled={isSolved || shownHints.indicatoren}
+                style={{
+                  ...hintButton,
+                  ...(shownHints.indicatoren ? activeIndicatorHintButton : {}),
+                }}
+              >
+                Indicatoren
+              </button>
 
-  <button
-    onClick={() => revealHint("bouwstenen")}
-    disabled={isSolved || shownHints.bouwstenen}
-    style={{
-      ...hintButton,
-      ...(shownHints.bouwstenen ? activeBuildingHintButton : {}),
-    }}
-  >
-    Bouwstenen
-  </button>
-</div>
+              <button
+                onClick={() => revealHint("bouwstenen")}
+                disabled={isSolved || shownHints.bouwstenen}
+                style={{
+                  ...hintButton,
+                  ...(shownHints.bouwstenen ? activeBuildingHintButton : {}),
+                }}
+              >
+                Bouwstenen
+              </button>
+            </div>
 
             {!isSolved && allHintsShown && (
               <button onClick={giveUp} style={secondaryButton}>
@@ -694,10 +697,10 @@ function replayPuzzle() {
             )}
 
             {isSolved && (
-  <button onClick={replayPuzzle} style={replayButton}>
-    ↺ Speel opnieuw
-  </button>
-)}
+              <button onClick={replayPuzzle} style={replayButton}>
+                ↺ Speel opnieuw
+              </button>
+            )}
           </>
         )}
 
@@ -749,15 +752,18 @@ const mainStyle: CSSProperties = {
     "linear-gradient(#d7e8ff 1px, transparent 1px), linear-gradient(90deg, #ffd6dc 1px, transparent 1px)",
   backgroundSize: "100% 34px, 80px 100%",
   fontFamily: "var(--font-alegreya), serif",
-  padding: "8px 12px",
+  padding: "14px",
   overflowX: "hidden",
+  boxSizing: "border-box",
 };
 
 const sectionStyle: CSSProperties = {
-  width: "min(94vw, 620px)",
+  width: "100%",
+  maxWidth: "680px",
   margin: "0 auto",
   textAlign: "center",
   position: "relative",
+  boxSizing: "border-box",
 };
 
 const titleStyle: CSSProperties = {
@@ -809,6 +815,12 @@ const archiveNavStyle: CSSProperties = {
   flexWrap: "nowrap",
 };
 
+const navButtonSlotStyle: CSSProperties = {
+  width: "106px",
+  display: "flex",
+  justifyContent: "center",
+};
+
 const archiveTextStyle: CSSProperties = {
   color: "#3b235f",
   fontSize: "16px",
@@ -833,33 +845,6 @@ const smallNavButton: CSSProperties = {
   fontWeight: 800,
 };
 
-const actionButtonsRow: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  gap: "8px",
-  marginBottom: "10px",
-};
-
-const resetButton: CSSProperties = {
-  background: "rgba(255,255,255,0.96)",
-  color: "#6d28d9",
-  border: "2px solid #ddd6fe",
-  padding: "8px 18px",
-  borderRadius: "14px",
-  fontSize: "16px",
-  cursor: "pointer",
-  fontFamily: "var(--font-alegreya), serif",
-  fontWeight: 800,
-  boxShadow: "0 4px 0 #ddd6fe",
-};
-
-const navButtonSlotStyle: CSSProperties = {
-  width: "106px",
-  display: "flex",
-  justifyContent: "center",
-};
-
 const todayButton: CSSProperties = {
   background: "transparent",
   color: "#6d28d9",
@@ -877,38 +862,40 @@ const stickyWrapStyle: CSSProperties = {
 };
 
 const stickyNoteStyle: CSSProperties = {
+  width: "100%",
+  boxSizing: "border-box",
   background: "linear-gradient(135deg, #fff176, #ffe45c)",
-  padding: "28px 22px 24px",
-  minHeight: "138px",
-  boxShadow: "0 12px 24px rgba(76, 29, 149, 0.14)",
-  transform: "rotate(-1deg)",
-  marginBottom: "12px",
+  padding: "32px 22px",
+  minHeight: "180px",
+  boxShadow: "0 16px 30px rgba(76, 29, 149, 0.18)",
+  transform: "rotate(-0.7deg)",
+  marginBottom: "24px",
   position: "relative",
   borderRadius: "2px",
 };
 
 const tapeStyle: CSSProperties = {
   position: "absolute",
-  top: "-15px",
-  left: "-12px",
+  top: "-10px",
+  left: "-10px",
   background: "#c4b5fd",
-  width: "70px",
-  height: "24px",
+  width: "76px",
+  height: "26px",
   transform: "rotate(-18deg)",
   opacity: 0.85,
 };
 
 const noteIconButton: CSSProperties = {
   position: "absolute",
-  top: "14px",
-  right: "-44px",
-  width: "38px",
-  height: "38px",
+  top: "12px",
+  right: "12px",
+  width: "34px",
+  height: "34px",
   borderRadius: "12px",
   border: "2px solid rgba(109,40,217,0.22)",
   background: "rgba(255,255,255,0.94)",
   color: "#6d28d9",
-  fontSize: "20px",
+  fontSize: "18px",
   cursor: "pointer",
   boxShadow: "0 5px 12px rgba(76, 29, 149, 0.12)",
 };
@@ -919,6 +906,129 @@ const clueStyle: CSSProperties = {
   lineHeight: 1.08,
   margin: "0 0 24px",
   fontWeight: 700,
+};
+
+const answerSlotsStyle: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "10px",
+  flexWrap: "nowrap",
+  color: "#2b2118",
+  fontSize: "clamp(26px, 8vw, 34px)",
+  fontWeight: 800,
+  letterSpacing: "0",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+};
+
+const answerSlotLetterStyle: CSSProperties = {
+  minWidth: "16px",
+  fontSize: "30px",
+  lineHeight: 1,
+};
+
+const letterInputWrapper: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "8px",
+  marginBottom: "10px",
+  width: "100%",
+  boxSizing: "border-box",
+};
+
+const letterInputStyle: CSSProperties = {
+  display: "grid",
+  gap: "7px",
+  width: "100%",
+  maxWidth: "430px",
+};
+
+const letterBoxStyle: CSSProperties = {
+  width: "100%",
+  aspectRatio: "1 / 1",
+  minWidth: 0,
+  border: "3px solid #8b5cf6",
+  borderRadius: "14px",
+  textAlign: "center",
+  fontSize: "clamp(20px, 7vw, 30px)",
+  fontWeight: 800,
+  color: "#2b2118",
+  background: "white",
+  fontFamily: "var(--font-alegreya), serif",
+  outline: "none",
+  boxSizing: "border-box",
+};
+
+const smallResetButton: CSSProperties = {
+  width: "38px",
+  height: "38px",
+  borderRadius: "12px",
+  border: "2px solid #ddd6fe",
+  background: "rgba(255,255,255,0.96)",
+  color: "#6d28d9",
+  fontSize: "20px",
+  cursor: "pointer",
+  fontWeight: 800,
+  boxShadow: "0 4px 0 #ddd6fe",
+  flexShrink: 0,
+};
+
+const wideCheckButton: CSSProperties = {
+  width: "100%",
+  background: "linear-gradient(135deg, #7c3aed, #5b21b6)",
+  color: "white",
+  border: "none",
+  padding: "12px 22px",
+  borderRadius: "16px",
+  fontSize: "22px",
+  cursor: "pointer",
+  boxShadow: "0 6px 0 #4c1d95",
+  fontFamily: "var(--font-alegreya), serif",
+  margin: "0 auto 12px",
+  fontWeight: 800,
+};
+
+const hintRowStyle: CSSProperties = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "8px",
+  marginBottom: "8px",
+};
+
+const hintButton: CSSProperties = {
+  background: "rgba(255,255,255,0.96)",
+  color: "#6d28d9",
+  border: "2px solid #c4b5fd",
+  padding: "10px 6px",
+  borderRadius: "14px",
+  fontSize: "16px",
+  cursor: "pointer",
+  boxShadow: "0 4px 0 #ddd6fe",
+  fontFamily: "var(--font-alegreya), serif",
+  fontWeight: 800,
+};
+
+const activeMeaningHintButton: CSSProperties = {
+  color: "#2563eb",
+  borderColor: "#2563eb",
+  background: "rgba(37, 99, 235, 0.08)",
+  boxShadow: "0 4px 0 rgba(37, 99, 235, 0.2)",
+};
+
+const activeIndicatorHintButton: CSSProperties = {
+  color: "#16a34a",
+  borderColor: "#16a34a",
+  background: "rgba(22, 163, 74, 0.08)",
+  boxShadow: "0 4px 0 rgba(22, 163, 74, 0.2)",
+};
+
+const activeBuildingHintButton: CSSProperties = {
+  color: "#dc2626",
+  borderColor: "#dc2626",
+  background: "rgba(220, 38, 38, 0.08)",
+  boxShadow: "0 4px 0 rgba(220, 38, 38, 0.2)",
 };
 
 const meaningHighlightStyle: CSSProperties = {
@@ -935,62 +1045,11 @@ const indicatorHighlightStyle: CSSProperties = {
   textUnderlineOffset: "3px",
 };
 
-const letterInputWrapper: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  gap: "8px",
-  marginBottom: "10px",
-};
-
-const smallResetButton: CSSProperties = {
-  width: "38px",
-  height: "38px",
-  borderRadius: "12px",
-  border: "2px solid #ddd6fe",
-  background: "rgba(255,255,255,0.96)",
-  color: "#6d28d9",
-  fontSize: "20px",
-  cursor: "pointer",
-  fontWeight: 800,
-  boxShadow: "0 4px 0 #ddd6fe",
-};
-
-const replayButton: CSSProperties = {
-  background: "rgba(255,255,255,0.96)",
-  color: "#6d28d9",
-  border: "2px solid #8b5cf6",
-  padding: "10px 18px",
-  borderRadius: "15px",
-  fontSize: "18px",
-  cursor: "pointer",
-  fontFamily: "var(--font-alegreya), serif",
-  fontWeight: 800,
-  marginTop: "10px",
-  marginLeft: "10px",
-  boxShadow: "0 4px 0 #ddd6fe",
-};
-
 const buildingHighlightStyle: CSSProperties = {
   color: "#dc2626",
   fontWeight: 900,
   textDecoration: "underline",
   textUnderlineOffset: "3px",
-};
-
-const answerSlotsStyle: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "8px",
-  flexWrap: "wrap",
-  color: "#2b2118",
-  fontWeight: 800,
-};
-
-const answerSlotLetterStyle: CSSProperties = {
-  minWidth: "16px",
-  fontSize: "30px",
-  lineHeight: 1,
 };
 
 const notebookStyle: CSSProperties = {
@@ -1018,84 +1077,6 @@ const notebookTextareaStyle: CSSProperties = {
   color: "#2b2118",
   fontFamily: "var(--font-alegreya), serif",
   padding: "4px",
-};
-
-const letterInputStyle: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "7px",
-  flexWrap: "wrap",
-  marginBottom: "10px",
-};
-
-const letterBoxStyle: CSSProperties = {
-  width: "38px",
-  height: "42px",
-  textAlign: "center",
-  borderRadius: "11px",
-  border: "2px solid #8b5cf6",
-  fontSize: "24px",
-  fontWeight: 800,
-  color: "#2b2118",
-  background: "rgba(255,255,255,0.96)",
-  fontFamily: "var(--font-alegreya), serif",
-  textTransform: "uppercase",
-};
-
-const wideCheckButton: CSSProperties = {
-  width: "min(100%, 440px)",
-  background: "linear-gradient(135deg, #7c3aed, #5b21b6)",
-  color: "white",
-  border: "none",
-  padding: "12px 22px",
-  borderRadius: "16px",
-  fontSize: "22px",
-  cursor: "pointer",
-  boxShadow: "0 6px 0 #4c1d95",
-  fontFamily: "var(--font-alegreya), serif",
-  margin: "0 auto 12px",
-  fontWeight: 800,
-};
-
-const activeMeaningHintButton: CSSProperties = {
-  color: "#2563eb",
-  borderColor: "#2563eb",
-  background: "rgba(37, 99, 235, 0.08)",
-  boxShadow: "0 4px 0 rgba(37, 99, 235, 0.2)",
-};
-
-const activeIndicatorHintButton: CSSProperties = {
-  color: "#16a34a",
-  borderColor: "#16a34a",
-  background: "rgba(22, 163, 74, 0.08)",
-  boxShadow: "0 4px 0 rgba(22, 163, 74, 0.2)",
-};
-
-const activeBuildingHintButton: CSSProperties = {
-  color: "#dc2626",
-  borderColor: "#dc2626",
-  background: "rgba(220, 38, 38, 0.08)",
-  boxShadow: "0 4px 0 rgba(220, 38, 38, 0.2)",
-};
-
-const hintRowStyle: CSSProperties = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gap: "8px",
-  marginBottom: "8px",
-};
-
-const hintButton: CSSProperties = {
-  background: "rgba(255,255,255,0.96)",
-  color: "#6d28d9",
-  border: "2px solid #c4b5fd",
-  padding: "10px 6px",
-  borderRadius: "14px",
-  fontSize: "16px",
-  cursor: "pointer",
-  boxShadow: "0 4px 0 #ddd6fe",
-  fontFamily: "var(--font-alegreya), serif",
-  fontWeight: 800,
 };
 
 const secondaryButton: CSSProperties = {
@@ -1192,6 +1173,21 @@ const shareButton: CSSProperties = {
   fontWeight: 800,
   marginTop: "6px",
   boxShadow: "0 5px 14px rgba(76, 29, 149, 0.22)",
+};
+
+const replayButton: CSSProperties = {
+  background: "rgba(255,255,255,0.96)",
+  color: "#6d28d9",
+  border: "2px solid #8b5cf6",
+  padding: "10px 18px",
+  borderRadius: "15px",
+  fontSize: "18px",
+  cursor: "pointer",
+  fontFamily: "var(--font-alegreya), serif",
+  fontWeight: 800,
+  marginTop: "10px",
+  marginLeft: "10px",
+  boxShadow: "0 4px 0 #ddd6fe",
 };
 
 const socialBox: CSSProperties = {
