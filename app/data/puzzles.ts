@@ -191,4 +191,17 @@ export const puzzles = [
     explanation:
       '"Einde" is een selectie-indicator die aangeeft dat we het einde van het woord "satelliet" nodig hebben, namelijk "liet". "Klinkt" is een homofonie-indicator die aangeeft dat we een woord zoeken dat klinkt als "liet", dat is het woord "lied" en dit past met de definitie "muzikaal".',
   },
+
+    {
+    date: "2026-06-02",
+    clue: "Ik durf de klinkers in de straat in het midden van de weg zonder klinkers te leggen. (4)",
+    answer: "waag",
+    hints: {
+      definitie: ["Ik durf"],
+      indicatoren: ["de klinkers in", "in het midden van", "zonder klinkers te leggen"], 
+      bouwstenen: ["straat", "weg"],
+    },
+    explanation:
+      "De selectie-indicator 'klinkers in' geeft aan dat we de klinkers uit bouwsteen 'straat' moeten pakken, dit is 'aa'. De weglaatindicator 'zonder' gecombineerd met selectie-indicator 'klinkers' geven aan dat je de klinkers uit bouwsteen 'weg' moet halen, dan krijg je nog 'wg'. De 'aa' moet volgens de insluitindicator 'in het midden' van 'wg'. Dan krijg je 'waag' en dit past bij de definitie 'ik durf'.",
+  },
 ]
