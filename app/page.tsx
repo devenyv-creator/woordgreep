@@ -696,12 +696,6 @@ function renderHighlightedClue() {
 />
                 ))}
               </div>
-
-              {!isSolved && guess.length > 0 && (
-                <button onClick={resetAnswer} style={smallResetButton}>
-                  ↺
-                </button>
-              )}
 </div>
 
 {!isSolved && (
