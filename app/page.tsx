@@ -2,8 +2,17 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
-import { track } from "@vercel/analytics";
 import { puzzles } from "./data/puzzles";
+
+declare global {
+  interface Window {
+    gtag?: (
+      command: "event",
+      eventName: string,
+      parameters?: Record<string, string>
+    ) => void;
+  }
+}
 
 type HintType = "definitie" | "indicatoren" | "bouwstenen";
 
@@ -26,6 +35,12 @@ type StreakData = {
   bestStreak: number;
   lastSolvedDate: string | null;
 };
+
+function trackEvent(eventName: string, parameters?: Record<string, string>) {
+  if (typeof window === "undefined") return;
+
+  window.gtag?.("event", eventName, parameters);
+}
 
 const FIRST_PUZZLE_DATE = "2026-05-17";
 const ARCHIVE_UNLOCK_KEY = "woordgreep-archive-unlocked-until";
@@ -195,7 +210,7 @@ export default function Home() {
   }
 
   async function unlockArchiveWithAd() {
-    track("archive_ad_clicked", { date: selectedDateKey });
+    trackEvent("archive_ad_clicked", { date: selectedDateKey });
 
     setIsWatchingAd(true);
     setMessage("");
@@ -208,7 +223,7 @@ export default function Home() {
       setIsWatchingAd(false);
       setMessage("Archief ontgrendeld voor 24 uur ✨");
 
-      track("archive_unlocked", { date: selectedDateKey });
+      trackEvent("archive_unlocked", { date: selectedDateKey });
     }, 2200);
   }
 
@@ -266,7 +281,7 @@ export default function Home() {
     if (!puzzle || archiveIsLocked) return;
 
     if (guess.replaceAll(" ", "").toLowerCase() === puzzle.answer.trim().toLowerCase()) {
-      track("puzzle_solved", {
+      trackEvent("puzzle_solved", {
         date: selectedDateKey,
         isToday: String(isToday),
       });
@@ -372,7 +387,7 @@ function handleLetterKeyDown(
     setMessage("");
     saveCurrentGame(guess, notes, nextShownHints);
 
-    track("hint_used", {
+    trackEvent("hint_used", {
       type,
       date: selectedDateKey,
       isToday: String(isToday),
@@ -382,7 +397,7 @@ function handleLetterKeyDown(
   function giveUp() {
     if (!puzzle || archiveIsLocked) return;
 
-    track("give_up_clicked", { date: selectedDateKey });
+    trackEvent("give_up_clicked", { date: selectedDateKey });
 
     setMessage(`Het antwoord is ${puzzle.answer.toUpperCase()}.`);
     setIsSolved(true);
@@ -398,7 +413,7 @@ function handleLetterKeyDown(
   }
 
   async function shareResult() {
-    track("share_clicked", {
+    trackEvent("share_clicked", {
       date: selectedDateKey,
       isToday: String(isToday),
     });
@@ -502,7 +517,7 @@ wordsToHighlight.forEach(({ word, style }) => {
     inputRefs.current[0]?.focus();
     saveCurrentGame("", notes, shownHints);
 
-    track("answer_reset", {
+    trackEvent("answer_reset", {
       date: selectedDateKey,
       isToday: String(isToday),
     });
@@ -532,7 +547,7 @@ wordsToHighlight.forEach(({ word, style }) => {
       notes,
     });
 
-    track("puzzle_replayed", {
+    trackEvent("puzzle_replayed", {
       date: selectedDateKey,
       isToday: String(isToday),
     });
@@ -612,7 +627,7 @@ wordsToHighlight.forEach(({ word, style }) => {
                 <button
                   onClick={() => {
                     setShowNotes(!showNotes);
-                    track("notes_toggled", { date: selectedDateKey });
+                    trackEvent("notes_toggled", { date: selectedDateKey });
                   }}
                   style={noteIconButton}
                   aria-label="Notitie openen"
