@@ -90,8 +90,10 @@ function getUnlockedArchiveDates(
 
     if (startIndex === -1) return;
 
+    const fromIndex = Math.max(0, startIndex - ARCHIVE_UNLOCK_SIZE + 1);
+
     availableDates
-      .slice(startIndex, startIndex + ARCHIVE_UNLOCK_SIZE)
+      .slice(fromIndex, startIndex + 1)
       .forEach((dateKey) => unlockedDates.add(dateKey));
   });
 
