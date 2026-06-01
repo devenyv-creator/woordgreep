@@ -1065,7 +1065,7 @@ const hintRowStyle: CSSProperties = {
 const hintButton: CSSProperties = {
   background: "rgba(255,255,255,0.96)",
   color: "#6d28d9",
-  border: "2px solid #c4b5fd",
+  border: "3px solid #8b5cf6",
   padding: "10px 6px",
   borderRadius: "14px",
   fontSize: "16px",
