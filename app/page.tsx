@@ -548,11 +548,14 @@ wordsToHighlight.forEach(({ word, style }) => {
           <span>👑 {bestStreak}</span>
         </div>
 
-        <div style={installWrapStyle}>
-          <button onClick={installApp} style={installButton}>
-            📲 Voeg toe aan beginscherm
-          </button>
-        </div>
+{typeof window !== "undefined" &&
+  !window.matchMedia("(display-mode: standalone)").matches && (
+    <div style={installWrapStyle}>
+      <button onClick={installApp} style={installButton}>
+        📲 Voeg toe aan beginscherm
+      </button>
+    </div>
+)}
 
         <div style={archiveNavStyle}>
           <div style={navButtonSlotStyle}>
