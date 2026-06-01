@@ -38,12 +38,12 @@ type StreakData = {
 
 function trackEvent(eventName: string, parameters?: Record<string, string>) {
   if (typeof window === "undefined") return;
-
   window.gtag?.("event", eventName, parameters);
 }
 
 const FIRST_PUZZLE_DATE = "2026-05-17";
-const ARCHIVE_PROGRESS_KEY = "woordgreep-archive-progress";
+const ARCHIVE_UNLOCK_KEY = "woordgreep-archive-unlocked-ranges";
+const ARCHIVE_UNLOCK_SIZE = 5;
 
 const emptyShownHints: ShownHints = {
   definitie: false,
@@ -63,12 +63,39 @@ function getYesterdayDateKey(dateKey: string) {
   return date.toLocaleDateString("sv-SE");
 }
 
-function getArchiveProgress() {
-  const saved = localStorage.getItem(ARCHIVE_PROGRESS_KEY);
+function getUnlockedArchiveRanges() {
+  if (typeof window === "undefined") return [];
 
-  if (!saved) return 0;
+  const saved = localStorage.getItem(ARCHIVE_UNLOCK_KEY);
+  if (!saved) return [];
 
-  return Number(saved);
+  try {
+    const parsed = JSON.parse(saved);
+    return Array.isArray(parsed) ? parsed.filter(Boolean) : [];
+  } catch {
+    return [];
+  }
+}
+
+function getUnlockedArchiveDates(
+  unlockedRanges: string[],
+  availableDates: string[]
+) {
+  const unlockedDates = new Set<string>();
+
+  unlockedRanges.forEach((startDateKey) => {
+    const startIndex = availableDates.findIndex(
+      (dateKey) => dateKey === startDateKey
+    );
+
+    if (startIndex === -1) return;
+
+    availableDates
+      .slice(startIndex, startIndex + ARCHIVE_UNLOCK_SIZE)
+      .forEach((dateKey) => unlockedDates.add(dateKey));
+  });
+
+  return unlockedDates;
 }
 
 export default function Home() {
@@ -90,6 +117,11 @@ export default function Home() {
       .sort((a, b) => a.date.localeCompare(b.date));
   }, [todayKey]);
 
+  const playableDateKeys = useMemo(
+    () => playablePuzzles.map((puzzle) => puzzle.date),
+    [playablePuzzles]
+  );
+
   const latestPuzzle = playablePuzzles[playablePuzzles.length - 1];
 
   const [selectedDateKey, setSelectedDateKey] = useState(
@@ -105,38 +137,51 @@ export default function Home() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<any>(null);
-const [archiveProgress, setArchiveProgress] = useState(0);
+  const [unlockedArchiveRanges, setUnlockedArchiveRanges] = useState<string[]>(
+    []
+  );
   const [isWatchingAd, setIsWatchingAd] = useState(false);
+
+  const unlockedArchiveDates = useMemo(
+    () => getUnlockedArchiveDates(unlockedArchiveRanges, playableDateKeys),
+    [unlockedArchiveRanges, playableDateKeys]
+  );
 
   const puzzle =
     playablePuzzles.find((puzzle) => puzzle.date === selectedDateKey) ?? null;
 
-  const previousPuzzle = playablePuzzles
-    .filter((puzzle) => puzzle.date < selectedDateKey)
-    .at(-1);
-
-  const nextPuzzle = playablePuzzles.find(
-    (puzzle) => puzzle.date > selectedDateKey
+  const currentPuzzleIndex = playablePuzzles.findIndex(
+    (puzzle) => puzzle.date === selectedDateKey
   );
+
+  const previousPuzzle =
+    currentPuzzleIndex > 0 ? playablePuzzles[currentPuzzleIndex - 1] : null;
+
+  const nextPuzzle =
+    currentPuzzleIndex >= 0 && currentPuzzleIndex < playablePuzzles.length - 1
+      ? playablePuzzles[currentPuzzleIndex + 1]
+      : null;
 
   const isToday = selectedDateKey === todayKey;
   const isFirstPuzzle = selectedDateKey === FIRST_PUZZLE_DATE;
   const isArchivePuzzle = selectedDateKey < todayKey;
-const archivePuzzleIndex = playablePuzzles.findIndex(
-  (p) => p.date === selectedDateKey
-);
 
-const freeArchiveLimit = archiveProgress + 5;
+  const archiveIsLocked =
+    isArchivePuzzle && !unlockedArchiveDates.has(selectedDateKey);
 
-const archiveIsLocked =
-  isArchivePuzzle && archivePuzzleIndex >= freeArchiveLimit;
+  const previousPuzzleIsLocked =
+    previousPuzzle !== null &&
+    previousPuzzle.date < todayKey &&
+    !unlockedArchiveDates.has(previousPuzzle.date);
+
+  const canGoPrevious = previousPuzzle !== null && !previousPuzzleIsLocked;
 
   const allHintsShown =
     shownHints.definitie && shownHints.indicatoren && shownHints.bouwstenen;
 
-useEffect(() => {
-  setArchiveProgress(getArchiveProgress());
-}, []);
+  useEffect(() => {
+    setUnlockedArchiveRanges(getUnlockedArchiveRanges());
+  }, []);
 
   useEffect(() => {
     if (!latestPuzzle) return;
@@ -218,33 +263,35 @@ useEffect(() => {
     });
   }
 
-async function unlockArchiveWithAd() {
-  trackEvent("archive_ad_clicked", {
-    date: selectedDateKey,
-  });
-
-  setIsWatchingAd(true);
-  setMessage("");
-
-  setTimeout(() => {
-    const newProgress = archiveProgress + 5;
-
-    localStorage.setItem(
-      ARCHIVE_PROGRESS_KEY,
-      String(newProgress)
-    );
-
-    setArchiveProgress(newProgress);
-
-    setIsWatchingAd(false);
-
-    setMessage("✨ 5 extra archiefpuzzels ontgrendeld!");
-
-    trackEvent("archive_unlocked", {
-      unlockedUntil: String(newProgress),
+  async function unlockArchiveWithAd() {
+    trackEvent("archive_ad_clicked", {
+      date: selectedDateKey,
     });
-  }, 2200);
-}
+
+    setIsWatchingAd(true);
+    setMessage("");
+
+    setTimeout(() => {
+      setUnlockedArchiveRanges((current) => {
+        if (current.includes(selectedDateKey)) return current;
+
+        const next = [...current, selectedDateKey];
+
+        localStorage.setItem(ARCHIVE_UNLOCK_KEY, JSON.stringify(next));
+
+        return next;
+      });
+
+      setIsWatchingAd(false);
+      setMessage("✨ 5 archiefpuzzels vanaf hier ontgrendeld!");
+
+      trackEvent("archive_unlocked", {
+        date: selectedDateKey,
+        amount: String(ARCHIVE_UNLOCK_SIZE),
+      });
+    }, 2200);
+  }
+
   async function installApp() {
     if (installPrompt) {
       installPrompt.prompt();
@@ -298,7 +345,10 @@ async function unlockArchiveWithAd() {
   function checkAnswer() {
     if (!puzzle || archiveIsLocked) return;
 
-    if (guess.replaceAll(" ", "").toLowerCase() === puzzle.answer.trim().toLowerCase()) {
+    if (
+      guess.replaceAll(" ", "").toLowerCase() ===
+      puzzle.answer.trim().toLowerCase()
+    ) {
       trackEvent("puzzle_solved", {
         date: selectedDateKey,
         isToday: String(isToday),
@@ -322,76 +372,76 @@ async function unlockArchiveWithAd() {
     }
   }
 
-function updateLetter(letter: string, position: number) {
-  if (!puzzle || isSolved || archiveIsLocked) return;
+  function updateLetter(letter: string, position: number) {
+    if (!puzzle || isSolved || archiveIsLocked) return;
 
-  const cleanLetter = letter
-    .replace(/[^a-zA-ZÀ-ÿ]/g, "")
-    .slice(-1)
-    .toUpperCase();
-
-  const guessArray = guess
-    .padEnd(puzzle.answer.length, " ")
-    .split("")
-    .slice(0, puzzle.answer.length);
-
-  guessArray[position] = cleanLetter || " ";
-
-  const nextGuess = guessArray.join("");
-
-  setGuess(nextGuess);
-  saveCurrentGame(nextGuess, notes);
-  setMessage("");
-
-  if (cleanLetter && position < puzzle.answer.length - 1) {
-    inputRefs.current[position + 1]?.focus();
-  }
-}
-
-function handleLetterKeyDown(
-  event: React.KeyboardEvent<HTMLInputElement>,
-  position: number
-) {
-  if (!puzzle) return;
-
-  if (event.key === "Enter") {
-    checkAnswer();
-  }
-
-  if (event.key === "Backspace") {
-    event.preventDefault();
+    const cleanLetter = letter
+      .replace(/[^a-zA-ZÀ-ÿ]/g, "")
+      .slice(-1)
+      .toUpperCase();
 
     const guessArray = guess
       .padEnd(puzzle.answer.length, " ")
       .split("")
       .slice(0, puzzle.answer.length);
 
-    if (guessArray[position].trim()) {
-      guessArray[position] = " ";
-      const nextGuess = guessArray.join("");
-      setGuess(nextGuess);
-      saveCurrentGame(nextGuess, notes);
-      return;
+    guessArray[position] = cleanLetter || " ";
+
+    const nextGuess = guessArray.join("");
+
+    setGuess(nextGuess);
+    saveCurrentGame(nextGuess, notes);
+    setMessage("");
+
+    if (cleanLetter && position < puzzle.answer.length - 1) {
+      inputRefs.current[position + 1]?.focus();
+    }
+  }
+
+  function handleLetterKeyDown(
+    event: React.KeyboardEvent<HTMLInputElement>,
+    position: number
+  ) {
+    if (!puzzle) return;
+
+    if (event.key === "Enter") {
+      checkAnswer();
     }
 
-    if (position > 0) {
+    if (event.key === "Backspace") {
+      event.preventDefault();
+
+      const guessArray = guess
+        .padEnd(puzzle.answer.length, " ")
+        .split("")
+        .slice(0, puzzle.answer.length);
+
+      if (guessArray[position].trim()) {
+        guessArray[position] = " ";
+        const nextGuess = guessArray.join("");
+        setGuess(nextGuess);
+        saveCurrentGame(nextGuess, notes);
+        return;
+      }
+
+      if (position > 0) {
+        inputRefs.current[position - 1]?.focus();
+        guessArray[position - 1] = " ";
+
+        const nextGuess = guessArray.join("");
+        setGuess(nextGuess);
+        saveCurrentGame(nextGuess, notes);
+      }
+    }
+
+    if (event.key === "ArrowLeft" && position > 0) {
       inputRefs.current[position - 1]?.focus();
-      guessArray[position - 1] = " ";
+    }
 
-      const nextGuess = guessArray.join("");
-      setGuess(nextGuess);
-      saveCurrentGame(nextGuess, notes);
+    if (event.key === "ArrowRight" && position < puzzle.answer.length - 1) {
+      inputRefs.current[position + 1]?.focus();
     }
   }
-
-  if (event.key === "ArrowLeft" && position > 0) {
-    inputRefs.current[position - 1]?.focus();
-  }
-
-  if (event.key === "ArrowRight" && position < puzzle.answer.length - 1) {
-    inputRefs.current[position + 1]?.focus();
-  }
-}
 
   function revealHint(type: HintType) {
     if (!puzzle || archiveIsLocked || isSolved) return;
@@ -455,10 +505,13 @@ Speel mee op woordgreep.nl`;
   }
 
   function goToPreviousPuzzle() {
-    if (previousPuzzle) {
-      setSelectedDateKey(previousPuzzle.date);
-      setMessage("");
+    if (!previousPuzzle || previousPuzzleIsLocked) {
+      setMessage("🔒 Bekijk eerst een korte advertentie om verder terug te gaan.");
+      return;
     }
+
+    setSelectedDateKey(previousPuzzle.date);
+    setMessage("");
   }
 
   function goToNextPuzzle() {
@@ -475,72 +528,58 @@ Speel mee op woordgreep.nl`;
     }
   }
 
-function renderHighlightedClue() {
-  if (!puzzle) return null;
+  function renderHighlightedClue() {
+    if (!puzzle) return null;
 
-  const wordsToHighlight = [
-    ...((shownHints.definitie || isSolved)
-      ? puzzle.hints.definitie.map((word: string) => ({
-          word,
-          style: meaningHighlightStyle,
-        }))
-      : []),
+    const wordsToHighlight = [
+      ...((shownHints.definitie || isSolved)
+        ? puzzle.hints.definitie.map((word: string) => ({
+            word,
+            style: meaningHighlightStyle,
+          }))
+        : []),
 
-    ...((shownHints.indicatoren || isSolved)
-      ? puzzle.hints.indicatoren.map((word: string) => ({
-          word,
-          style: indicatorHighlightStyle,
-        }))
-      : []),
+      ...((shownHints.indicatoren || isSolved)
+        ? puzzle.hints.indicatoren.map((word: string) => ({
+            word,
+            style: indicatorHighlightStyle,
+          }))
+        : []),
 
-    ...((shownHints.bouwstenen || isSolved)
-      ? puzzle.hints.bouwstenen.map((word: string) => ({
-          word,
-          style: buildingHighlightStyle,
-        }))
-      : []),
-  ];
+      ...((shownHints.bouwstenen || isSolved)
+        ? puzzle.hints.bouwstenen.map((word: string) => ({
+            word,
+            style: buildingHighlightStyle,
+          }))
+        : []),
+    ];
 
-  let parts: React.ReactNode[] = [puzzle.clue];
+    let parts: React.ReactNode[] = [puzzle.clue];
 
-  wordsToHighlight.forEach(({ word, style }) => {
-    let hasHighlighted = false;
+    wordsToHighlight.forEach(({ word, style }) => {
+      let hasHighlighted = false;
 
-    parts = parts.flatMap((part, index) => {
-      if (typeof part !== "string") return [part];
-      if (hasHighlighted) return [part];
+      parts = parts.flatMap((part, index) => {
+        if (typeof part !== "string") return [part];
+        if (hasHighlighted) return [part];
 
-      const wordIndex = part.indexOf(word);
+        const wordIndex = part.indexOf(word);
 
-      if (wordIndex === -1) return [part];
+        if (wordIndex === -1) return [part];
 
-      hasHighlighted = true;
+        hasHighlighted = true;
 
-      return [
-        part.slice(0, wordIndex),
-        <span key={`${word}-${index}`} style={style}>
-          {word}
-        </span>,
-        part.slice(wordIndex + word.length),
-      ];
+        return [
+          part.slice(0, wordIndex),
+          <span key={`${word}-${index}`} style={style}>
+            {word}
+          </span>,
+          part.slice(wordIndex + word.length),
+        ];
+      });
     });
-  });
 
-  return parts;
-}
-
-  function resetAnswer() {
-    if (!puzzle || archiveIsLocked || isSolved) return;
-
-    setGuess("");
-    setMessage("");
-    inputRefs.current[0]?.focus();
-    saveCurrentGame("", notes, shownHints);
-
-    trackEvent("answer_reset", {
-      date: selectedDateKey,
-      isToday: String(isToday),
-    });
+    return parts;
   }
 
   function replayPuzzle() {
@@ -583,19 +622,27 @@ function renderHighlightedClue() {
           <span>👑 {bestStreak}</span>
         </div>
 
-{typeof window !== "undefined" &&
-  !window.matchMedia("(display-mode: standalone)").matches && (
-    <div style={installWrapStyle}>
-      <button onClick={installApp} style={installButton}>
-        📲 Voeg toe aan beginscherm
-      </button>
-    </div>
-)}
+        {typeof window !== "undefined" &&
+          !window.matchMedia("(display-mode: standalone)").matches && (
+            <div style={installWrapStyle}>
+              <button onClick={installApp} style={installButton}>
+                📲 Voeg toe aan beginscherm
+              </button>
+            </div>
+          )}
 
         <div style={archiveNavStyle}>
           <div style={navButtonSlotStyle}>
             {!isFirstPuzzle && previousPuzzle && (
-              <button onClick={goToPreviousPuzzle} style={smallNavButton}>
+              <button
+                onClick={goToPreviousPuzzle}
+                disabled={!canGoPrevious}
+                style={{
+                  ...smallNavButton,
+                  opacity: canGoPrevious ? 1 : 0.45,
+                  cursor: canGoPrevious ? "pointer" : "not-allowed",
+                }}
+              >
                 ← Vorige
               </button>
             )}
@@ -627,7 +674,8 @@ function renderHighlightedClue() {
             <h2 style={lockedTitleStyle}>🔒 Archiefpuzzel</h2>
 
             <p style={lockedTextStyle}>
-              Bekijk een korte advertentie en speel daarna 5 extra archiefpuzzels vrij.
+              Bekijk een korte advertentie en speel vanaf deze puzzel 5
+              archiefpuzzels vrij.
             </p>
 
             <button
@@ -637,6 +685,8 @@ function renderHighlightedClue() {
             >
               {isWatchingAd ? "Advertentie laden..." : "▶ Bekijk advertentie"}
             </button>
+
+            <div style={messageStyle}>{message}</div>
           </div>
         ) : (
           <>
@@ -686,9 +736,9 @@ function renderHighlightedClue() {
               </div>
             </div>
 
-{isArchivePuzzle && !archiveIsLocked && (
-  <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
-)}
+            {isArchivePuzzle && (
+              <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
+            )}
 
             <div style={letterInputWrapper}>
               <div
@@ -698,37 +748,39 @@ function renderHighlightedClue() {
                 }}
               >
                 {puzzle.answer.split("").map((_, index) => (
-<input
-  key={`${puzzle.date}-input-${index}`}
-  ref={(element) => {
-    inputRefs.current[index] = element;
-  }}
-  value={guess[index]?.trim() ?? ""}
-  onChange={(event) => updateLetter(event.target.value, index)}
-  onKeyDown={(event) => handleLetterKeyDown(event, index)}
-  onFocus={(event) => event.target.select()}
-  maxLength={1}
-  disabled={isSolved}
-  style={letterBoxStyle}
-  aria-label={`Letter ${index + 1}`}
-/>
+                  <input
+                    key={`${puzzle.date}-input-${index}`}
+                    ref={(element) => {
+                      inputRefs.current[index] = element;
+                    }}
+                    value={guess[index]?.trim() ?? ""}
+                    onChange={(event) => updateLetter(event.target.value, index)}
+                    onKeyDown={(event) => handleLetterKeyDown(event, index)}
+                    onFocus={(event) => event.target.select()}
+                    maxLength={1}
+                    disabled={isSolved}
+                    style={letterBoxStyle}
+                    aria-label={`Letter ${index + 1}`}
+                  />
                 ))}
               </div>
-</div>
+            </div>
 
-{!isSolved && (
-  <button onClick={checkAnswer} style={wideCheckButton}>
-    Controleer
-  </button>
-)}
+            {!isSolved && (
+              <button onClick={checkAnswer} style={wideCheckButton}>
+                Controleer
+              </button>
+            )}
 
-<div style={hintRowStyle}>
+            <div style={hintRowStyle}>
               <button
                 onClick={() => revealHint("definitie")}
                 disabled={isSolved || shownHints.definitie}
                 style={{
                   ...hintButton,
-                  ...((shownHints.definitie || isSolved) ? activeMeaningHintButton : {}),
+                  ...((shownHints.definitie || isSolved)
+                    ? activeMeaningHintButton
+                    : {}),
                 }}
               >
                 Definitie
@@ -739,7 +791,9 @@ function renderHighlightedClue() {
                 disabled={isSolved || shownHints.indicatoren}
                 style={{
                   ...hintButton,
-                  ...((shownHints.indicatoren || isSolved) ? activeIndicatorHintButton : {}),
+                  ...((shownHints.indicatoren || isSolved)
+                    ? activeIndicatorHintButton
+                    : {}),
                 }}
               >
                 Indicatoren
@@ -750,7 +804,9 @@ function renderHighlightedClue() {
                 disabled={isSolved || shownHints.bouwstenen}
                 style={{
                   ...hintButton,
-                  ...((shownHints.bouwstenen || isSolved) ? activeBuildingHintButton : {}),
+                  ...((shownHints.bouwstenen || isSolved)
+                    ? activeBuildingHintButton
+                    : {}),
                 }}
               >
                 Bouwstenen
@@ -785,7 +841,8 @@ function renderHighlightedClue() {
           <h3 style={socialTitle}>📚 Dagelijkse uitleg</h3>
 
           <p style={socialText}>
-            Elke avond plaatsen we een uitgebreide uitleg van de puzzel op social media.
+            Elke avond plaatsen we een uitgebreide uitleg van de puzzel op social
+            media.
           </p>
 
           <div style={socialLinks}>
