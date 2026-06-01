@@ -289,25 +289,26 @@ export default function Home() {
     }
   }
 
-  function updateLetter(letter: string, position: number) {
-    if (!puzzle || isSolved || archiveIsLocked) return;
+function updateLetter(letter: string, position: number) {
+  if (!puzzle || isSolved || archiveIsLocked) return;
 
-    const cleanLetter = letter.slice(-1);
-    const nextGuessArray = puzzle.answer.split("").map((_, index) => {
-      if (index === position) return cleanLetter;
-      return guess[index] ?? "";
-    });
+  const cleanLetter = letter.replace(/[^a-zA-ZÀ-ÿ]/g, "").slice(-1);
 
-    const nextGuess = nextGuessArray.join("").slice(0, puzzle.answer.length);
+  const nextGuessArray = puzzle.answer.split("").map((_, index) => {
+    if (index === position) return cleanLetter;
+    return guess[index] ?? "";
+  });
 
-    setGuess(nextGuess);
-    saveCurrentGame(nextGuess, notes);
-    setMessage("");
+  const nextGuess = nextGuessArray.join("").slice(0, puzzle.answer.length);
 
-    if (cleanLetter && position < puzzle.answer.length - 1) {
-      inputRefs.current[position + 1]?.focus();
-    }
+  setGuess(nextGuess);
+  saveCurrentGame(nextGuess, notes);
+  setMessage("");
+
+  if (cleanLetter && position < puzzle.answer.length - 1) {
+    inputRefs.current[position + 1]?.focus();
   }
+}
 
   function handleLetterKeyDown(
     event: React.KeyboardEvent<HTMLInputElement>,
@@ -614,12 +615,6 @@ wordsToHighlight.forEach(({ word, style }) => {
               <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
             )}
 
-            {!isSolved && (
-              <button onClick={checkAnswer} style={wideCheckButton}>
-                Controleer
-              </button>
-            )}
-
             <div style={letterInputWrapper}>
               <div
                 style={{
@@ -628,19 +623,20 @@ wordsToHighlight.forEach(({ word, style }) => {
                 }}
               >
                 {puzzle.answer.split("").map((_, index) => (
-                  <input
-                    key={`${puzzle.date}-input-${index}`}
-                    ref={(element) => {
-                      inputRefs.current[index] = element;
-                    }}
-                    value={guess[index] ?? ""}
-                    onChange={(event) => updateLetter(event.target.value, index)}
-                    onKeyDown={(event) => handleLetterKeyDown(event, index)}
-                    maxLength={1}
-                    disabled={isSolved}
-                    style={letterBoxStyle}
-                    aria-label={`Letter ${index + 1}`}
-                  />
+<input
+  key={`${puzzle.date}-input-${index}`}
+  ref={(element) => {
+    inputRefs.current[index] = element;
+  }}
+  value={guess[index] ?? ""}
+  onChange={(event) => updateLetter(event.target.value, index)}
+  onKeyDown={(event) => handleLetterKeyDown(event, index)}
+  onFocus={(event) => event.target.select()}
+  maxLength={1}
+  disabled={isSolved}
+  style={letterBoxStyle}
+  aria-label={`Letter ${index + 1}`}
+/>
                 ))}
               </div>
 
@@ -649,9 +645,15 @@ wordsToHighlight.forEach(({ word, style }) => {
                   ↺
                 </button>
               )}
-            </div>
+</div>
 
-            <div style={hintRowStyle}>
+{!isSolved && (
+  <button onClick={checkAnswer} style={wideCheckButton}>
+    Controleer
+  </button>
+)}
+
+<div style={hintRowStyle}>
               <button
                 onClick={() => revealHint("definitie")}
                 disabled={isSolved || shownHints.definitie}
@@ -882,28 +884,34 @@ const stickyNoteStyle: CSSProperties = {
 
 const tapeStyle: CSSProperties = {
   position: "absolute",
-  top: "-10px",
-  left: "-10px",
+  top: "8px",
+  left: "10px",
   background: "#c4b5fd",
-  width: "76px",
-  height: "26px",
-  transform: "rotate(-18deg)",
+  width: "54px",
+  height: "18px",
+  transform: "rotate(-14deg)",
   opacity: 0.85,
 };
 
 const noteIconButton: CSSProperties = {
   position: "absolute",
-  top: "12px",
-  right: "12px",
-  width: "34px",
-  height: "34px",
+  right: "10px",
+  bottom: "10px",
+  width: "42px",
+  height: "42px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   borderRadius: "12px",
   border: "2px solid rgba(109,40,217,0.22)",
-  background: "rgba(255,255,255,0.94)",
+  background: "rgba(255,255,255,0.96)",
   color: "#6d28d9",
-  fontSize: "18px",
+  fontSize: "20px",
+  lineHeight: 1,
   cursor: "pointer",
   boxShadow: "0 5px 12px rgba(76, 29, 149, 0.12)",
+  zIndex: 3,
+  padding: 0,
 };
 
 const clueStyle: CSSProperties = {
@@ -1059,7 +1067,7 @@ const buildingHighlightStyle: CSSProperties = {
 };
 
 const notebookStyle: CSSProperties = {
-  margin: "14px auto 0",
+  margin: "14px 44px 0 0",
   background: "#fffdf7",
   border: "2px solid #ddd6fe",
   borderRadius: "14px",
