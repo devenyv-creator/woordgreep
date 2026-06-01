@@ -694,7 +694,7 @@ function goToPreviousPuzzle() {
           <>
             <div style={stickyWrapStyle}>
               <div style={stickyNoteStyle}>
-                <div style={tapeStyle} />
+              
 
                 <button
                   onClick={() => {
@@ -1008,17 +1008,6 @@ const stickyNoteStyle: CSSProperties = {
   marginBottom: "24px",
   position: "relative",
   borderRadius: "2px",
-};
-
-const tapeStyle: CSSProperties = {
-  position: "absolute",
-  top: "8px",
-  left: "10px",
-  background: "#c4b5fd",
-  width: "54px",
-  height: "18px",
-  transform: "rotate(-14deg)",
-  opacity: 0.85,
 };
 
 const noteIconButton: CSSProperties = {
