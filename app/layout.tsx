@@ -12,7 +12,13 @@ const alegreya = Alegreya({
 export const metadata: Metadata = {
   title: "Woordgreep",
   description: "Dagelijkse Nederlandse woordpuzzel",
+
+  other: {
+    "google-adsense-account": "ca-pub-1828611231115211",
+  },
+
   manifest: "/manifest.json",
+
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
