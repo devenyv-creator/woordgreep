@@ -45,7 +45,7 @@ export const puzzles = [
       bouwstenen: ["naam"],
     },
     explanation:
-      "'Terug' is een omkeerindicator. Als je het woord 'naam' achterstevoren leest dan krijg je het woord 'maan'. Europa is een van de manen van Jupiter.",
+      "'Terug' is een omkeerindicator die aangeeft dat we het woord 'naam' moeten omdraaien. Dan krijgen we 'maan' en dit past bij de definitie want 'Europa' is één van de vier grote manen van Jupiter.",
   },
   {
     date: "2026-05-21",

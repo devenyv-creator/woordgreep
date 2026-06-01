@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Alegreya } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const alegreya = Alegreya({
   subsets: ["latin"],
@@ -23,11 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={alegreya.variable}>
-      <body>
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <html lang="nl">
+  <body>{children}</body>
+
+  <GoogleAnalytics gaId="G-5Q453WR3BZ" />
+</html>
   );
 }
