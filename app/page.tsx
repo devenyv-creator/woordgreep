@@ -457,57 +457,59 @@ Speel mee op woordgreep.nl`;
     }
   }
 
-  function renderHighlightedClue() {
-    if (!puzzle) return null;
+function renderHighlightedClue() {
+  if (!puzzle) return null;
 
-    const wordsToHighlight = [
-      ...(shownHints.definitie
-        ? puzzle.hints.definitie.map((word: string) => ({
-            word,
-            style: meaningHighlightStyle,
-          }))
-        : []),
-      ...(shownHints.indicatoren
-        ? puzzle.hints.indicatoren.map((word: string) => ({
-            word,
-            style: indicatorHighlightStyle,
-          }))
-        : []),
-      ...(shownHints.bouwstenen
-        ? puzzle.hints.bouwstenen.map((word: string) => ({
-            word,
-            style: buildingHighlightStyle,
-          }))
-        : []),
-    ];
+  const wordsToHighlight = [
+    ...((shownHints.definitie || isSolved)
+      ? puzzle.hints.definitie.map((word: string) => ({
+          word,
+          style: meaningHighlightStyle,
+        }))
+      : []),
 
-    let parts: React.ReactNode[] = [puzzle.clue];
+    ...((shownHints.indicatoren || isSolved)
+      ? puzzle.hints.indicatoren.map((word: string) => ({
+          word,
+          style: indicatorHighlightStyle,
+        }))
+      : []),
 
-wordsToHighlight.forEach(({ word, style }) => {
-  let hasHighlighted = false;
+    ...((shownHints.bouwstenen || isSolved)
+      ? puzzle.hints.bouwstenen.map((word: string) => ({
+          word,
+          style: buildingHighlightStyle,
+        }))
+      : []),
+  ];
 
-  parts = parts.flatMap((part, index) => {
-    if (typeof part !== "string") return [part];
-    if (hasHighlighted) return [part];
+  let parts: React.ReactNode[] = [puzzle.clue];
 
-    const wordIndex = part.indexOf(word);
+  wordsToHighlight.forEach(({ word, style }) => {
+    let hasHighlighted = false;
 
-    if (wordIndex === -1) return [part];
+    parts = parts.flatMap((part, index) => {
+      if (typeof part !== "string") return [part];
+      if (hasHighlighted) return [part];
 
-    hasHighlighted = true;
+      const wordIndex = part.indexOf(word);
 
-    return [
-      part.slice(0, wordIndex),
-      <span key={`${word}-${index}`} style={style}>
-        {word}
-      </span>,
-      part.slice(wordIndex + word.length),
-    ];
+      if (wordIndex === -1) return [part];
+
+      hasHighlighted = true;
+
+      return [
+        part.slice(0, wordIndex),
+        <span key={`${word}-${index}`} style={style}>
+          {word}
+        </span>,
+        part.slice(wordIndex + word.length),
+      ];
+    });
   });
-});
 
-    return parts;
-  }
+  return parts;
+}
 
   function resetAnswer() {
     if (!puzzle || archiveIsLocked || isSolved) return;
@@ -714,7 +716,7 @@ wordsToHighlight.forEach(({ word, style }) => {
                 disabled={isSolved || shownHints.definitie}
                 style={{
                   ...hintButton,
-                  ...(shownHints.definitie ? activeMeaningHintButton : {}),
+                  ...((shownHints.definitie || isSolved) ? activeMeaningHintButton : {}),
                 }}
               >
                 Definitie
@@ -725,7 +727,7 @@ wordsToHighlight.forEach(({ word, style }) => {
                 disabled={isSolved || shownHints.indicatoren}
                 style={{
                   ...hintButton,
-                  ...(shownHints.indicatoren ? activeIndicatorHintButton : {}),
+                  ...((shownHints.indicatoren || isSolved) ? activeIndicatorHintButton : {}),
                 }}
               >
                 Indicatoren
@@ -736,7 +738,7 @@ wordsToHighlight.forEach(({ word, style }) => {
                 disabled={isSolved || shownHints.bouwstenen}
                 style={{
                   ...hintButton,
-                  ...(shownHints.bouwstenen ? activeBuildingHintButton : {}),
+                  ...((shownHints.bouwstenen || isSolved) ? activeBuildingHintButton : {}),
                 }}
               >
                 Bouwstenen
