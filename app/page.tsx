@@ -43,7 +43,7 @@ function trackEvent(eventName: string, parameters?: Record<string, string>) {
 }
 
 const FIRST_PUZZLE_DATE = "2026-05-17";
-const ARCHIVE_UNLOCK_KEY = "woordgreep-archive-unlocked-until";
+const ARCHIVE_PROGRESS_KEY = "woordgreep-archive-progress";
 
 const emptyShownHints: ShownHints = {
   definitie: false,
@@ -63,10 +63,12 @@ function getYesterdayDateKey(dateKey: string) {
   return date.toLocaleDateString("sv-SE");
 }
 
-function isArchiveUnlocked() {
-  const unlockedUntil = localStorage.getItem(ARCHIVE_UNLOCK_KEY);
-  if (!unlockedUntil) return false;
-  return Date.now() < Number(unlockedUntil);
+function getArchiveProgress() {
+  const saved = localStorage.getItem(ARCHIVE_PROGRESS_KEY);
+
+  if (!saved) return 0;
+
+  return Number(saved);
 }
 
 export default function Home() {
@@ -103,7 +105,7 @@ export default function Home() {
   const [currentStreak, setCurrentStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<any>(null);
-  const [archiveUnlocked, setArchiveUnlocked] = useState(false);
+const [archiveProgress, setArchiveProgress] = useState(0);
   const [isWatchingAd, setIsWatchingAd] = useState(false);
 
   const puzzle =
@@ -120,14 +122,21 @@ export default function Home() {
   const isToday = selectedDateKey === todayKey;
   const isFirstPuzzle = selectedDateKey === FIRST_PUZZLE_DATE;
   const isArchivePuzzle = selectedDateKey < todayKey;
-  const archiveIsLocked = isArchivePuzzle && !archiveUnlocked;
+const archivePuzzleIndex = playablePuzzles.findIndex(
+  (p) => p.date === selectedDateKey
+);
+
+const freeArchiveLimit = archiveProgress + 5;
+
+const archiveIsLocked =
+  isArchivePuzzle && archivePuzzleIndex >= freeArchiveLimit;
 
   const allHintsShown =
     shownHints.definitie && shownHints.indicatoren && shownHints.bouwstenen;
 
-  useEffect(() => {
-    setArchiveUnlocked(isArchiveUnlocked());
-  }, []);
+useEffect(() => {
+  setArchiveProgress(getArchiveProgress());
+}, []);
 
   useEffect(() => {
     if (!latestPuzzle) return;
@@ -209,24 +218,33 @@ export default function Home() {
     });
   }
 
-  async function unlockArchiveWithAd() {
-    trackEvent("archive_ad_clicked", { date: selectedDateKey });
+async function unlockArchiveWithAd() {
+  trackEvent("archive_ad_clicked", {
+    date: selectedDateKey,
+  });
 
-    setIsWatchingAd(true);
-    setMessage("");
+  setIsWatchingAd(true);
+  setMessage("");
 
-    setTimeout(() => {
-      const twentyFourHoursFromNow = Date.now() + 24 * 60 * 60 * 1000;
-      localStorage.setItem(ARCHIVE_UNLOCK_KEY, String(twentyFourHoursFromNow));
+  setTimeout(() => {
+    const newProgress = archiveProgress + 5;
 
-      setArchiveUnlocked(true);
-      setIsWatchingAd(false);
-      setMessage("Archief ontgrendeld voor 24 uur ✨");
+    localStorage.setItem(
+      ARCHIVE_PROGRESS_KEY,
+      String(newProgress)
+    );
 
-      trackEvent("archive_unlocked", { date: selectedDateKey });
-    }, 2200);
-  }
+    setArchiveProgress(newProgress);
 
+    setIsWatchingAd(false);
+
+    setMessage("✨ 5 extra archiefpuzzels ontgrendeld!");
+
+    trackEvent("archive_unlocked", {
+      unlockedUntil: String(newProgress),
+    });
+  }, 2200);
+}
   async function installApp() {
     if (installPrompt) {
       installPrompt.prompt();
@@ -609,7 +627,7 @@ function renderHighlightedClue() {
             <h2 style={lockedTitleStyle}>🔒 Archiefpuzzel</h2>
 
             <p style={lockedTextStyle}>
-              Bekijk een korte advertentie om 24 uur toegang te krijgen tot het archief.
+              Bekijk een korte advertentie en speel daarna 5 extra archiefpuzzels vrij.
             </p>
 
             <button
@@ -668,9 +686,9 @@ function renderHighlightedClue() {
               </div>
             </div>
 
-            {isArchivePuzzle && archiveUnlocked && (
-              <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
-            )}
+{isArchivePuzzle && !archiveIsLocked && (
+  <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
+)}
 
             <div style={letterInputWrapper}>
               <div
