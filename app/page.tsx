@@ -169,12 +169,10 @@ export default function Home() {
   const archiveIsLocked =
     isArchivePuzzle && !unlockedArchiveDates.has(selectedDateKey);
 
-  const previousPuzzleIsLocked =
-    previousPuzzle !== null &&
-    previousPuzzle.date < todayKey &&
-    !unlockedArchiveDates.has(previousPuzzle.date);
+const currentPuzzleIsLocked = archiveIsLocked;
 
-  const canGoPrevious = previousPuzzle !== null && !previousPuzzleIsLocked;
+const canGoPrevious =
+  previousPuzzle !== null && !currentPuzzleIsLocked;
 
   const allHintsShown =
     shownHints.definitie && shownHints.indicatoren && shownHints.bouwstenen;
@@ -504,15 +502,17 @@ Speel mee op woordgreep.nl`;
     }
   }
 
-  function goToPreviousPuzzle() {
-    if (!previousPuzzle || previousPuzzleIsLocked) {
-      setMessage("🔒 Bekijk eerst een korte advertentie om verder terug te gaan.");
-      return;
-    }
+function goToPreviousPuzzle() {
+  if (!previousPuzzle) return;
 
-    setSelectedDateKey(previousPuzzle.date);
-    setMessage("");
+  if (archiveIsLocked) {
+    setMessage("🔒 Ontgrendel eerst dit archiefblok om verder terug te gaan.");
+    return;
   }
+
+  setSelectedDateKey(previousPuzzle.date);
+  setMessage("");
+}
 
   function goToNextPuzzle() {
     if (nextPuzzle) {
