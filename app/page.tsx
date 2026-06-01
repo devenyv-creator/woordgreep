@@ -265,7 +265,7 @@ export default function Home() {
   function checkAnswer() {
     if (!puzzle || archiveIsLocked) return;
 
-    if (guess.trim().toLowerCase() === puzzle.answer.trim().toLowerCase()) {
+    if (guess.replaceAll(" ", "").toLowerCase() === puzzle.answer.trim().toLowerCase()) {
       track("puzzle_solved", {
         date: selectedDateKey,
         isToday: String(isToday),
@@ -292,14 +292,19 @@ export default function Home() {
 function updateLetter(letter: string, position: number) {
   if (!puzzle || isSolved || archiveIsLocked) return;
 
-  const cleanLetter = letter.replace(/[^a-zA-ZÀ-ÿ]/g, "").slice(-1);
+  const cleanLetter = letter
+    .replace(/[^a-zA-ZÀ-ÿ]/g, "")
+    .slice(-1)
+    .toUpperCase();
 
-  const nextGuessArray = puzzle.answer.split("").map((_, index) => {
-    if (index === position) return cleanLetter;
-    return guess[index] ?? "";
-  });
+  const guessArray = guess
+    .padEnd(puzzle.answer.length, " ")
+    .split("")
+    .slice(0, puzzle.answer.length);
 
-  const nextGuess = nextGuessArray.join("").slice(0, puzzle.answer.length);
+  guessArray[position] = cleanLetter || " ";
+
+  const nextGuess = guessArray.join("");
 
   setGuess(nextGuess);
   saveCurrentGame(nextGuess, notes);
@@ -310,18 +315,50 @@ function updateLetter(letter: string, position: number) {
   }
 }
 
-  function handleLetterKeyDown(
-    event: React.KeyboardEvent<HTMLInputElement>,
-    position: number
-  ) {
-    if (event.key === "Enter") {
-      checkAnswer();
+function handleLetterKeyDown(
+  event: React.KeyboardEvent<HTMLInputElement>,
+  position: number
+) {
+  if (!puzzle) return;
+
+  if (event.key === "Enter") {
+    checkAnswer();
+  }
+
+  if (event.key === "Backspace") {
+    event.preventDefault();
+
+    const guessArray = guess
+      .padEnd(puzzle.answer.length, " ")
+      .split("")
+      .slice(0, puzzle.answer.length);
+
+    if (guessArray[position].trim()) {
+      guessArray[position] = " ";
+      const nextGuess = guessArray.join("");
+      setGuess(nextGuess);
+      saveCurrentGame(nextGuess, notes);
+      return;
     }
 
-    if (event.key === "Backspace" && !guess[position] && position > 0) {
+    if (position > 0) {
       inputRefs.current[position - 1]?.focus();
+      guessArray[position - 1] = " ";
+
+      const nextGuess = guessArray.join("");
+      setGuess(nextGuess);
+      saveCurrentGame(nextGuess, notes);
     }
   }
+
+  if (event.key === "ArrowLeft" && position > 0) {
+    inputRefs.current[position - 1]?.focus();
+  }
+
+  if (event.key === "ArrowRight" && position < puzzle.answer.length - 1) {
+    inputRefs.current[position + 1]?.focus();
+  }
+}
 
   function revealHint(type: HintType) {
     if (!puzzle || archiveIsLocked || isSolved) return;
@@ -628,7 +665,7 @@ wordsToHighlight.forEach(({ word, style }) => {
   ref={(element) => {
     inputRefs.current[index] = element;
   }}
-  value={guess[index] ?? ""}
+  value={guess[index]?.trim() ?? ""}
   onChange={(event) => updateLetter(event.target.value, index)}
   onKeyDown={(event) => handleLetterKeyDown(event, index)}
   onFocus={(event) => event.target.select()}
