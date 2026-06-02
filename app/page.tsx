@@ -876,6 +876,14 @@ function goToPreviousPuzzle() {
             </a>
           </div>
         </div>
+        
+        <div style={{ marginTop: 30, fontSize: 14 }}>
+  <a href="/privacy">Privacy</a>
+  {" • "}
+  <a href="/voorwaarden">Voorwaarden</a>
+  {" • "}
+  <a href="/contact">Contact</a>
+</div>
       </section>
     </main>
   );
