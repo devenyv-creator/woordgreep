@@ -204,4 +204,29 @@ export const puzzles = [
     explanation:
       "De selectie-indicator 'klinkers in' geeft aan dat we de klinkers uit bouwsteen 'straat' moeten pakken, dit is 'aa'. De weglaatindicator 'zonder' gecombineerd met selectie-indicator 'klinkers' geven aan dat je de klinkers uit bouwsteen 'weg' moet halen, dan krijg je nog 'wg'. De 'aa' moet volgens de insluitindicator 'in het midden' van 'wg'. Dan krijg je 'waag' en dit past bij de definitie 'ik durf'.",
   },
+
+      {
+    date: "2026-06-03",
+    clue: "Blazer in kostuum onderzocht. (4)",
+    answer: "mond",
+    hints: {
+      definitie: ["Blazer"],
+      indicatoren: ["in"], 
+      bouwstenen: ["kostuum onderzocht"],
+    },
+    explanation: "De verborgen-woord indicator 'in' geeft aan dat we het antwoord kunnen vinden in de bouwsteen 'kostuum onderzocht', als we starten bij de 'm' van kostuum, dan krijg je 'mond' en dit past bij de definitie want je mond is een blazer (hetgene dat blaast).",
+  },
+
+      {
+    date: "2026-06-04",
+    clue: "Hoop roddels terug in woonplaats. (4)",
+    answer: "dorp",
+    hints: {
+      definitie: ["woonplaats"],
+      indicatoren: ["terug in"], 
+      bouwstenen: ["Hoop roddels"],
+    },
+    explanation:
+      "'Terug' is een omkeerindicator en 'in de' is een verborgen-woordindicator. Deze twee werken samen waardoor je in de bouwsteen 'hoop roddels' omgekeerd het woord 'dorp' kunt vinden en dit past met de definitie 'woonplaats'.",
+  },
 ]
