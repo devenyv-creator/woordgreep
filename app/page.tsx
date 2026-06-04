@@ -684,21 +684,6 @@ function goToPreviousPuzzle() {
           <span>👑 {bestStreak}</span>
         </div>
 
-        <button
-  onClick={() => {
-    const testData: StreakData = {
-      currentStreak: 3,
-      bestStreak: 3,
-      lastSolvedDate: "2026-06-03",
-    };
-
-    saveStreakData(testData);
-    location.reload();
-  }}
->
-  TEST 3 STREAK
-</button>
-
         {typeof window !== "undefined" &&
           !window.matchMedia("(display-mode: standalone)").matches && (
             <div style={installWrapStyle}>
