@@ -219,7 +219,7 @@ export const puzzles = [
 
       {
     date: "2026-06-04",
-    clue: "Hoop roddels terug in woonplaats. (4)",
+    clue: "Hoop roddels terug in de woonplaats. (4)",
     answer: "dorp",
     hints: {
       definitie: ["woonplaats"],
