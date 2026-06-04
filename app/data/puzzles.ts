@@ -223,7 +223,7 @@ export const puzzles = [
     answer: "dorp",
     hints: {
       definitie: ["woonplaats"],
-      indicatoren: ["terug in"], 
+      indicatoren: ["terug in de"], 
       bouwstenen: ["Hoop roddels"],
     },
     explanation:
