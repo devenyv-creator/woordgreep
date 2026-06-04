@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { puzzles } from "./data/puzzles";
 
 declare global {
@@ -44,6 +44,7 @@ function trackEvent(eventName: string, parameters?: Record<string, string>) {
 const FIRST_PUZZLE_DATE = "2026-05-17";
 const ARCHIVE_UNLOCK_KEY = "woordgreep-archive-unlocked-ranges";
 const ARCHIVE_UNLOCK_SIZE = 5;
+const STREAK_KEY = "woordgreep-streak";
 
 const emptyShownHints: ShownHints = {
   definitie: false,
@@ -61,6 +62,66 @@ function getYesterdayDateKey(dateKey: string) {
   const date = new Date(`${dateKey}T12:00:00`);
   date.setDate(date.getDate() - 1);
   return date.toLocaleDateString("sv-SE");
+}
+
+
+function setCookie(name: string, value: string, days = 365) {
+  if (typeof document === "undefined") return;
+
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+
+  document.cookie = `${name}=${encodeURIComponent(
+    value
+  )}; expires=${expires}; path=/; SameSite=Lax`;
+}
+
+function getCookie(name: string) {
+  if (typeof document === "undefined") return null;
+
+  return (
+    document.cookie
+      .split("; ")
+      .find((row) => row.startsWith(`${name}=`))
+      ?.split("=")[1] ?? null
+  );
+}
+
+function saveStreakData(streakData: StreakData) {
+  if (typeof window === "undefined") return;
+
+  const value = JSON.stringify(streakData);
+
+  localStorage.setItem(STREAK_KEY, value);
+  setCookie(STREAK_KEY, value);
+}
+
+function loadStreakData(): StreakData | null {
+  if (typeof window === "undefined") return null;
+
+  const localValue = localStorage.getItem(STREAK_KEY);
+
+  if (localValue) {
+    try {
+      return JSON.parse(localValue);
+    } catch {
+      localStorage.removeItem(STREAK_KEY);
+    }
+  }
+
+  const cookieValue = getCookie(STREAK_KEY);
+
+  if (!cookieValue) return null;
+
+  try {
+    const decodedValue = decodeURIComponent(cookieValue);
+    const parsed = JSON.parse(decodedValue);
+
+    localStorage.setItem(STREAK_KEY, JSON.stringify(parsed));
+
+    return parsed;
+  } catch {
+    return null;
+  }
 }
 
 function getUnlockedArchiveRanges() {
@@ -220,10 +281,9 @@ const canGoPrevious =
   }, [selectedDateKey]);
 
   useEffect(() => {
-    const savedStreakText = localStorage.getItem("woordgreep-streak");
+    const savedStreak = loadStreakData();
 
-    if (savedStreakText) {
-      const savedStreak: StreakData = JSON.parse(savedStreakText);
+    if (savedStreak) {
       setCurrentStreak(savedStreak.currentStreak);
       setBestStreak(savedStreak.bestStreak);
     }
@@ -309,7 +369,7 @@ const canGoPrevious =
   function updateStreakAfterSolve() {
     if (!isToday) return;
 
-    const savedStreakText = localStorage.getItem("woordgreep-streak");
+    const savedStreak = loadStreakData();
 
     let streakData: StreakData = {
       currentStreak: 0,
@@ -317,8 +377,8 @@ const canGoPrevious =
       lastSolvedDate: null,
     };
 
-    if (savedStreakText) {
-      streakData = JSON.parse(savedStreakText);
+    if (savedStreak) {
+      streakData = savedStreak;
     }
 
     if (streakData.lastSolvedDate === todayKey) return;
@@ -336,7 +396,7 @@ const canGoPrevious =
       lastSolvedDate: todayKey,
     };
 
-    localStorage.setItem("woordgreep-streak", JSON.stringify(newStreakData));
+    saveStreakData(newStreakData);
 
     setCurrentStreak(newCurrentStreak);
     setBestStreak(newBestStreak);
@@ -556,7 +616,7 @@ function goToPreviousPuzzle() {
         : []),
     ];
 
-    let parts: React.ReactNode[] = [puzzle.clue];
+    let parts: ReactNode[] = [puzzle.clue];
 
     wordsToHighlight.forEach(({ word, style }) => {
       let hasHighlighted = false;
@@ -623,6 +683,21 @@ function goToPreviousPuzzle() {
           <span>🔥 {currentStreak}</span>
           <span>👑 {bestStreak}</span>
         </div>
+
+        <button
+  onClick={() => {
+    const testData: StreakData = {
+      currentStreak: 3,
+      bestStreak: 3,
+      lastSolvedDate: "2026-06-03",
+    };
+
+    saveStreakData(testData);
+    location.reload();
+  }}
+>
+  TEST 3 STREAK
+</button>
 
         {typeof window !== "undefined" &&
           !window.matchMedia("(display-mode: standalone)").matches && (
