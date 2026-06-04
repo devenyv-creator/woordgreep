@@ -219,14 +219,14 @@ export const puzzles = [
 
       {
     date: "2026-06-04",
-    clue: "Hoop roddels terug in de woonplaats. (4)",
+    clue: "Hoop roddels terug in woonplaats. (4)",
     answer: "dorp",
     hints: {
       definitie: ["woonplaats"],
-      indicatoren: ["terug in de"], 
+      indicatoren: ["terug in"], 
       bouwstenen: ["Hoop roddels"],
     },
     explanation:
-      "'Terug' is een omkeerindicator en 'in de' is een verborgen-woordindicator. Deze twee werken samen waardoor je in de bouwsteen 'hoop roddels' omgekeerd het woord 'dorp' kunt vinden en dit past met de definitie 'woonplaats'.",
+      "'Terug' is een omkeerindicator en 'in' is een verborgen-woordindicator. Deze twee werken samen, waardoor je in de bouwsteen 'hoop roddels' omgekeerd het woord 'dorp' kunt vinden en dit past met de definitie 'woonplaats'.",
   },
 ]

@@ -684,6 +684,21 @@ function goToPreviousPuzzle() {
           <span>👑 {bestStreak}</span>
         </div>
 
+        <button
+  onClick={() => {
+    const testData: StreakData = {
+      currentStreak: 4,
+      bestStreak: 4,
+      lastSolvedDate: "2026-06-04",
+    };
+
+    saveStreakData(testData);
+    location.reload();
+  }}
+>
+  HERSTEL 4 STREAK
+</button>
+
         {typeof window !== "undefined" &&
           !window.matchMedia("(display-mode: standalone)").matches && (
             <div style={installWrapStyle}>
