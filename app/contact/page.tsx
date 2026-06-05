@@ -8,7 +8,7 @@ export default function ContactPage() {
       </p>
 
       <p>
-        Neem contact op via de socials!
+        Neem contact op via info@nt2-academy.nl!
       </p>
     </main>
   );
