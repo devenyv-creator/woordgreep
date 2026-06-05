@@ -239,7 +239,7 @@ export const puzzles = [
       bouwstenen: ["koffiemachine", "zwarte thee"],
     },
     explanation:
-      "de selectie-indicator 'start van' geeft aan dat we de eerste letter van bouwsteen 'koffiemachine' nodig hebben, de letter 'k'. 'Zonder kop' geeft aan dat we de bouwsteen 'zwarte' moeten gebruiken zonder de eerste letter, dus 'warte'. 'klinken' geeft aan dat we een homofoon van een woord moeten gebruiken, in dit geval van het woord 'thee' en dit wordt de letter 't'. Als we alle letters bij elkaar voegen krijgen we het antwoord 'kwartet' en dit past bij de definitie vier.",
+      "De selectie-indicator 'start van' geeft aan dat we de eerste letter van bouwsteen 'koffiemachine' nodig hebben, de letter 'k'. 'Zonder kop' geeft aan dat we de bouwsteen 'zwarte' moeten gebruiken zonder de eerste letter, dus 'warte'. 'klinken' geeft aan dat we een homofoon van een woord moeten gebruiken, in dit geval van het woord 'thee' en dit wordt de letter 't'. Als we alle letters bij elkaar voegen krijgen we het antwoord 'kwartet' en dit past bij de definitie vier.",
   },
 
         {
