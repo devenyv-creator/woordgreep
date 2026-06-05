@@ -190,6 +190,7 @@ export default function Home() {
   const [selectedDateKey, setSelectedDateKey] = useState(
     latestPuzzle?.date ?? FIRST_PUZZLE_DATE
   );
+  const [showInstallButton, setShowInstallButton] = useState(false); 
   const [guess, setGuess] = useState("");
   const [notes, setNotes] = useState("");
   const [showNotes, setShowNotes] = useState(false);
@@ -289,18 +290,23 @@ const canGoPrevious =
     }
   }, []);
 
-  useEffect(() => {
-    const handler = (event: any) => {
-      event.preventDefault();
-      setInstallPrompt(event);
-    };
+useEffect(() => {
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches;
 
-    window.addEventListener("beforeinstallprompt", handler);
+  setShowInstallButton(!isStandalone);
 
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handler);
-    };
-  }, []);
+  const handler = (event: any) => {
+    event.preventDefault();
+    setInstallPrompt(event);
+  };
+
+  window.addEventListener("beforeinstallprompt", handler);
+
+  return () => {
+    window.removeEventListener("beforeinstallprompt", handler);
+  };
+}, []);
 
   function saveGame(newGame: SavedGame) {
     localStorage.setItem(
@@ -616,12 +622,12 @@ function goToPreviousPuzzle() {
         : []),
     ];
 
-    let parts: ReactNode[] = [puzzle.clue];
+    let parts: Array<string | ReactNode> = [puzzle.clue];
 
     wordsToHighlight.forEach(({ word, style }) => {
       let hasHighlighted = false;
 
-      parts = parts.flatMap((part, index) => {
+      parts = parts.flatMap((part, index): Array<string | ReactNode> => {
         if (typeof part !== "string") return [part];
         if (hasHighlighted) return [part];
 
@@ -684,8 +690,7 @@ function goToPreviousPuzzle() {
           <span>👑 {bestStreak}</span>
         </div>
 
-        {typeof window !== "undefined" &&
-          !window.matchMedia("(display-mode: standalone)").matches && (
+        {showInstallButton && (
             <div style={installWrapStyle}>
               <button onClick={installApp} style={installButton}>
                 📲 Voeg toe aan beginscherm
@@ -943,6 +948,8 @@ function goToPreviousPuzzle() {
   <a href="/voorwaarden">Voorwaarden</a>
   {" • "}
   <a href="/contact">Contact</a>
+  {" • "}
+  <a href="/over-woordgreep">Over</a>
 </div>
       </section>
     </main>

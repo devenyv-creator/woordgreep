@@ -1,6 +1,7 @@
 export default function VoorwaardenPage() {
   return (
-    <main style={{ padding: 24, maxWidth: 700, margin: "0 auto" }}>
+    <main className="paper-background">
+      <div className="paper-content">
       <h1>Algemene voorwaarden</h1>
 
       <p>
@@ -15,6 +16,10 @@ export default function VoorwaardenPage() {
       <p>
         Woordgreep kan op elk moment worden aangepast of gewijzigd.
       </p>
+        <p>
+          <a href="/">← Terug naar de puzzel</a>
+        </p>
+      </div>
     </main>
   );
 }

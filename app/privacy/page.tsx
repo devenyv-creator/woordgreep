@@ -1,6 +1,7 @@
 export default function PrivacyPage() {
   return (
-    <main style={{ padding: 24, maxWidth: 700, margin: "0 auto" }}>
+    <main className="paper-background">
+      <div className="paper-content">
       <h1>Privacybeleid</h1>
 
       <p>
@@ -14,6 +15,10 @@ export default function PrivacyPage() {
         Door deze website te gebruiken ga je akkoord met het gebruik van cookies
         en analytische gegevens.
       </p>
+        <p>
+          <a href="/">← Terug naar de puzzel</a>
+        </p>
+      </div>
     </main>
   );
 }
