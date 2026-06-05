@@ -239,7 +239,20 @@ export const puzzles = [
       bouwstenen: ["koffiemachine", "zwarte thee"],
     },
     explanation:
-      "de selectie-indicator 'start van' geeft aan dat we de eerste letter van bouwsteen 'koffiemachine' nodig hebben, de letter 'k'. 'Zonder kop' geeft aan dat we de bouwsteen 'zwarte' moeten gebruiken zonder de eerste letter, dus 'warte'. 'klinken' geeft aan dat we een homofoon van een woord moeten gebruiken, in dit geval van het woord 'thee' en dit wordt de letter 't'. Als we alle letters bij elkaar voegen krijgen we het antwoord 'kwartet' en dit past bij de definitie vier",
+      "de selectie-indicator 'start van' geeft aan dat we de eerste letter van bouwsteen 'koffiemachine' nodig hebben, de letter 'k'. 'Zonder kop' geeft aan dat we de bouwsteen 'zwarte' moeten gebruiken zonder de eerste letter, dus 'warte'. 'klinken' geeft aan dat we een homofoon van een woord moeten gebruiken, in dit geval van het woord 'thee' en dit wordt de letter 't'. Als we alle letters bij elkaar voegen krijgen we het antwoord 'kwartet' en dit past bij de definitie vier.",
+  },
+
+        {
+    date: "2026-06-06",
+    clue: "Bruid loopt weg van verwarde echtgenoot, waarschijnlijk einde optie. (8)",
+    answer: "mogelijk",
+    hints: {
+      definitie: ["optie"],
+      indicatoren: ["loopt weg van", "verwarde", "einde"], 
+      bouwstenen: ["Bruid", "echtgenoot", "waarschijnlijk"],
+    },
+    explanation:
+      "'Loopt weg van' is een weglaatindicator die aangeeft dat we de letters van bouwsteen 'bruid' moeten verwijderen uit een ander woord, dit kan niet gelijk, dus moeten we eerst een substitutie toepassen. Een ander woord voor echtgenoot (op de dag van de bruiloft) is bruidegom. Na het verwijderen van 'bruid' geeft de anagramindicator 'verwarde' aan dat we de letters die overblijven moeten husselen waardoor we 'moge' krijgen. Hier voegen we het einde van 'waarschijnlijk' toe en dan krijg je 'mogelijk' en dit past met de definitie 'optie.'"
   },
 
 ]
