@@ -229,4 +229,17 @@ export const puzzles = [
     explanation:
       "'Terug' is een omkeerindicator en 'in' is een verborgen-woordindicator. Deze twee werken samen, waardoor je in de bouwsteen 'hoop roddels' omgekeerd het woord 'dorp' kunt vinden en dit past met de definitie 'woonplaats'.",
   },
+      {
+    date: "2026-06-05",
+    clue: "Vier de start van de koffiemachine maar zonder kop zwarte thee te klinken. (7)",
+    answer: "kwartet",
+    hints: {
+      definitie: ["Vier"],
+      indicatoren: ["de start van", "zonder kop", "te klinken"], 
+      bouwstenen: ["koffiemachine", "zwarte thee"],
+    },
+    explanation:
+      "de selectie-indicator 'start van' geeft aan dat we de eerste letter van bouwsteen 'koffiemachine' nodig hebben, de letter 'k'. 'Zonder kop' geeft aan dat we de bouwsteen 'zwarte' moeten gebruiken zonder de eerste letter, dus 'warte'. 'klinken' geeft aan dat we een homofoon van een woord moeten gebruiken, in dit geval van het woord 'thee' en dit wordt de letter 't'. Als we alle letters bij elkaar voegen krijgen we het antwoord 'kwartet' en dit past bij de definitie vier",
+  },
+
 ]
