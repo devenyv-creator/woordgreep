@@ -255,4 +255,17 @@ export const puzzles = [
       "'Loopt weg van' is een weglaatindicator die aangeeft dat we de letters van bouwsteen 'bruid' moeten verwijderen uit een ander woord, dit kan niet gelijk, dus moeten we eerst een substitutie toepassen. Een ander woord voor echtgenoot (op de dag van de bruiloft) is bruidegom. Na het verwijderen van 'bruid' geeft de anagramindicator 'verwarde' aan dat we de letters die overblijven moeten husselen waardoor we 'moge' krijgen. Hier voegen we het einde van 'waarschijnlijk' toe en dan krijg je 'mogelijk' en dit past met de definitie 'optie.'"
   },
 
+       {
+    date: "2026-06-07",
+    clue: "π + 2 x 100 + O + 50 + O … hulp nodig? (7)",
+    answer: "piccolo",
+    hints: {
+      definitie: ["hulp nodig?"],
+      indicatoren: ["2 x"], 
+      bouwstenen: ["π", "100", "O", "50", "O"],
+    },
+    explanation:
+      "Dit is een puzzel met vooral substituties waardoor het vooral 'trial and error' is. 'π' staat voor de letters 'pi', 100 is de letter 'c' als Romeins cijfers en die hebben we twee keer nodig. De 'O' is niet een cijfer maar een letter, en de 50 is een 'l' als romeins cijfer. Zet die letters achter elkaar en je krijgt het 'piccolo' en dit past bij de definitie want die roep je als je hulp nodig hebt.", 
+}
+
 ]
