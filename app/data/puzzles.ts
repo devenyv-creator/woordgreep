@@ -262,7 +262,7 @@ export const puzzles = [
     hints: {
       definitie: ["hulp nodig?"],
       indicatoren: ["2 x"], 
-      bouwstenen: ["π", "100", "O", "50", "O"],
+      bouwstenen: ["π", "100", "0", "50", "0"],
     },
     explanation:
       "Dit is een puzzel met vooral substituties waardoor het vooral 'trial and error' is. 'π' staat voor de letters 'pi', 100 is de letter 'c' als Romeins cijfer en die hebben we twee keer nodig. De '0' is niet een cijfer maar een letter, en de 50 is een 'l' als romeins cijfer. Zet die letters achter elkaar en je krijgt het woord 'piccolo' en dit past bij de definitie want die roep je als je hulp nodig hebt.", 
