@@ -252,12 +252,12 @@ export const puzzles = [
       bouwstenen: ["Bruid", "echtgenoot", "waarschijnlijk"],
     },
     explanation:
-      "'Loopt weg van' is een weglaatindicator die aangeeft dat we de letters van bouwsteen 'bruid' moeten verwijderen uit een ander woord, dit kan niet gelijk, dus moeten we eerst een substitutie toepassen. Een ander woord voor echtgenoot (op de dag van de bruiloft) is bruidegom. Na het verwijderen van 'bruid' geeft de anagramindicator 'verwarde' aan dat we de letters die overblijven moeten husselen waardoor we 'moge' krijgen. Hier voegen we het einde van 'waarschijnlijk' toe en dan krijg je 'mogelijk' en dit past met de definitie 'optie.'"
+      "'Loopt weg van' is een weglaatindicator die aangeeft dat we de letters van bouwsteen 'bruid' moeten verwijderen uit een ander woord, dit kan niet gelijk, dus moeten we eerst een substitutie toepassen. Een ander woord voor echtgenoot (op de dag van de bruiloft) is bruidegom. Na het verwijderen van 'bruid' geeft de anagramindicator 'verwarde' aan dat we de letters die overblijven moeten husselen waardoor we 'moge' krijgen. Hier voegen we het einde van 'waarschijnlijk' toe en dan krijg je 'mogelijk' en dit past met de definitie 'optie'."
   },
 
        {
     date: "2026-06-07",
-    clue: "π + 2 x 100 + O + 50 + O … hulp nodig? (7)",
+    clue: "π + 2 x 100 + 0 + 50 + 0 … hulp nodig? (7)",
     answer: "piccolo",
     hints: {
       definitie: ["hulp nodig?"],
@@ -265,7 +265,32 @@ export const puzzles = [
       bouwstenen: ["π", "100", "O", "50", "O"],
     },
     explanation:
-      "Dit is een puzzel met vooral substituties waardoor het vooral 'trial and error' is. 'π' staat voor de letters 'pi', 100 is de letter 'c' als Romeins cijfers en die hebben we twee keer nodig. De 'O' is niet een cijfer maar een letter, en de 50 is een 'l' als romeins cijfer. Zet die letters achter elkaar en je krijgt het 'piccolo' en dit past bij de definitie want die roep je als je hulp nodig hebt.", 
-}
+      "Dit is een puzzel met vooral substituties waardoor het vooral 'trial and error' is. 'π' staat voor de letters 'pi', 100 is de letter 'c' als Romeins cijfer en die hebben we twee keer nodig. De '0' is niet een cijfer maar een letter, en de 50 is een 'l' als romeins cijfer. Zet die letters achter elkaar en je krijgt het woord 'piccolo' en dit past bij de definitie want die roep je als je hulp nodig hebt.", 
+},
 
+       {
+    date: "2026-06-08",
+    clue: "Kometen gaan niet helemaal passen. (6)",
+    answer: "meten",
+    hints: {
+      definitie: ["passen"],
+      indicatoren: ["niet helemaal"], 
+      bouwstenen: ["Kometen"],
+    },
+    explanation:
+      "De selectie-indicator 'gaan niet helemaal' geeft aan dat we maar een deel van de bouwsteen 'kometen' moeten gebruiken. Als je de laatste 5 letters van het woord pakt, krijg je 'meten' en dit past bij de definitie 'passen'", 
+},
+
+       {
+    date: "2026-06-09",
+    clue: "De file is chaotisch, maar zorgt voor affectie. (6)",
+    answer: "liefde",
+    hints: {
+      definitie: ["zorgt voor affectie"],
+      indicatoren: ["chaotisch"], 
+      bouwstenen: ["De file"],
+    },
+    explanation:
+      "De anagramindicator 'chaotisch' zegt dat we een anagram moeten maken van een bouwsteen. We weten dat we 6 letters nodig hebben, en met de woorden rechts van 'chaotisch' kan je geen zes letterwoord maken, dus pakken we 'de file' samen als bouwsteen. Als we hier de letters van husselen krijg je 'liefde' en dit past bij de definitie 'zorgt voor affectie'.", 
+},
 ]
