@@ -270,7 +270,7 @@ export const puzzles = [
 
        {
     date: "2026-06-08",
-    clue: "Kometen gaan niet helemaal passen. (6)",
+    clue: "Kometen gaan niet helemaal passen. (5)",
     answer: "meten",
     hints: {
       definitie: ["passen"],
