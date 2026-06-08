@@ -278,7 +278,7 @@ export const puzzles = [
       bouwstenen: ["Kometen"],
     },
     explanation:
-      "De selectie-indicator 'gaan niet helemaal' geeft aan dat we maar een deel van de bouwsteen 'kometen' moeten gebruiken. Als je de laatste 5 letters van het woord pakt, krijg je 'meten' en dit past bij de definitie 'passen'", 
+      "De selectie-indicator 'niet helemaal' geeft aan dat we maar een deel van de bouwsteen 'kometen' moeten gebruiken. Als je de laatste 5 letters van het woord pakt, krijg je 'meten' en dit past bij de definitie 'passen'.", 
 },
 
        {
