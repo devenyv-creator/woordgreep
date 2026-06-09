@@ -10,13 +10,7 @@ export default function TipsVoorBeginnersPage() {
           verwijderen, omdraaien of vervangen. Zodra je deze patronen leert 
           herkennen, worden cryptische omschrijvingen steeds leuker om op te lossen.
         </p>
-
-        <p>
-          Let daarbij goed op indicatorwoorden. Woorden zoals "in", "zonder", "om",
-          "door elkaar" of "achter" kunnen aangeven dat er iets met letters of
-          woorddelen moet gebeuren.
-        </p>
-
+        
         <p>
           Gebruik de hints als je vastloopt. De hints zijn niet bedoeld als
           valsspelen, maar als hulpmiddel om te leren hoe cryptische puzzels
