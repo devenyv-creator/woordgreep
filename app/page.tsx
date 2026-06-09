@@ -950,6 +950,8 @@ function goToPreviousPuzzle() {
   <a href="/contact">Contact</a>
   {" • "}
   <a href="/over-woordgreep">Over</a>
+  {" • "}
+  <a href="/tips-voor-beginners">Tips voor beginners</a>
 </div>
       </section>
     </main>

@@ -293,4 +293,19 @@ export const puzzles = [
     explanation:
       "De anagramindicator 'chaotisch' zegt dat we een anagram moeten maken van een bouwsteen. We weten dat we 6 letters nodig hebben, en met de woorden rechts van 'chaotisch' kan je geen zes letterwoord maken, dus pakken we 'de file' samen als bouwsteen. Als we hier de letters van husselen krijg je 'liefde' en dit past bij de definitie 'zorgt voor affectie'.", 
 },
+
+{
+    date: "2026-06-10",
+    clue: "Meiden hoeven geen identiteitskaart te laten zien denk ik. (4)",
+    answer: "meen",
+    hints: {
+      definitie: ["denk ik"],
+      indicatoren: ["hoeven geen", "te laten zien"], 
+      bouwstenen: ["Meiden", "identiteitskaart"],
+    },
+    explanation:
+      "De weglaatindicator 'hoeven geen ... te laten zien' geeft aan dat je een bouwsteen moet weghalen uit een andere bouwsteen. Er staat niks logisch wat je kunt weghalen uit iets anders, dus zal er eerst een substitutie moeten plaatsvinden. We pakken een korte versie van 'identiteitskaart', 'id', en halen dit weg uit 'meiden'. Hieruit krijg je 'meen' en dit past bij de definitie 'denk ik'.", 
+},
+
+
 ]
