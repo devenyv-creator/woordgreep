@@ -307,5 +307,17 @@ export const puzzles = [
       "De weglaatindicator 'hoeven geen ... te laten zien' geeft aan dat je een bouwsteen moet weghalen uit een andere bouwsteen. Er staat niks logisch wat je kunt weghalen uit iets anders, dus zal er eerst een substitutie moeten plaatsvinden. We pakken een korte versie van 'identiteitskaart', 'id', en halen dit weg uit 'meiden'. Hieruit krijg je 'meen' en dit past bij de definitie 'denk ik'.", 
 },
 
+{
+    date: "2026-06-11",
+    clue: "Glibberig Frans brood loser in laatste krachtmeting? (6)",
+    answer: "paling",
+    hints: {
+      definitie: ["Glibberig"],
+      indicatoren: ["Frans", "in", "laatste"], 
+      bouwstenen: ["brood", "loser", "krachtmeting"],
+    },
+    explanation:
+      "'Frans' is een indicator die een substitutie aangeeft. Normaal hoeven substituties geen indicator, maar deze is toegevoegd om het iets makkelijker te maken. De substitutie voor brood is 'pain', de Franse vertaling. 'Loser' is een bouwsteen en dit wordt met een substitutie een 'L' omdat je je vingers in de vorm van de L maakt als je iemand voor loser uitmaakt. Deze letter gaat 'in' de letters die we al hebben, waardoor je 'palin' krijgt. We voegen daar nog de 'laatste' letter van bouwsteen 'krachtmeting' aan toe. Dan krijg je als antwoord 'paling' en dit past met de definitie, want een paling is glibberig.", 
+},
 
 ]
