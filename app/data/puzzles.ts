@@ -320,4 +320,29 @@ export const puzzles = [
       "'Frans' is een indicator die een substitutie aangeeft. Normaal hoeven substituties geen indicator, maar deze is toegevoegd om het iets makkelijker te maken. De substitutie voor brood is 'pain', de Franse vertaling. 'Loser' is een bouwsteen en dit wordt met een substitutie een 'L' omdat je je vingers in de vorm van de L maakt als je iemand voor loser uitmaakt. Deze letter gaat 'in' de letters die we al hebben, waardoor je 'palin' krijgt. We voegen daar nog de 'laatste' letter van bouwsteen 'krachtmeting' aan toe. Dan krijg je als antwoord 'paling' en dit past met de definitie, want een paling is glibberig.", 
 },
 
+{
+    date: "2026-06-12",
+    clue: "Wij zijn bij familie even op Zweedse plein? (6)",
+    answer: "wespen",
+    hints: {
+      definitie: ["Wij zijn bij familie"],
+      indicatoren: ["even"], 
+      bouwstenen: ["Zweedse plein"],
+    },
+    explanation:
+      " De selectie-indicator 'even' geeft aan dat we de even letters van de bouwsteen 'Zweedse plein' moeten nemen. Als we de letters op positie 2, 4, 6, 8, 10 en 12 selecteren, krijgen we 'wespen'. Dit past bij de definitie 'wij zijn bij familie'. Wespen behoren namelijk tot dezelfde orde van insecten als bijen en kunnen daarom in losse zin als 'familie' van bijen worden beschouwd. Het vraagteken geeft aan dat de definitie niet helemaal letterlijk genomen hoeft te worden. Het is geen exacte omschrijving van het antwoord, maar eerder iets wat een wesp figuurlijk zou kunnen zeggen over haar relatie tot bijen: 'wij zijn bij familie'", 
+},
+
+{
+    date: "2026-06-13",
+    clue: "Dief is tegendraads binnen Duitsland in daadkrachtige actie (6)",
+    answer: "piraat",
+    hints: {
+      definitie: ["Dief"],
+      indicatoren: ["binnen Duitsland", "in"], 
+      bouwstenen: ["tegendraads", "daadkrachtige actie"],
+    },
+    explanation:
+      "De selectie-indicator 'binnen Duitsland'geeft aan dat we letters moeten nemen die binnen D…D staan. In de bouwsteen 'tegendraads'staan tussen de twee d's de letters 'raa'. Voor 'daadkrachtige actie' zoeken we een drieletterige substitutie: 'pit'. De insluitindicator 'in' geeft aan dat 'raa' in 'pit' geplaatst moet worden. Dat levert piraat op. Dit past bij de definitie: een piraat is een dief.", 
+},
 ]
