@@ -335,7 +335,7 @@ export const puzzles = [
 
 {
     date: "2026-06-13",
-    clue: "Dief is tegendraads binnen Duitsland in daadkrachtige actie (6)",
+    clue: "Dief is tegendraads binnen Duitsland in daadkrachtige actie. (6)",
     answer: "piraat",
     hints: {
       definitie: ["Dief"],
@@ -344,5 +344,18 @@ export const puzzles = [
     },
     explanation:
       "De selectie-indicator 'binnen Duitsland'geeft aan dat we letters moeten nemen die binnen D…D staan. In de bouwsteen 'tegendraads'staan tussen de twee d's de letters 'raa'. Voor 'daadkrachtige actie' zoeken we een drieletterige substitutie: 'pit'. De insluitindicator 'in' geeft aan dat 'raa' in 'pit' geplaatst moet worden. Dat levert piraat op. Dit past bij de definitie: een piraat is een dief.", 
+},
+
+{
+    date: "2026-06-14",
+    clue: "In een schilderachtig tafereel begint dit ondersteboven voor tor die hoorbaar een toets indrukt. (9)",
+    answer: "pittoresk",
+    hints: {
+      definitie: ["In een schilderachtig tafereel"],
+      indicatoren: ["begint", "ondersteboven", "voor", "hoorbaar"], 
+      bouwstenen: ["dit", "tor", "een toets indrukt"],
+    },
+    explanation:
+      "Deze puzzel bestaat naast de definitie uit drie onderdelen. Als eerste het stukje 'begint dit ondersteboven'. We pakken de eerste letter van het woord 'dit', de 'd', en als we die omdraaien krijg je 'pit'. Het tweede deel is 'voor tor', hierbij pakken we de letters 'tor' en ons eerste deel moet hiervoor. Dan het derde deel 'hoorbaar een toets indrukt'. 'hoorbaar' is een homofonie-indicator en we hebben dan een toets nodig met drie letters, want we missen nog drie letters voor ons antwoord. Je kan dan denken aan 'b' (klinkt als 'bee'), 'k' (klinkt als 'kaa') of een andere letter, maar in dit geval gaat het om 'esc', wat klinkt als 'esk'. Als we de drie delen samenvoegen, krijg je 'pittoresk' en dit past bij de definitie want een schilderachtig tafereel is pittoresk.", 
 },
 ]
