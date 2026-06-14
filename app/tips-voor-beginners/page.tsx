@@ -15,12 +15,14 @@ export default function TipsVoorBeginnersPage() {
           Gebruik de hints als je vastloopt. De hints zijn niet bedoeld als
           valsspelen, maar als hulpmiddel om te leren hoe cryptische puzzels
           werken. Hoe vaker je speelt, hoe minder vaak je ze nodig zult hebben.
+          We volgen een 'puzzel-ritme'; aan het begin van de week 
+          zijn de zinnen makkelijker op te lossen dan aan het einde. 
         </p>
 
         <p>
           Maak gebruik van het notitieblok. Soms helpt het om mogelijke letters,
           afkortingen of ideeën op te schrijven terwijl je nadenkt over een
-          oplossing.
+          oplossing. 
         </p>
 
         <p>

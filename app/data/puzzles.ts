@@ -358,4 +358,41 @@ export const puzzles = [
     explanation:
       "Deze puzzel bestaat naast de definitie uit drie onderdelen. Als eerste het stukje 'begint dit ondersteboven'. We pakken de eerste letter van het woord 'dit', de 'd', en als we die omdraaien krijg je 'pit'. Het tweede deel is 'voor tor', hierbij pakken we de letters 'tor' en ons eerste deel moet hiervoor. Dan het derde deel 'hoorbaar een toets indrukt'. 'hoorbaar' is een homofonie-indicator en we hebben dan een toets nodig met drie letters, want we missen nog drie letters voor ons antwoord. Je kan dan denken aan 'b' (klinkt als 'bee'), 'k' (klinkt als 'kaa') of een andere letter, maar in dit geval gaat het om 'esc', wat klinkt als 'esk'. Als we de drie delen samenvoegen, krijg je 'pittoresk' en dit past bij de definitie want een schilderachtig tafereel is pittoresk.", 
 },
+
+     { 
+    date: "2026-06-15", 
+    clue: "Droom omgeslagen door de dood. (5)", 
+    answer: "moord", 
+    hints: { 
+      definitie: ["de dood"], 
+      indicatoren: ["omgeslagen"],  
+      bouwstenen: ["Droom"],
+    }, 
+    explanation: 
+  "Deze puzzel bestaat uit drie delen. 'Droom' is de bouwsteen, daar moeten we iets mee doen. 'Omgeslagen' is een omdraai-indicator en die geeft aan dat we die bouwsteen andersom moeten zetten. Dan krijg je 'moord' en dit past bij het derde deel (de definitie) van de puzzel: 'de dood'.", 
+
+}, 
+     { 
+
+    date: "2026-06-16", 
+
+    clue: "Rijst zonder schil is koud. (3)", 
+
+    answer: "ijs", 
+
+    hints: { 
+
+      definitie: ["is koud"], 
+
+      indicatoren: ["zonder schil"],  
+
+      bouwstenen: ["Rijst"], 
+
+    }, 
+
+    explanation: 
+
+      "Als we beginnen bij de indicator 'zonder schil' dan zegt dat als weglaatindicator dat we van een bepaalde bouwsteen de schil eraf moeten halen. De schil van iets kan je zien als de buitenkanten, dus gaan we de buitenkanten van onze bouwsteen afhalen. Ons antwoord heeft drie letters en als we de buitenste letters van 'koud' afhalen, heb  je nog maar twee letters over, dus dat kan niet. De bouwsteen moet dan dus wel 'rijst' zijn. Als we de buitenste letters daarvan afhalen krijg je 'ijs' en dit past bij de definitie 'is koud'. ",  
+
+}, 
 ]
