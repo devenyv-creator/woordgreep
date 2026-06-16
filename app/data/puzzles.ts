@@ -395,4 +395,28 @@ export const puzzles = [
       "Als we beginnen bij de indicator 'zonder schil' dan zegt dat als weglaatindicator dat we van een bepaalde bouwsteen de schil eraf moeten halen. De schil van iets kan je zien als de buitenkanten, dus gaan we de buitenkanten van onze bouwsteen afhalen. Ons antwoord heeft drie letters en als we de buitenste letters van 'koud' afhalen, heb  je nog maar twee letters over, dus dat kan niet. De bouwsteen moet dan dus wel 'rijst' zijn. Als we de buitenste letters daarvan afhalen krijg je 'ijs' en dit past bij de definitie 'is koud'. ",  
 
 }, 
+
+     { 
+
+    date: "2026-06-17", 
+
+    clue: "Ontevreden Georgië mengt zich met deel van schoonmaken. (7)", 
+
+    answer: "ongemak", 
+
+    hints: { 
+
+      definitie: ["Ontevreden"], 
+
+      indicatoren: ["mengt zich met deel van"],  
+
+      bouwstenen: ["Georgië","schoonmaken"], 
+
+    }, 
+
+    explanation: 
+
+      "Vaak wordt er in deze puzzels gebruik gemaakt van afkortingen voor landen. We gebruiken dus 'GE' als substitutie voor 'Georgië'. Deze letters mengen zich met een deel van het woord 'schoonmaken'. We hebben zeven letters nodig dus zoeken we er nog vijf. Als je het middelste stuk pakt, heb je 'onmak'. Als je 'ge' hier mee mengt krijg je 'ongemak' en dit past bij de definitie ontevreden.",  
+
+}, 
 ]
