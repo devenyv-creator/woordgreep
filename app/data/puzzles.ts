@@ -419,4 +419,28 @@ export const puzzles = [
       "Vaak wordt er in deze puzzels gebruik gemaakt van afkortingen voor landen. We gebruiken dus 'GE' als substitutie voor 'Georgië'. Deze letters mengen zich met een deel van het woord 'schoonmaken'. We hebben zeven letters nodig dus zoeken we er nog vijf. Als je het middelste stuk pakt, heb je 'onmak'. Als je 'ge' hier mee mengt krijg je 'ongemak' en dit past bij de definitie ontevreden.",  
 
 }, 
+
+     { 
+
+    date: "2026-06-18", 
+
+    clue: "Magiër start van de middellijn met 't voetbal. Vrij spel tussen Oscar en Victor (8)", 
+
+    answer: "tovenaar", 
+
+    hints: { 
+
+      definitie: ["Magiër"], 
+
+      indicatoren: ["start van de", "met", "Vrij spel tussen"],  
+
+      bouwstenen: ["middellijn", "'t", "voetbal", "Oscar en Victor"], 
+
+    }, 
+
+    explanation: 
+
+      "Dit is een puzzel met veel substituties, wat het best lastig kan maken. Als eerste de substitutie voor 'middellijn': dit gaat om de middellijn van de aarde, de evenaar. De start van dit woord is met 't voetbal. De t nemen we letterlijk over en 'voetbal' substitueren we met een O (vanwege de vorm van een voetbal). Als je deze delen bij elkaar voegt, krijg je 'toevenaar'. Dan kun je er al een beetje in herkennen wat het antwoord zal zijn, maar om compleet te zijn, maken we het wel even af. 'Vrij spel tussen Oscar en Victor' houdt in dat we de letters tussen de O en de V uit het NAVO-alfabet moeten verwijderen. Als we dat doen en de e weglaten, krijg je 'tovenaar' en dit past bij de definitie 'Magiër'.",  
+
+}, 
 ]
