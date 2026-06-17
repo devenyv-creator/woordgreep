@@ -424,7 +424,7 @@ export const puzzles = [
 
     date: "2026-06-18", 
 
-    clue: "Magiër start van de middellijn met 't voetbal. Vrij spel tussen Oscar en Victor (8)", 
+    clue: "Magiër start van de middellijn met 't voetbal. Vrij spel tussen Oscar en Victor. (8)", 
 
     answer: "tovenaar", 
 
