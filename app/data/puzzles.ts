@@ -442,5 +442,30 @@ export const puzzles = [
 
       "Dit is een puzzel met veel substituties, wat het best lastig kan maken. Als eerste de substitutie voor 'middellijn': dit gaat om de middellijn van de aarde, de evenaar. De start van dit woord is met 't voetbal. De t nemen we letterlijk over en 'voetbal' substitueren we met een O (vanwege de vorm van een voetbal). Als je deze delen bij elkaar voegt, krijg je 'toevenaar'. Dan kun je er al een beetje in herkennen wat het antwoord zal zijn, maar om compleet te zijn, maken we het wel even af. 'Vrij spel tussen Oscar en Victor' houdt in dat we de letters tussen de O en de V uit het NAVO-alfabet moeten verwijderen. Als we dat doen en de e weglaten, krijg je 'tovenaar' en dit past bij de definitie 'Magiër'.",  
 
+},
+
+ 
+{ 
+
+    date: "2026-06-19", 
+
+    clue: "Nederlandse buren zijn nog maar kort rijk door start familie firma. (7)", 
+
+    answer: "bedrijf", 
+
+    hints: { 
+
+      definitie: ["firma"], 
+
+      indicatoren: ["zijn nog maar kort","start"],  
+
+      bouwstenen: ["Nederlandse buren", "rijk", "familie"], 
+
+    }, 
+
+    explanation: 
+
+      "Wat fijn voor de buren. De buren van Nederland zijn België en Duitsland en afgekort zijn dat 'Be' en 'D'. Selectie-indicator 'kort' geeft aan dat we maar een deel van het hele woord 'rijk' nodig hebben, er staat niet aangegeven hoe kort dit moet zijn, dus hier kan je verschillende opties proberen of eerst de rest van het antwoord zoeken. In dit geval is het stukje dat we nodig hebben 'rij'. We eindigen met de start van 'familie', en dat is de letter 'f'. Als we alle stukje bij elkaar voegen krijg je 'bedrijf' en dit past bij de definitie 'firma'.",  
+
 }, 
 ]
