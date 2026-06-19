@@ -468,4 +468,26 @@ export const puzzles = [
       "Wat fijn voor de buren. De buren van Nederland zijn België en Duitsland en afgekort zijn dat 'Be' en 'D'. Selectie-indicator 'kort' geeft aan dat we maar een deel van het hele woord 'rijk' nodig hebben, er staat niet aangegeven hoe kort dit moet zijn, dus hier kan je verschillende opties proberen of eerst de rest van het antwoord zoeken. In dit geval is het stukje dat we nodig hebben 'rij'. We eindigen met de start van 'familie', en dat is de letter 'f'. Als we alle stukje bij elkaar voegen krijg je 'bedrijf' en dit past bij de definitie 'firma'.",  
 
 }, 
+{ 
+
+    date: "2026-06-20", 
+
+    clue: "Gevleugelde vlo in de ruimte hoeft geen helm te dragen. (7)", 
+
+    answer: "vlinder", 
+
+    hints: { 
+
+      definitie: ["Gevleugelde"], 
+
+      indicatoren: ["te dragen", "geen"],  
+
+      bouwstenen: ["vlo in de ruimte", "helm"], 
+
+    }, 
+
+    explanation: 
+
+      "'Te dragen' is een verborgen woordindicator, je kijkt dan in de bouwsteen 'vlo in de ruimte'. Hier komt alleen nog geen logisch antwoord van zeven letters uit. Je moet namelijk nog de 'ruimte-helm' uit het woord halen; de letter 'o'. Die zien we in het woord 'vlo'. Als je zonder de 'o' opzoek gaat naar een woord in de bouwsteen dan kan je het woord 'vlinder' vinden, en dit sluit aan bij de definitie 'gevleugelde'."
+}, 
 ]
