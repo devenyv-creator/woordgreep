@@ -490,4 +490,119 @@ export const puzzles = [
 
       "'Te dragen' is een verborgen woordindicator, je kijkt dan in de bouwsteen 'vlo in de ruimte'. Hier komt alleen nog geen logisch antwoord van zeven letters uit. Je moet namelijk nog de 'ruimte-helm' uit het woord halen; de letter 'o'. Die zien we in het woord 'vlo'. Als je zonder de 'o' opzoek gaat naar een woord in de bouwsteen dan kan je het woord 'vlinder' vinden, en dit sluit aan bij de definitie 'gevleugelde'."
 }, 
+
+     { 
+
+    date: "2026-06-21", 
+
+    clue: "Kapper knipt fout na echo op Zwitserlandse stadsakker. (10)", 
+
+    answer: "houthakker", 
+
+    hints: { 
+
+      definitie: ["kapper"], 
+
+      indicatoren: ["knipt", "na"],  
+
+      bouwstenen: ["fout", "echo", "Zwitserlandse", "stadsakker"], 
+
+    }, 
+
+    explanation: 
+
+      "Eigenlijk is deze puzzel niet ingewikkeld, er is namelijk maar één echte indicator die we moeten toepassen op alle bouwstenen. De indicator is een weglaatindicator 'knipt', deze houdt in dat we de eerste helft van alle bouwstenen verwijderen. 'fout' wordt 'ut' moet na het woord 'echo' wat 'ho' wordt. Zwitserland met landcode 'ch' wordt 'h' en 'stadsakker' wordt 'akker'. Voegen we deze vier stukjes samen, dan krijg je 'houthakker' en dit past bij de definitie 'kapper'. ",  
+
+}, 
+     { 
+
+    date: "2026-06-22", 
+
+    clue: "Een herroepen afwijzing. (3)", 
+
+    answer: "nee", 
+
+    hints: { 
+
+      definitie: ["afwijzing"], 
+
+      indicatoren: ["herroepen"],  
+
+      bouwstenen: ["Een"], 
+
+    }, 
+
+    explanation: "Deze puzzel bestaat uit drie woorden. 'Een' is de bouwsteen, daar moeten we iets mee doen. 'herroepen'is een omdraai-indicator en die geeft aan dat we die bouwsteen andersom moeten zetten. Dan krijg je 'nee' en dit past bij het derde woord (de definitie) van de puzzel: 'afwijzing'.",  
+
+}, 
+     { 
+
+    date: "2026-06-23", 
+
+    clue: "Rijst zit vast in rand van de gootsteenkraan. (5)", 
+
+    answer: "graan", 
+
+    hints: { 
+
+      definitie: ["Rijst"], 
+
+      indicatoren: ["zit vast in", "rand"],  
+
+      bouwstenen: ["gootsteenkraan"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel combineren we twee indicatoren, namelijk een selectie-indicator en een verborgen-woordindicator, maar eigenlijk doen ze beiden hetzelfde. Ze geven namelijk aan dat we de buitenkanten, dus de eerste een laatste letters, van 'gootsteenkraan' nodig hebben. Het antwoord is 5 letters lang, dus kunnen we verschillende opties proberen, de opties zijn 1 letter aan de ene kant en 4 aan de andere, 2 om 3, 3 om 2 of 4 om 1. Als we de eerste letter en de laatste vier pakken krijg je 'graan' en dit past bij de definitie want rijst is een graan. ",  
+
+}, 
+     { 
+
+    date: "2026-06-24", 
+
+    clue: "Deel van horeca baalt uitgesproken van geluidsoverlast. (6)", 
+
+    answer: "kabaal", 
+
+    hints: { 
+
+      definitie: ["geluidsoverlast"], 
+
+      indicatoren: ["Deel van", "uitgesproken"],  
+
+      bouwstenen: ["horeca baalt"], 
+
+    }, 
+
+    explanation: 
+
+      "We hebben hier te maken met een verborgen-woordindicator en een homofoon-indicator. In de woorden 'horeca baalt', kan je 'cabaal' halen. Als je dit uitspreekt klinkt het hetzelfde als het antwoord 'kabaal' en dit past bij de definitie geluidsoverlast.",  
+
+}, 
+     { 
+
+    date: "2026-06-25", 
+
+    clue: "Wij denken onterecht dat de tegenstander slecht is omdat zij ontregeld achterstonden (13)", 
+
+    answer: "Onderschatten", 
+
+    hints: { 
+
+      definitie: ["Wij denken onterecht dat de tegenstander slecht is"], 
+
+      indicatoren: ["ontregeld"],  
+
+      bouwstenen: ["achterstonden"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is de definite erg lang en dat kan verwarring zaaien. De woordspeling zelf is vrij eenvoudig: 'ontregeld' geeft aan dat de letters gehusseld zijn en we dus een anagram nodig hebben. Een anagram van 'achterstonden' is 'onderschatten' en dit past bij de definitie 'wij denken onterecht dat de tegenstander slecht is'.",  
+
+}, 
+
 ]
