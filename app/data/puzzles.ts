@@ -501,7 +501,7 @@ export const puzzles = [
 
     hints: { 
 
-      definitie: ["kapper"], 
+      definitie: ["Kapper"], 
 
       indicatoren: ["knipt", "na"],  
 
