@@ -28,13 +28,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="nl">
-      <head>
-        <Script id="grow-me" strategy="afterInteractive">
+      <body className={alegreya.variable}>
+        {children}
+
+        <Analytics />
+        <GoogleAnalytics gaId="G-5Q453WR3BZ" />
+
+        {/* Journey by Mediavine */}
+        <Script
+          id="grow-me"
+          data-grow-initializer=""
+          strategy="afterInteractive"
+        >
           {`
             !(function(){
               window.growMe || (
@@ -59,18 +69,14 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google AdSense */}
         <Script
+          id="adsense-script"
           async
           strategy="afterInteractive"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828611231115211"
         />
-      </head>
-
-      <body className={alegreya.variable}>
-        {children}
-        <Analytics />
-        <GoogleAnalytics gaId="G-5Q453WR3BZ" />
       </body>
     </html>
   );
