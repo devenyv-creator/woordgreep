@@ -31,22 +31,47 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-return (
-  <html lang="nl">
-    <head>
-      <Script
-        async
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828611231115211"
-      />
-    </head>
+  return (
+    <html lang="nl">
+      <body className={alegreya.variable}>
+        {children}
 
-    <body className={alegreya.variable}>
-      {children}
-      <Analytics />
-    </body>
+        <Analytics />
 
-    <GoogleAnalytics gaId="G-5Q453WR3BZ" />
-  </html>
-);}
+        <GoogleAnalytics gaId="G-5Q453WR3BZ" />
+
+        <Script
+          async
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828611231115211"
+        />
+
+        <Script id="grow-me" strategy="afterInteractive">
+          {`
+            !(function(){
+              window.growMe || (
+                (window.growMe = function(e){
+                  window.growMe._.push(e);
+                }),
+                (window.growMe._ = [])
+              );
+
+              var e = document.createElement("script");
+              e.type = "text/javascript";
+              e.src = "https://faves.grow.me/main.js";
+              e.defer = true;
+              e.setAttribute(
+                "data-grow-faves-site-id",
+                "U2l0ZTpkMzhmMjZhNC03Y2RiLTRiYTktYmVkZS1iNGRiYmZkZDQ5NDM="
+              );
+
+              var t = document.getElementsByTagName("script")[0];
+              t.parentNode.insertBefore(e, t);
+            })();
+          `}
+        </Script>
+      </body>
+    </html>
+  );
+}
