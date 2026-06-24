@@ -33,20 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body className={alegreya.variable}>
-        {children}
-
-        <Analytics />
-
-        <GoogleAnalytics gaId="G-5Q453WR3BZ" />
-
-        <Script
-          async
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828611231115211"
-        />
-
+      <head>
         <Script id="grow-me" strategy="afterInteractive">
           {`
             !(function(){
@@ -71,6 +58,19 @@ export default function RootLayout({
             })();
           `}
         </Script>
+
+        <Script
+          async
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828611231115211"
+        />
+      </head>
+
+      <body className={alegreya.variable}>
+        {children}
+        <Analytics />
+        <GoogleAnalytics gaId="G-5Q453WR3BZ" />
       </body>
     </html>
   );
