@@ -33,43 +33,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
+      <head>
+        <script
+          data-grow-initializer=""
+          dangerouslySetInnerHTML={{
+            __html: `!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpkMzhmMjZhNC03Y2RiLTRiYTktYmVkZS1iNGRiYmZkZDQ5NDM=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();`,
+          }}
+        />
+      </head>
+
       <body className={alegreya.variable}>
         {children}
 
         <Analytics />
         <GoogleAnalytics gaId="G-5Q453WR3BZ" />
 
-        {/* Journey by Mediavine */}
-        <Script
-          id="grow-me"
-          data-grow-initializer=""
-          strategy="afterInteractive"
-        >
-          {`
-            !(function(){
-              window.growMe || (
-                (window.growMe = function(e){
-                  window.growMe._.push(e);
-                }),
-                (window.growMe._ = [])
-              );
-
-              var e = document.createElement("script");
-              e.type = "text/javascript";
-              e.src = "https://faves.grow.me/main.js";
-              e.defer = true;
-              e.setAttribute(
-                "data-grow-faves-site-id",
-                "U2l0ZTpkMzhmMjZhNC03Y2RiLTRiYTktYmVkZS1iNGRiYmZkZDQ5NDM="
-              );
-
-              var t = document.getElementsByTagName("script")[0];
-              t.parentNode.insertBefore(e, t);
-            })();
-          `}
-        </Script>
-
-        {/* Google AdSense */}
         <Script
           id="adsense-script"
           async
