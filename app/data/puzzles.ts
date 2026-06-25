@@ -605,4 +605,76 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-06-26", 
+
+    clue: "Docent gebruikt formule en rekent som juist uit: 27 + 5 + 9. (3)", 
+
+    answer: "juf", 
+
+    hints: { 
+
+      definitie: ["Docent"], 
+
+      indicatoren: ["27 + 5 + 9"],  
+
+      bouwstenen: ["gebruikt formule en rekent som uit"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel gebruikt één redelijk simpele selectie-indicator, maar om die te vinden en toe te passen kan nog best ingewikkeld zijn. De cijfers in de rekensom zijn de posities van de letters die geselecteerd moeten worden uit de bouwsteen 'gebruikt formule en rekent som juist uit'. De 27ste letter is de 'j', de 5de letter is de 'u' en de 9de letter is de 'f'. Voeg dit samen en je krijgt 'juf' en dit past bij de definitie 'docent'.",  
+
+}, 
+     { 
+
+    date: "2026-06-27", 
+
+    clue: "Eiffeltoren in prijs inbegrepen bij Franse bestemming. (6)", 
+
+    answer: "parijs", 
+
+    hints: { 
+
+      definitie: ["Franse bestemming"], 
+
+      indicatoren: ["in", "inbegrepen"],  
+
+      bouwstenen: ["Eiffeltoren", "prijs"], 
+
+    }, 
+
+    explanation: 
+
+      "De sleutel van deze puzzel is de substitutie voor Eiffeltoren. 'inbegrepen' geeft als insluitindicator namelijk aan dat er een bouwsteen binnen de bouwsteen 'prijs' moet worden toegevoegd. Omdat ons antwoord 6 letters nodig heeft, moet er één letter toegevoegd worden. De substitutie die we moeten toepassen gaat over de vorm van de eiffeltoren, deze lijkt namelijk op de letter 'A'. Als we de letter 'a' toevoegen aan het woord 'prijs' krijgen we 'parijs' als antwoord en dit past bij de definitie 'Franse bestemming'.",  
+
+}, 
+
+     { 
+
+    date: "2026-06-28", 
+
+    clue: "Monument had men niet verward voor oever zonder oorsprong in Estland, een echt hoogtepunt. (5, 7)", 
+
+    answer: "Mount Everest", 
+
+    hints: { 
+
+      definitie: ["een echt hoogtepunt"], 
+
+      indicatoren: ["niet", "verward", "voor", "zonder oorsprong"],  
+
+      bouwstenen: ["Monument", "oever", "Estland"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel bestaat uit drie delen en een definitie. De definitie is 'een echt hoogtepunt', maar dat kan zo veel dingen zijn, dus daar hebben we nog weinig aan. Het eerste deel is 'monument had men niet verward'. De weglaatindicator 'niet' geeft aan dat we bouwsteen 'men' uit bouwsteen 'monument' moeten halen, waardoor we 'monut' overhouden. 'Verward' geeft dan als anagramindicator aan dat we die letters moeten husselen en dan krijg je 'mount' als eerste deel van het antwoord. 'oever zonder oorsprong' is het tweede deel van het antwoord. Dit houdt simpelweg in dat we bouwsteen 'oever' moeten gebruiken zonder de eerste letter, dus 'ever'. Het laatste deel is 'Estland' en daar pakken de landcode van als substitutie, dit is 'est'. Als we de drie delen samenvoegen, krijg je 'mount everest' en dit past bij de definitie 'hoogtepunt'.",  
+
+}, 
+
+
 ]
