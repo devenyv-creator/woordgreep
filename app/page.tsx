@@ -1089,18 +1089,22 @@ const stickyNoteStyle: CSSProperties = {
 
 const noteIconButton: CSSProperties = {
   position: "absolute",
-  right: "10px",
-  bottom: "10px",
-  width: "42px",
-  height: "42px",
+  right: "4px",      // was 10px
+  bottom: "8px",     // was 10px
+
+  width: "36px",     // was 42px
+  height: "36px",
+
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "12px",
+
+  borderRadius: "10px",
   border: "2px solid rgba(109,40,217,0.22)",
   background: "rgba(255,255,255,0.96)",
   color: "#6d28d9",
-  fontSize: "20px",
+
+  fontSize: "18px",  // was 20px
   lineHeight: 1,
   cursor: "pointer",
   boxShadow: "0 5px 12px rgba(76, 29, 149, 0.12)",
