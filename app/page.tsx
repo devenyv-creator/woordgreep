@@ -1148,25 +1148,27 @@ const letterInputWrapper: CSSProperties = {
 
 const letterInputStyle: CSSProperties = {
   display: "grid",
-  gap: "10px",
-  justifyContent: "center",
-  width: "fit-content",
+  gap: "3px",
+  width: "100%",
+  maxWidth: "640px",
   margin: "0 auto",
 };
 
 const letterBoxStyle: CSSProperties = {
-  width: "clamp(48px, 11vw, 64px)",
+  width: "100%",
   aspectRatio: "1 / 1",
+  minWidth: 0,
   border: "3px solid #8b5cf6",
-  borderRadius: "14px",
+  borderRadius: "8px",
   textAlign: "center",
-  fontSize: "clamp(22px, 6vw, 30px)",
+  fontSize: "clamp(15px, 4vw, 28px)",
   fontWeight: 800,
   color: "#2b2118",
   background: "white",
   fontFamily: "var(--font-alegreya), serif",
   outline: "none",
   boxSizing: "border-box",
+  padding: 0,
 };
 
 const smallResetButton: CSSProperties = {

@@ -585,7 +585,7 @@ export const puzzles = [
 
     date: "2026-06-25", 
 
-    clue: "Wij denken onterecht dat de tegenstander slecht is omdat zij ontregeld achterstonden (13)", 
+    clue: "Wij denken onterecht dat de tegenstander slecht is omdat zij ontregeld achterstonden. (13)", 
 
     answer: "Onderschatten", 
 
