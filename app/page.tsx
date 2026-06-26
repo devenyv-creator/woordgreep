@@ -811,8 +811,11 @@ function goToPreviousPuzzle() {
               <div
                 style={{
                   ...letterInputStyle,
-                  gridTemplateColumns: `repeat(${puzzle.answer.length}, minmax(0, 1fr))`,
-                }}
+                  gridTemplateColumns: `repeat(${puzzle.answer.length}, minmax(0, ${
+    puzzle.answer.length <= 5 ? "58px" : "1fr"
+  }))`,
+  maxWidth: puzzle.answer.length <= 5 ? "220px" : "100%",
+}}
               >
                 {puzzle.answer.split("").map((_, index) => (
                   <input
@@ -1152,9 +1155,8 @@ const letterInputWrapper: CSSProperties = {
 
 const letterInputStyle: CSSProperties = {
   display: "grid",
-  gap: "3px",
+  gap: "4px",
   width: "100%",
-  maxWidth: "640px",
   margin: "0 auto",
 };
 
@@ -1163,9 +1165,9 @@ const letterBoxStyle: CSSProperties = {
   aspectRatio: "1 / 1",
   minWidth: 0,
   border: "3px solid #8b5cf6",
-  borderRadius: "8px",
+  borderRadius: "10px",
   textAlign: "center",
-  fontSize: "clamp(15px, 4vw, 28px)",
+  fontSize: "clamp(16px, 4vw, 28px)",
   fontWeight: 800,
   color: "#2b2118",
   background: "white",
