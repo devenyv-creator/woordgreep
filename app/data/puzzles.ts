@@ -676,5 +676,29 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-06-29", 
+
+    clue: "Net heeft 'em gevangen en gegrepen. (5)",
+
+    answer: "neemt", 
+
+    hints: { 
+
+      definitie: ["gegrepen"], 
+
+      indicatoren: ["heeft", "gevangen"],  
+
+      bouwstenen: ["Net", "'em"], 
+
+    }, 
+
+    explanation: 
+
+      "De indicator 'gevangen' is een insluitindicator. Het houdt in dat een bouwsteen een andere bouwsteen in zich neemt. De letters van bouwsteen 'em' komen dus terecht in bouwsteen 'net'. Als je dat doet krijg je 'neemt' en dit past bij de definitie 'gegrepen'.",  
+
+}, 
+
 
 ]
