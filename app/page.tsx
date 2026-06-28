@@ -783,34 +783,37 @@ function goToPreviousPuzzle() {
               </div>
             </div>
 
-            <div style={letterInputWrapper}>
-              <div
-                style={{
-                  ...letterInputStyle,
-                  gridTemplateColumns: `repeat(${puzzle.answer.length}, minmax(0, ${
-    puzzle.answer.length <= 5 ? "58px" : "1fr"
-  }))`,
-  maxWidth: puzzle.answer.length <= 5 ? "220px" : "100%",
-}}
-              >
-                {puzzle.answer.split("").map((_, index) => (
-                  <input
-                    key={`${puzzle.date}-input-${index}`}
-                    ref={(element) => {
-                      inputRefs.current[index] = element;
-                    }}
-                    value={guess[index]?.trim() ?? ""}
-                    onChange={(event) => updateLetter(event.target.value, index)}
-                    onKeyDown={(event) => handleLetterKeyDown(event, index)}
-                    onFocus={(event) => event.target.select()}
-                    maxLength={1}
-                    disabled={isSolved}
-                    style={letterBoxStyle}
-                    aria-label={`Letter ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
+  <div style={letterInputWrapper}>
+  <div
+    style={{
+      ...letterInputStyle,
+      gridTemplateColumns: `repeat(${puzzle.answer.length}, minmax(0, ${
+        puzzle.answer.length <= 8 ? "58px" : "1fr"
+      }))`,
+      maxWidth:
+        puzzle.answer.length <= 8
+          ? `${puzzle.answer.length * 64}px`
+          : "100%",
+    }}
+  >
+    {puzzle.answer.split("").map((_, index) => (
+      <input
+        key={`${puzzle.date}-input-${index}`}
+        ref={(element) => {
+          inputRefs.current[index] = element;
+        }}
+        value={guess[index]?.trim() ?? ""}
+        onChange={(event) => updateLetter(event.target.value, index)}
+        onKeyDown={(event) => handleLetterKeyDown(event, index)}
+        onFocus={(event) => event.target.select()}
+        maxLength={1}
+        disabled={isSolved}
+        style={letterBoxStyle}
+        aria-label={`Letter ${index + 1}`}
+      />
+    ))}
+  </div>
+</div>
 
             {!isSolved && (
               <button onClick={checkAnswer} style={wideCheckButton}>
