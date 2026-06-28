@@ -656,9 +656,9 @@ export const puzzles = [
 
     date: "2026-06-28", 
 
-    clue: "Monument had men niet verward voor oever zonder oorsprong in Estland, een echt hoogtepunt. (5, 7)", 
+    clue: "Monument had men niet verward voor oever zonder oorsprong in Estland, een echt hoogtepunt. (5, 7) - let op: schrijf het antwoord aan elkaar",
 
-    answer: "Mount Everest", 
+    answer: "mounteverest", 
 
     hints: { 
 
