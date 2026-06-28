@@ -230,8 +230,7 @@ export default function Home() {
   const isFirstPuzzle = selectedDateKey === FIRST_PUZZLE_DATE;
   const isArchivePuzzle = selectedDateKey < todayKey;
 
-  const archiveIsLocked =
-    isArchivePuzzle && !unlockedArchiveDates.has(selectedDateKey);
+  const archiveIsLocked = false;
 
 const currentPuzzleIsLocked = archiveIsLocked;
 
@@ -736,25 +735,6 @@ function goToPreviousPuzzle() {
 
         {!puzzle ? (
           <div style={infoBox}>Voor deze datum staat nog geen puzzel klaar.</div>
-        ) : archiveIsLocked ? (
-          <div style={lockedArchiveStyle}>
-            <h2 style={lockedTitleStyle}>🔒 Archiefpuzzel</h2>
-
-            <p style={lockedTextStyle}>
-              Bekijk een korte advertentie en speel vanaf deze puzzel 5
-              archiefpuzzels vrij.
-            </p>
-
-            <button
-              onClick={unlockArchiveWithAd}
-              disabled={isWatchingAd}
-              style={primaryButton}
-            >
-              {isWatchingAd ? "Advertentie laden..." : "▶ Bekijk advertentie"}
-            </button>
-
-            <div style={messageStyle}>{message}</div>
-          </div>
         ) : (
           <>
             <div style={stickyWrapStyle}>
@@ -802,10 +782,6 @@ function goToPreviousPuzzle() {
                 )}
               </div>
             </div>
-
-            {isArchivePuzzle && (
-              <div style={archiveUnlockedStyle}>✨ Archief ontgrendeld</div>
-            )}
 
             <div style={letterInputWrapper}>
               <div
