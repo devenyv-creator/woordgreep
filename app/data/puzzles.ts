@@ -700,5 +700,29 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-06-30", 
+
+    clue: "Overeenkomst tussen wij en zij: hardop eten. (2)", 
+
+    answer: "ei", 
+
+    hints: { 
+
+      definitie: ["eten"], 
+
+      indicatoren: ["Overeenkomst tussen", "hardop"],  
+
+      bouwstenen: ["wij", "zij"], 
+
+    }, 
+
+    explanation: 
+
+      "De overeenkomst tussen wij en zij zijn de letter ij. Als je deze hardop uitspreekt, klinkt het ook als 'ei' en dit past bij de definitie 'eten'.",  
+
+}, 
+
 
 ]
