@@ -724,5 +724,28 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-07-01", 
+
+    clue: "De laatste loodjes wegen nu het zwaarst bij gekke actie. (5)", 
+
+    answer: "stunt", 
+
+    hints: { 
+
+      definitie: ["actie"], 
+
+      indicatoren: ["laatste", "gekke"],  
+
+      bouwstenen: ["loodjes wegen nu het zwaarst"], 
+
+    }, 
+
+    explanation: 
+
+      "We hebben hier te maken met een selectie-indicator en een anagramindicator. Als je de laatste letters van de woorden na de indicator 'laatste' pakt dan krijg je 's, n, u, t en t'. Als je de letters door elkaar husselt (aangegeven door gekke) krijg je het woord 'stunt' en dit past bij de definitie actie.",  
+
+}, 
 
 ]
