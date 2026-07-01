@@ -748,4 +748,30 @@ export const puzzles = [
 
 }, 
 
+ 
+
+     { 
+
+    date: "2026-07-02", 
+
+    clue: "Strandbericht: verwarde man steekt parasol in de fik. (13)", 
+
+    answer: "brandstichter", 
+
+    hints: { 
+
+      definitie: ["man steekt parasol in de fik"], 
+
+      indicatoren: ["verwarde"],  
+
+      bouwstenen: ["Strandbericht"], 
+
+    }, 
+
+    explanation: 
+
+      "We hebben hier weer te maken met een 'simpele' puzzel met maar één indicator en één bouwsteen. De indicator 'verwarde' geeft aan dat we de letters in bouwsteen 'strandbericht' moeten husselen. Als je dat doet krijg je als antwoord 'brandstichter' en dit past bij de definitie 'man steekt parasol in de fik'.",  
+
+}, 
+
 ]
