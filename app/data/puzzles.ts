@@ -788,7 +788,7 @@ export const puzzles = [
     hints: { 
 
       definitie: ["Huilbui"], 
-, 
+      
       indicatoren: ["vangt", "gekke", "zonder", "einde"],  
 
       bouwstenen: ["aan", "start", "dwaas"], 
