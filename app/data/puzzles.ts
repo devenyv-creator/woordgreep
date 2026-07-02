@@ -774,4 +774,32 @@ export const puzzles = [
 
 }, 
 
+
+ 
+
+     { 
+
+    date: "2026-07-03", 
+
+    clue: "Huilbui vangt aan met gekke start, maar zonder dwaas einde. (6)", 
+
+    answer: "traant", 
+
+    hints: { 
+
+      definitie: ["Huilbui"], 
+, 
+      indicatoren: ["vangt", "gekke", "zonder", "einde"],  
+
+      bouwstenen: ["aan", "start", "dwaas"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel kan je een beetje op het verkeerde been zetten omdat het niet altijd even duidelijk is welke indicator precies welke functie hebben en sommige woorden kunnen een indicator zijn, maar ook een bouwsteen. 'Vangt aan' zou een selectie-indicator kunnen zijn, maar in deze puzzel is 'vangt' de een insluitindicator en 'aan' is de bouwsteen. Om deze bouwsteen moeten de letters van het woord 'start', wat hier dus ook geen indicator is, maar een bouwsteen. De letters van 'start' moeten wel eerst gehusseld worden, zoals aangegeven door de indicator 'gekke'. Ook moeten er nog twee letters af, omdat we voor ons antwoord, maar 6 letters nodig hebben. De letters die eraf moeten zijn de twee letters aan het einde van het woord dwaas, zoals aangegeven door de indicatoren 'zonder' en 'einde'. In een andere puzzel zou dwaas een anagram-indicator zijn, maar nu is het dus een bouwsteen. Als je dus het woord 'aan' omringt met de gehusselde letters van 'start' zonder 'as', dan krijg je 'traant' als antwoord en dit past bij de definitie 'huilbui'.",  
+
+}, 
+
+
 ]
