@@ -818,7 +818,7 @@ export const puzzles = [
       
       indicatoren: ["begint met", "afgekapte", "gekke"],  
 
-      bouwstenen: ["Brittanië", "reden"], 
+      bouwstenen: ["Brittannië", "reden"], 
 
     }, 
 
