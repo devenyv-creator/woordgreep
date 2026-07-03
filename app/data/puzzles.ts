@@ -808,7 +808,7 @@ export const puzzles = [
 
     date: "2026-07-04", 
 
-    clue: "Groot Britannië begint met afgekapte, gekke reden. (5)", 
+    clue: "Groot Brittannië begint met afgekapte, gekke reden. (5)", 
 
     answer: "breed", 
 
@@ -824,7 +824,7 @@ export const puzzles = [
 
     explanation: 
 
-      "Bij deze puzzel ligt de complexiteit in de definitie. Waar het verleidelijk is om 'Groot Brittanië' aan elkaar te lezen, moet je deze los van elkaar zien. 'Groot' is de defintie en 'Brittanië' is een bouwsteen. De selectie-indicator 'begint' geeft aan dat je de letter 'b' van 'Brittanië' nodig hebt. Daarna hebben we de combinatie van 'afgekapte' en 'gekke'. Deze geven aan dat we de 'n' van 'reden' moeten weglaten en we de rest moeten husselen. Als we dat doen en we zetten de 'b' van 'Brittanië' ervoor krijg je 'breed' en dit past bij de definitie 'groot'.",  
+      "Bij deze puzzel ligt de complexiteit in de definitie. Waar het verleidelijk is om 'Groot Brittannië' aan elkaar te lezen, moet je deze los van elkaar zien. 'Groot' is de defintie en 'Brittannië' is een bouwsteen. De selectie-indicator 'begint' geeft aan dat je de letter 'b' van 'Brittannië' nodig hebt. Daarna hebben we de combinatie van 'afgekapte' en 'gekke' als indicatoren. Deze geven aan dat we de 'n' van bouwsteen 'reden' moeten weglaten en we de rest moeten husselen. Als we dat doen en we zetten de 'b' van 'Brittannië' ervoor krijg je 'breed' en dit past bij de definitie 'groot'.",  
 
 }, 
 
