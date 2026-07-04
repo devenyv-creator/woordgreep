@@ -827,7 +827,29 @@ export const puzzles = [
       "Bij deze puzzel ligt de complexiteit in de definitie. Waar het verleidelijk is om 'Groot Brittannië' aan elkaar te lezen, moet je deze los van elkaar zien. 'Groot' is de defintie en 'Brittannië' is een bouwsteen. De selectie-indicator 'begint' geeft aan dat je de letter 'b' van 'Brittannië' nodig hebt. Daarna hebben we de combinatie van 'afgekapte' en 'gekke' als indicatoren. Deze geven aan dat we de 'n' van bouwsteen 'reden' moeten weglaten en we de rest moeten husselen. Als we dat doen en we zetten de 'b' van 'Brittannië' ervoor krijg je 'breed' en dit past bij de definitie 'groot'.",  
 
 }, 
+     { 
 
+    date: "2026-07-05", 
+
+    clue: "Ik pas niet in de kleine broek die ik voor de kart om moet doen. (5)", 
+
+    answer: "strak", 
+
+    hints: { 
+
+      definitie: ["Ik pas niet in"], 
+
+      indicatoren: ["voor", "om moet doen"],  
+
+      bouwstenen: ["de kleine broek", "kart"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel bestaat uit twee delen. Het is handig om bij het tweede deel te beginnen en dat is 'kart om moet doen', wat betekent dat je bouwsteen 'kart' om moet draaien waarmee je 'trak' krijgt. We missen dan nog één letter voor ons antwoord die voor de 'trak' komt te staan. We moeten dus uit het eerste deel 'de kleine broek' één letter halen. Er staan geen duidelijke indicatoren in dit deel, dus gaan we uit van een substitutie. Als je een kleine broek koopt, dan heeft dat in de winkel maat S, dus substituëren we de kleine broek voor 's'. Als je dat doet en je voegt de twee delen samen krijg je 'strak' en dit past bij de definitie 'ik pas niet'.",  
+
+}, 
 
 
 ]
