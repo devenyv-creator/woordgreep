@@ -855,7 +855,7 @@ export const puzzles = [
 
     date: "2026-07-06", 
 
-    clue: "Ver van een afschuwelijk begin van eerste vier tandartsbezoeken. (7)", 
+    clue: "Ver van een afschuwelijk begin voor eerste vier tandartsbezoeken. (7)", 
 
     answer: "afstand", 
 
@@ -863,7 +863,7 @@ export const puzzles = [
 
       definitie: ["Ver van"], 
 
-      indicatoren: ["begin", "eerste vier"],  
+      indicatoren: ["begin", " voor eerste vier"],  
 
       bouwstenen: ["afschuwelijk", "tandartsbezoeken"], 
 
