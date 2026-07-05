@@ -851,5 +851,27 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-07-06", 
+
+    clue: "Ver van een afschuwelijk begin van eerste vier tandartsbezoeken. (7)", 
+
+    answer: "afstand", 
+
+    hints: { 
+
+      definitie: ["Ver van"], 
+
+      indicatoren: ["begin", "eerste vier"],  
+
+      bouwstenen: ["afschuwelijk", "tandartsbezoeken"], 
+
+    }, 
+
+    explanation: "Deze puzzel bestaat uit twee delen met allebei een selectieindicator. 'begin' geeft aan dat we de eerste paar letters van bouwsteen 'afschuwelijk moeten pakken, we weten alleen nog niet hoeveel. 'eerste vier' geeft aan dat we de eerste vier letters van bouwsteen tandartsbezoek' moeten pakken, dus 'tand'. We weten dat het antwoord zeven letters heeft dus nu kunnen we de overige drie letters van het begin van 'afschuwelijk' pakken. Als we die twee delen samenvoegen krijg je 'afstand' en dit past bij de definitie 'ver van'."
+
+}, 
+
 
 ]
