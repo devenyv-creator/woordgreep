@@ -873,5 +873,29 @@ export const puzzles = [
 
 }, 
 
+{ 
+
+    date: "2026-07-07", 
+
+    clue: "Zeeland en Brabant beginnen pad over weg (8)", 
+
+    answer: "zebrapad", 
+
+    hints: { 
+
+      definitie: ["over weg"], 
+
+      indicatoren: ["beginnen"],  
+
+      bouwstenen: ["Zeeland", "Brabant", "pad"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft één selectie-indicator, namelijk 'beginnen'. Dit houdt in dat we de beginstukjes van bouwstenen 'Zeeland' en 'Brabant' moeten hebben. Hierbij voeg je dan het losse woord 'pad' aan toe en dan krijg je 'zebrapad' en dit past bij de definitie 'over weg'.",  
+
+}, 
+
 
 ]
