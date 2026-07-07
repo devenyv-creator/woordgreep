@@ -877,7 +877,7 @@ export const puzzles = [
 
     date: "2026-07-07", 
 
-    clue: "Zeeland en Brabant beginnen pad over weg (8)", 
+    clue: "Zeeland en Brabant beginnen pad over weg. (8)", 
 
     answer: "zebrapad", 
 
@@ -894,6 +894,28 @@ export const puzzles = [
     explanation: 
 
       "Deze puzzel heeft één selectie-indicator, namelijk 'beginnen'. Dit houdt in dat we de beginstukjes van bouwstenen 'Zeeland' en 'Brabant' moeten hebben. Hierbij voeg je dan het losse woord 'pad' aan toe en dan krijg je 'zebrapad' en dit past bij de definitie 'over weg'.",  
+
+}, 
+
+     { 
+
+    date: "2026-07-08", 
+
+    clue: "Inclusieve bocht. (3)", 
+
+    answer: "lus", 
+
+    hints: { 
+
+      definitie: ["bocht"], 
+
+      indicatoren: ["In"],  
+
+      bouwstenen: ["clusieve"], 
+
+    }, 
+
+    explanation: "Bij zo'n korte puzzel kan het soms juist moeilijk zijn om te begrijpen wat je moet doen. We weten dat in bijna elke puzzel een indicator, bouwsteen en definitie moet zitten, maar we hebben maar twee woorden. Er blijven daarom maar twee opties over. Of we zoeken een substitie in combinatie met een definitie of we moeten een woord splitsen waardoor de indicator en bouwsteen in hetzelfde woord zitten. Dat laatste is wat er in deze puzzel gebeurt. Het woord 'inclusieve' splitsen we zodat we als verborgen-woordindicator 'in' kunnen gebruiken en 'clusieve' als bouwsteen. Hierin vind je het woord 'lus' verborgen en dit past bij de definitie 'bocht'.",
 
 }, 
 
