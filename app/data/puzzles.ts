@@ -919,5 +919,28 @@ export const puzzles = [
 
 }, 
 
+     { 
+
+    date: "2026-07-09", 
+
+    clue: "Je moet niet twisten na een foxtrot en zo'n slotstuk van dit kunstobject. (7)", 
+
+    answer: "fontein", 
+
+    hints: { 
+
+      definitie: ["kunstobject"], 
+
+      indicatoren: ["twisten", "slotstuk", "na"],  
+
+      bouwstenen: ["niet", "foxtrot", "zo'n"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel begint letterlijk met vertellen wat je moet doen, namelijk het woord 'niet' twisten, dus omdraaien. Dan krijg je 'tein'. Dit komt na de foxtrot, ook wel de 'f' in het NAVO-alfabet en het 'slotstuk', dus de laatste letters van bouwsteen 'zo'n', waar je de letters 'on' uithaalt. Als je dit allemaal samenvoegt krijg je 'f', 'on', 'tein'. Dus 'fontein' en dit past bij de definitie 'kunstobject'.",  
+
+}, 
 
 ]
