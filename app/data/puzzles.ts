@@ -942,5 +942,28 @@ export const puzzles = [
       "Deze puzzel begint letterlijk met vertellen wat je moet doen, namelijk het woord 'niet' twisten, dus omdraaien. Dan krijg je 'tein'. Dit komt na de foxtrot, ook wel de 'f' in het NAVO-alfabet en het 'slotstuk', dus de laatste letters van bouwsteen 'zo'n', waar je de letters 'on' uithaalt. Als je dit allemaal samenvoegt krijg je 'f', 'on', 'tein'. Dus 'fontein' en dit past bij de definitie 'kunstobject'.",  
 
 }, 
+     { 
+
+    date: "2026-07-10", 
+
+    clue: "Laatste hap mosterd voor de maaltijd klinkt als afspraak. (5)", 
+
+    answer: "daten", 
+
+    hints: { 
+
+      definitie: ["afspraak"], 
+
+      indicatoren: ["laatste hap", "voor", "klinkt als"],  
+
+      bouwstenen: ["mosterd", "maaltijd"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een substitutie in combinatie met een homofoon, wat het nog wel ingewikkeld kan maken. Het eerste deel spreekt redelijk voor zich 'laatste hap' betekent het einde van het woord 'mosterd'. Woorden beginnen niet vaak met 'rd' en als we meer letters van 'mosterd' pakken hebben we nog maar weinig letters over voor de rest van de zin, we gaan daarom uit van alleen de laatste letter, dus de 'd'. Dan moeten we een substitutie voor 'maaltijd' hebben, in dit geval is dat 'eten'. Je krijg dan als woord 'deten'. Dit klinkt als 'daten' en dit past bij de definitie 'afspraak'.",  
+
+}, 
 
 ]
