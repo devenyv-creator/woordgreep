@@ -966,4 +966,55 @@ export const puzzles = [
 
 }, 
 
+        { 
+
+    date: "2026-07-11", 
+
+    clue: "Een goed begin en half werk is gekgenoeg belangrijk om indruk te maken. (5)", 
+
+    answer: "gewei", 
+
+    hints: { 
+
+      definitie: ["om indruk te maken"], 
+
+      indicatoren: ["begin", "half", "gekgenoeg"],  
+
+      bouwstenen: ["Een goed", "werk"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel kan ingewikkeld zijn omdat we twee keer een woord als bouwsteen gebruiken die in andere puzzels weleens als opvulwoorden dienen. Bij de eerste indicator, 'begin', pakken we dus het begin van bouwsteen 'goed', maar ook van bouwsteen 'een' en verzamelen we de letters 'eg'. De tweede selectie-indicator is 'half' en geeft aan dat we de eerste helft van bouwsteen 'werk' en van bouwsteen 'is' moeten pakken, dus 'we' en 'i'. Dan hebben we vijf letters verzameld die we alleen nog moeten husselen zoals aangegeven door anagram-indicator 'gekgenoeg'. Als je dat doet kom je uit op 'gewei' en dit past bij de definitie 'belangrijk om indruk te maken', althans, als je een hert bent.",  
+
+}, 
+
+{ 
+
+    date: "2026-07-12", 
+
+    clue: "De eerste doet rondjes om het eraf te halen van steen. (6)", 
+
+    answer: "domino", 
+
+    hints: { 
+
+      definitie: ["steen"], 
+
+      indicatoren: ["De eerste", "doet", "om"],  
+
+      bouwstenen: ["doet", "rondjes", "het eraf te halen"], 
+
+    }, 
+
+    explanation: 
+
+      "De complexiteit in deze puzzel ligt bij de twee substities en een bouwsteen die ook een opvulwoord zou kunnen zijn. Om daarmee te beginnen: 'De eerste' is een selectie-indicator die aangeeft dat we de eerste letter van 'doet' moeten pakken, 'd'. Daarna krijgen we de eerste substitutie, namelijk 'rondjes'. Als je een rondje opschrijft, schrijf je eigenlijk de letter 'o' en dus je het rondjes vervangen voor twee keer de 'o'. En deze zetten we 'om' de volgende bouwsteen zoals aangegeven door insluitindicator 'om'. De volgende bouwsteen is 'het eraf te halen van' en hiervoor hebben we een substitutie nodig van drie letters. Als je bij een rekensom iets van iets anders afhaalt doe je 'min' en dat is dan ook de substitutie die we doen. We hadden de 'd', daarna doen we twee keer een 'o' rondom het woord 'min' en dan krijg je 'domino'. Dit past bij de definitie 'steen'.",  
+
+}, 
+
+ 
+
+
 ]
