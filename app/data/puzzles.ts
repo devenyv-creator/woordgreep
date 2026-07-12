@@ -1014,7 +1014,144 @@ export const puzzles = [
 
 }, 
 
- 
+      { 
 
+    date: "2026-07-13", 
+
+    clue: "In het onderzoekscentrum kaatst de bal. (3)", 
+
+    answer: "lab", 
+
+    hints: { 
+
+      definitie: ["In het onderzoekscentrum"], 
+
+      indicatoren: ["kaatst"],  
+
+      bouwstenen: ["bal"], 
+
+    }, 
+
+    explanation:  "Deze puzzel heeft een omdraai-indicator, namelijk 'kaatst'. Als je iets kaatst komt het namelijk terug. De bouwsteen 'bal' moet je dus terug lezen en dan krijg je 'lab' en dit past bij de definitie onderzoekscentrum.",  
+
+}, 
+
+     { 
+
+    date: "2026-07-14", 
+
+    clue: "De regen, 't klinkt koninklijk (6)", 
+
+    answer: "regent", 
+
+    hints: { 
+
+      definitie: ["koninklijk"], 
+
+      indicatoren: ["klinkt"],  
+
+      bouwstenen: ["regen 't"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel probeert je qua uitspraak op het verkeerde been te zetten. De klemtoon in regen ligt in deze zin bij het eerste deel, maar als je de 'regen' en de 't' pakt en je legt de klemtoon bij het tweede deel, krijg je 'regent', als in de leider van het volk en dit past bij de definitie 'koninklijk'.",  
+
+}, 
+
+     { 
+
+    date: "2026-07-15", 
+
+    clue: "Voorraad begint beperkt na overleg. (6)", 
+
+    answer: "beraad", 
+
+    hints: { 
+
+      definitie: ["overleg"], 
+
+      indicatoren: ["Voor", "begint"],  
+
+      bouwstenen: ["raad", "beperkt"], 
+
+    }, 
+
+    explanation: "Bij deze puzzel zijn er weer een aantal woorden die als indicator kunnen tellen, maar er zijn twee echte indicatoren. Als eerste 'voor' als deel van het woord 'voorraad' die aangeeft dat er voor het woord 'raad' nog een aantal letters moeten. De tweede indicator is 'begint' die aangeeft dat we de eerste letters van bouwsteen 'beperkt' moeten gebruiken. We hebben nog twee letters nodig voor ons antwoord dus we pakken de 'be' en zetten die voor 'raad', dan krijg je 'beraad' en dit past bij de definitie 'overleg'.",  
+
+}, 
+
+     { 
+
+    date: "2026-07-16", 
+
+    clue: "Iets in deze escalatie resoneert met deze muziek. (3)", 
+
+    answer: "ska", 
+
+    hints: { 
+
+      definitie: ["muziek"], 
+
+      indicatoren: ["Iets in", "resoneert"],  
+
+      bouwstenen: ["escalatie"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft één bouwsteen, namelijk 'escalatie' en daar moeten we twee dingen mee doen. Je moet er een deel uitpakken zoals aangegeven door de verborgen woord-indicator 'iets in' en dit moet je uitspreken zoals aangegeven door homofonie-indicator 'resoneert'. Als je 'sca' uit 'escalatie' pakt en je spreekt dit hardop uit, dan klinkt het als 'ska' en dit past bij de definitie 'muziek'",  
+
+},      
+
+{ 
+
+    date: "2026-07-17", 
+
+    clue: "In gevangenis is twee keer een echo minder. (6)", 
+
+    answer: "kerker", 
+
+    hints: { 
+
+      definitie: ["In gevangenis"], 
+
+      indicatoren: ["twee", "minder"],  
+
+      bouwstenen: ["keer", "echo"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel gebruikt een indicator die niet echt bij de standaard categorieën past. De indicator 'twee' geeft namelijk aan dat we de bouwsteen 'keer' twee keer moeten gebruiken. Beide keren heeft deze wel een letter minder. Als we namelijk 'echo' veranderen in de letter 'e' zoals in het NAVO-alfabet, lezen we dat we die letter minder moeten gebruiken in bouwsteen 'keer', dit wordt dan 'ker'. Als we twee keer 'ker' pakken, krijg je 'kerker' en dit past bij de definitie 'gevangenis'.",  
+
+}, 
+
+        { 
+
+    date: "2026-07-18", 
+
+    clue: "Oog, puntje van je neus. Hoofd, schouders knie en teen. Verdraaid, wat walgelijk. (6)", 
+
+    answer: "kotsen", 
+
+    hints: { 
+
+      definitie: ["wat walgelijk"], 
+
+      indicatoren: ["puntje van", "Hoofd", "verdraaid"],  
+
+      bouwstenen: ["Oog", "neus", "schouders knie en teen"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft drie verschillende acties die we moeten uitvoeren. De actie die er het meeste tussenuit springt in deze zin is 'verdraaid' wat aangeeft dat we een anagram moeten maken van zes letters die we eerst nog moeten verzamelen. We krijgen de eerste letter door het woord 'oog' te vervangen voor de vorm van een oog, namelijk de letter 'o'. De overige vijf letters krijgen we door eerst het 'puntje van' bouwsteen 'neus' te pakken, de 'n'. Daarna het 'hoofd', dus de eerste letter van bouwstenen 'schouders, knie en teen' te pakken, dus 'sket'. Als we die zes verzamelde letters husselen krijg je 'kotsen' en dit past bij de definitie 'wat walgelijk'.",  
+
+}, 
 
 ]
