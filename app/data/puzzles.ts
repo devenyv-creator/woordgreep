@@ -1156,7 +1156,7 @@ export const puzzles = [
 
         { 
 
-    date: "2026-07-25", 
+    date: "2026-07-19", 
 
     clue: "Incomplete spelleiding heeft geen idee, zei hij, hoe je dat woord schrijft. (7)", 
 
