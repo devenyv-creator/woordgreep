@@ -1154,4 +1154,28 @@ export const puzzles = [
 
 }, 
 
+        { 
+
+    date: "2026-07-25", 
+
+    clue: "Incomplete spelleiding heeft geen idee, zei hij, hoe je dat woord schrijft. (7)", 
+
+    answer: "spellen", 
+
+    hints: { 
+
+      definitie: ["hoe je dit woord schrijft"], 
+
+      indicatoren: ["Incomplete", "heeft geen", "zei hij"],  
+
+      bouwstenen: ["spelleiding", "idee"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft drie indicatoren. Als eerste 'incomplete', dit geeft aan dat we niet alles van de bouwsteen 'spelleiding' gebruiken en halen de laatste letter weg, dan houdt je 'spelleidin' over. Daar de indicator 'heeft geen' geeft als nog een weglaatindicator aan dat we bepaalde aantal letters niet moeten gebruiken in de bouwsteen. Het gaat dan om de letters die we puzzelen uit het stukje 'idee zei hij', waarin 'zei hij' een homofonie-indicator is en zegt dat we de bouwsteen 'idee' moeten uitspreken en dan klinkt het als de letter 'i' en 'd'. Als we die letters uit het overgebleven deel 'spelleidin' halen krijg je 'spellen' en dit past bij de definitie 'hoe je dat woord schrijf'.",  
+
+},
+
 ]
