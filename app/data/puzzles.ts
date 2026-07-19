@@ -1178,4 +1178,28 @@ export const puzzles = [
 
 },
 
+     { 
+
+    date: "2026-07-20", 
+
+    clue: "Slaper verwarde edelstenen. (6)", 
+
+    answer: "parels", 
+
+    hints: { 
+
+      definitie: ["edelstenen"], 
+
+      indicatoren: ["verwarde"],  
+
+      bouwstenen: ["Slaper"], 
+
+    }, 
+
+    explanation: "Deze puzzel heeft een anagramindicator, namelijk 'verwarde'. Als je de letters in 'slaper' husselt, krijg je 'parels' en dit past bij de definitie edelstenen.",
+
+}, 
+
+ 
+
 ]
