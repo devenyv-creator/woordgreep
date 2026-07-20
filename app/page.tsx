@@ -737,51 +737,55 @@ function goToPreviousPuzzle() {
           <div style={infoBox}>Voor deze datum staat nog geen puzzel klaar.</div>
         ) : (
           <>
-            <div style={stickyWrapStyle}>
-              <div style={stickyNoteStyle}>
-              
+<div style={stickyWrapStyle}>
+  <div style={stickyNoteStyle}>
+    <button
+      onClick={() => {
+        setShowNotes(!showNotes);
+        trackEvent("notes_toggled", { date: selectedDateKey });
+      }}
+      style={noteIconButton}
+      aria-label="Notitie openen"
+    >
+      ✏️
+    </button>
 
-                <button
-                  onClick={() => {
-                    setShowNotes(!showNotes);
-                    trackEvent("notes_toggled", { date: selectedDateKey });
-                  }}
-                  style={noteIconButton}
-                  aria-label="Notitie openen"
-                >
-                  ✏️
-                </button>
+    <p style={clueStyle}>{renderHighlightedClue()}</p>
 
-                <p style={clueStyle}>{renderHighlightedClue()}</p>
+    <div style={answerSlotsStyle}>
+      {puzzle.answer.split("").map((_, index) => (
+        <span
+          key={`${puzzle.date}-slot-${index}`}
+          style={answerSlotLetterStyle}
+        >
+          {isSolved
+            ? puzzle.answer[index].toUpperCase()
+            : guess[index]?.toUpperCase() || "_"}
+        </span>
+      ))}
+    </div>
 
-                <div style={answerSlotsStyle}>
-                  {puzzle.answer.split("").map((_, index) => (
-                    <span
-                      key={`${puzzle.date}-slot-${index}`}
-                      style={answerSlotLetterStyle}
-                    >
-                      {isSolved
-                        ? puzzle.answer[index].toUpperCase()
-                        : guess[index]?.toUpperCase() || "_"}
-                    </span>
-                  ))}
-                </div>
+    {showNotes && (
+      <div style={notebookStyle}>
+        <textarea
+          value={notes}
+          onChange={(event) => {
+            setNotes(event.target.value);
+            saveCurrentGame(guess, event.target.value);
+          }}
+          placeholder="Schrijf hier je gedachten..."
+          style={notebookTextareaStyle}
+        />
+      </div>
+    )}
+  </div>
 
-                {showNotes && (
-                  <div style={notebookStyle}>
-                    <textarea
-                      value={notes}
-                      onChange={(event) => {
-                        setNotes(event.target.value);
-                        saveCurrentGame(guess, event.target.value);
-                      }}
-                      placeholder="Schrijf hier je gedachten..."
-                      style={notebookTextareaStyle}
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
+  {puzzle.credit && (
+    <div style={creditStyle}>
+      {puzzle.credit}
+    </div>
+  )}
+</div>
 
   <div style={letterInputWrapper}>
   <div
@@ -829,7 +833,7 @@ function goToPreviousPuzzle() {
                   ...hintButton,
                   ...((shownHints.definitie || isSolved)
                     ? activeMeaningHintButton
-                    : {}),
+                    : {})
                 }}
               >
                 Definitie
@@ -950,6 +954,16 @@ const mainStyle: CSSProperties = {
   padding: "14px",
   overflowX: "hidden",
   boxSizing: "border-box",
+};
+
+const creditStyle: CSSProperties = {
+  marginTop: "-14px",
+  marginBottom: "18px",
+  textAlign: "center",
+  color: "#6d28d9",
+  fontSize: "15px",
+  fontStyle: "italic",
+  fontWeight: 600,
 };
 
 const sectionStyle: CSSProperties = {

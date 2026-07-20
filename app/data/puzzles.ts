@@ -1,4 +1,17 @@
-export const puzzles = [
+export type Puzzle = {
+  date: string;
+  clue: string;
+  answer: string;
+  hints: {
+    definitie: string[];
+    indicatoren: string[];
+    bouwstenen: string[];
+  };
+  explanation: string;
+  credit?: string;
+};
+
+export const puzzles: Puzzle[] = [
   {
     date: "2026-05-17",
     clue: "Naar verluidt is Leiden er slecht aan toe. (6)",
@@ -1198,6 +1211,55 @@ export const puzzles = [
 
     explanation: "Deze puzzel heeft een anagramindicator, namelijk 'verwarde'. Als je de letters in 'slaper' husselt, krijg je 'parels' en dit past bij de definitie edelstenen.",
 
+}, 
+
+     { 
+
+    date: "2026-07-21", 
+
+    clue: "Ik richt en ik pak 'm. (3)", 
+
+    answer: "mik", 
+
+    hints: { 
+
+      definitie: ["Ik richt"], 
+
+      indicatoren: ["pak"],  
+
+      bouwstenen: ["ik", "'m"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzels bestaat uit twee bouwstenen die simpel bij elkaar gevoegd worden. Indicator 'pak' geeft namelijk aan dat je bij 'ik' een letter moet toevoegen, namelijk de 'm'. Als je die voor 'ik' zet krijg je 'mik' en dit past bij de definitie 'ik richt'.",  
+
+}, 
+
+
+{ 
+
+    date: "2026-07-26", 
+
+    clue: "De eetlepel tussen de kaassoufflés volgt het Chinese bereiden van chips. (7)", 
+
+    answer: "wokkels", 
+
+    hints: { 
+
+      definitie: ["chips"], 
+
+      indicatoren: ["tussen", "soufflés", "volgt"],  
+
+      bouwstenen: ["De eetlepel", "kaas", "het Chinese bereiden van"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel voeren we twee keer een substitutie uit en hebben we één homofonie-indicator. 'De eetlepel' korten we af naar 'el' en deze moet 'tussen' 'kaassoufflés'. 'soufflés is een woordspeling op souffleren en dit is iets voorzeggen, als je 'kaas' hardop zegt spreek je een 'k' en een 's' uit dus deze gaan om de 'el' heen om 'kels' te maken. Dit volgt, dus moet na, 'het Chinese bereiden' en dit is de 'wok'. Als je dit allemaal samenvoegt, krijg je 'wokkels' en dit past bij de definitie 'chips'.",  
+credit: "💜 Ingestuurd door Joeywoud",
 }, 
 
  
