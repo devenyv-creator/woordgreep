@@ -1243,7 +1243,7 @@ export const puzzles: Puzzle[] = [
 
     clue: "Die gekke maretak ontroert mij. (5, 2)", 
 
-    answer: "", 
+    answer: "raaktme", 
 
     hints: { 
 
@@ -1255,7 +1255,8 @@ export const puzzles: Puzzle[] = [
 
     }, 
 
-    explanation:  "Bij deze puzzel is er een anagramindicator, 'gekke', die aangeeft dat we de letters van de bouwsteen, 'maretak', moeten husselen om een nieuw woord te krijgen. Het lastige bij deze puzzel is dat het twee woorden moeten vormen. Uit het husselen komen de woorden 'raakt me' en dit past bij de definitie 'ontroert mij'.",  
+    explanation:  "Bij deze puzzel is er een anagramindicator, 'gekke', die aangeeft dat we de letters van de bouwsteen, 'maretak', moeten husselen om een nieuw woord te krijgen. Het lastige bij deze puzzel is dat het twee woorden moeten vormen. Uit het husselen komen de woorden 'raakt me' en dit past bij de definitie 'ontroert mij'.",
+    credit: "antwoord aan elkaar schrijven"
 
 }, 
 
