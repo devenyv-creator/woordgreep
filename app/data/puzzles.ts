@@ -1256,7 +1256,7 @@ export const puzzles: Puzzle[] = [
     }, 
 
     explanation:  "Bij deze puzzel is er een anagramindicator, 'gekke', die aangeeft dat we de letters van de bouwsteen, 'maretak', moeten husselen om een nieuw woord te krijgen. Het lastige bij deze puzzel is dat het twee woorden moeten vormen. Uit het husselen komen de woorden 'raakt me' en dit past bij de definitie 'ontroert mij'.",
-    credit: "antwoord aan elkaar schrijven"
+    credit: "Let op: het antwoord aan elkaar schrijven"
 
 }, 
 
