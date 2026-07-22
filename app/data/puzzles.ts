@@ -1237,7 +1237,7 @@ export const puzzles: Puzzle[] = [
 
 }, 
 
-     { 
+{ 
 
     date: "2026-07-22", 
 
@@ -1257,6 +1257,78 @@ export const puzzles: Puzzle[] = [
 
     explanation:  "Bij deze puzzel is er een anagramindicator, 'gekke', die aangeeft dat we de letters van de bouwsteen, 'maretak', moeten husselen om een nieuw woord te krijgen. Het lastige bij deze puzzel is dat het twee woorden moeten vormen. Uit het husselen komen de woorden 'raakt me' en dit past bij de definitie 'ontroert mij'.",
     credit: "Let op: het antwoord aan elkaar schrijven."
+
+}, 
+
+     { 
+
+    date: "2026-07-23", 
+
+    clue: "Au! Goed gewisseld van de Europese Unie. (4)", 
+
+    answer: "goud", 
+
+    hints: { 
+
+      definitie: ["Au!"], 
+
+      indicatoren: ["gewisseld van de"],  
+
+      bouwstenen: ["Europese Unie"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een best verrassende definitie en er zijn een aantal stappen nodig om de puzzel op te lossen. Als eerste stap zoeken we naar de indicator en dat is 'gewisseld'. Deze geeft aan dat we twee letters moeten omwisselen. Dat betekent dat we een bouwsteen nodig hebben van vier letters om mee te starten, want het aantal letters verandert niet als we de wissel hebben gedaan. We gebruiken dus 'goed' als bouwsteen. Als derde moeten we erachter komen welke letters we moeten omwisselen. Als we 'de Europese Unie' afkorten naar 'EU' lees je de puzzel als 'goed gewisselend van EU' en daaruit volgt dat we dus de 'e' uit 'goed' gaan omwisselen voor een 'u'. Als je dat doet krijg je 'goud' en dat past bij de definitie want het chemische symbool van goud is 'Au'.",  
+
+}, 
+
+{ 
+
+    date: "2026-07-24", 
+
+    clue: "Verwarde biljarter 'n steeds betere speler. (10)", 
+
+    answer: "briljanter", 
+
+    hints: { 
+
+      definitie: ["steeds betere speler"], 
+
+      indicatoren: ["verwarde"],  
+
+      bouwstenen: ["biljarter", "'n"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een redelijk simpele structuur, er is namelijk een anagramindicator en een bouwsteen, het lastige is dat het een lang anagram is en met de definitie kan je verschillende kanten op. De indicator is 'verwarde' en de bouwsteen is 'biljarter n'. Als we daar de letters van husselen krijg je 'briljanter' en dit past bij de definitie 'steeds betere speler'.",  
+
+}, 
+
+{ 
+
+    date: "2026-07-25", 
+
+    clue: "Geest voelde zich ziek en daalde niet. (5)", 
+
+    answer: "steeg", 
+
+    hints: { 
+
+      definitie: ["daalde niet"], 
+
+      indicatoren: ["voelde zich ziek"],  
+
+      bouwstenen: ["Geest"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft maar een indicator, maar die bestaat uit meerdere woorden. 'voelde zich ziek' betekent namelijk dat we de letters uit een bouwsteen moeten husselen en dat doen we met het woord 'geest'. Als je dat husselt krijg je het woord 'steeg' en dit past bij de definitie 'daalde niet'.",  
 
 }, 
 
@@ -1281,7 +1353,7 @@ export const puzzles: Puzzle[] = [
     explanation: 
 
       "Bij deze puzzel voeren we twee keer een substitutie uit en hebben we één homofonie-indicator. 'De eetlepel' korten we af naar 'el' en deze moet 'tussen' 'kaassoufflés'. 'soufflés is een woordspeling op souffleren en dit is iets voorzeggen, als je 'kaas' hardop zegt spreek je een 'k' en een 's' uit dus deze gaan om de 'el' heen om 'kels' te maken. Dit volgt, dus moet na, 'het Chinese bereiden' en dit is de 'wok'. Als je dit allemaal samenvoegt, krijg je 'wokkels' en dit past bij de definitie 'chips'.",  
-credit: "💜 Ingestuurd door Joeywoud",
+credit: "💜 Ingestuurd door Joey",
 }, 
 
  
