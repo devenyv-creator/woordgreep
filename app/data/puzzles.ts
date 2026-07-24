@@ -1304,7 +1304,7 @@ export const puzzles: Puzzle[] = [
 
     explanation: 
 
-      "Deze puzzel heeft een redelijk simpele structuur, er is namelijk een anagramindicator en een bouwsteen, het lastige is dat het een lang anagram is en met de definitie kan je verschillende kanten op. De indicator is 'verwarde' en de bouwsteen is 'biljarter n'. Als we daar de letters van husselen krijg je 'briljanter' en dit past bij de definitie 'steeds betere speler'.",  
+      "Deze puzzel heeft een redelijk simpele structuur, er is namelijk een anagramindicator en een bouwsteen, het lastige is dat het een lange anagram is en met de definitie kan je verschillende kanten op. De indicator is 'verwarde' en de bouwsteen is 'biljarter n'. Als we daar de letters van husselen krijg je 'briljanter' en dit past bij de definitie 'steeds betere speler'.",  
 
 }, 
 
@@ -1354,6 +1354,166 @@ export const puzzles: Puzzle[] = [
 
       "Bij deze puzzel voeren we twee keer een substitutie uit en hebben we één homofonie-indicator. 'De eetlepel' korten we af naar 'el' en deze moet 'tussen' 'kaassoufflés'. 'soufflés is een woordspeling op souffleren en dit is iets voorzeggen, als je 'kaas' hardop zegt spreek je een 'k' en een 's' uit dus deze gaan om de 'el' heen om 'kels' te maken. Dit volgt, dus moet na, 'het Chinese bereiden' en dit is de 'wok'. Als je dit allemaal samenvoegt, krijg je 'wokkels' en dit past bij de definitie 'chips'.",  
 credit: "💜 Ingestuurd door Joey",
+}, 
+
+     { 
+
+    date: "2026-07-27", 
+
+    clue: "Verstopt in Rome is je vriendin. (6)", 
+
+    answer: "meisje", 
+
+    hints: { 
+
+      definitie: ["vriendin"], 
+
+      indicatoren: ["Verstopt in"],  
+
+      bouwstenen: ["Rome is je"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een verborgen-woordindicator, namelijk 'verstopt in'. Als je de zes letters vanaf de 'm' in 'Rome' achter elkaar zet, krijg je 'meisje' en dit past bij de definitie 'vriendin'.",  
+
+}, 
+
+     { 
+
+    date: "2026-07-28", 
+
+    clue: "Ik pak meer rommel en ga op vakantie. (7)", 
+
+    answer: "kampeer", 
+
+    hints: { 
+
+      definitie: ["ga op vakantie"], 
+
+      indicatoren: ["rommel"],  
+
+      bouwstenen: ["meer rommel"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzels heeft een anagramindicator met 'rommel' en dat geeft aan dat je de letters van de bouwstenen 'pak meer' moet husselen en dan kom je tot kampeer. Dit komt overeen met de definitie 'vakantie'.",  
+
+},      { 
+
+    date: "2026-07-29", 
+
+    clue: "Helend hart bevat 5 feeën. (5)", 
+
+    answer: "elven", 
+
+    hints: { 
+
+      definitie: ["feeën"], 
+
+      indicatoren: ["hart", "bevat"],  
+
+      bouwstenen: ["Helend", "5"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is er een selectie-indicator, 'hart', die aangeeft dat we de middelste letters van de bouwsteen, 'helend', moeten pakken. Dit is 'elen'. Dit 'bevat' het nummer '5', en dit is de letters 'v' in Romeinse cijfers. Die letter moet dus in de letters die we al hadden. Doe je dat, dan krijg je 'elven' en dit past bij de definitie 'feeën'.",  
+
+},         { 
+
+    date: "2026-07-30", 
+
+    clue: "Leeftijdsgroep is negatiever zonder 5 prikkels. (9)", 
+
+    answer: "generatie", 
+
+    hints: { 
+
+      definitie: ["Leeftijdsgroep"], 
+
+      indicatoren: ["zonder", "prikkels"],  
+
+      bouwstenen: ["negatiever", "5"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft het getal '5' en als je dat ziet, kan je er al een beetje vanuit gaan dat het een substitutie moet worden voor de letter 'v' zoals in het NAVO-alfabet. Je ziet ook het woord 'zonder' staan, wat een duidelijke weglaatindicator is, je laat die letter 'v' weg uit een bouwsteen die naast de indicator staat en dat is bouwsteen 'negatiever'. Dan is de laatste indicator wat lastiger te duiden, maar 'prikkels' is hier de anagramindicator. De negen letters die we nog over hebben moeten we husselen en daaruit komt het woord 'generatie' en dit past bij de definitie 'leeftijdsgroep'.",  
+
+},  { 
+
+    date: "2026-07-31", 
+
+    clue: "Uhm, gekke vogel houdt van kikkererwtendip. (6)", 
+
+    answer: "hummus", 
+
+    hints: { 
+
+      definitie: ["kikkererwtendip"], 
+
+      indicatoren: ["gekke"],  
+
+      bouwstenen: ["Uhm", "vogel"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft misschien een definitie die weggeeft wat het antwoord gaat zijn, maar we gaan het toch stap voor stap doornemen. 'Uhm' staat naast de anagramindicator 'gekke', dus we weten dat we die drie letters moeten husselen. De enige twee logische oriëntaties van die drie letters zijn 'muh' of 'hum', dat onthouden we even. We hebben dan nog drie letters nodig om het antwoord te maken en daarvoor gebruiken we 'vogel', hier hebben we een substitutie voor nodig, dus moeten we een vogel van drie letters bedenken die achter de letters die we al hebben past. Hieruit komt 'mus' want als je dat achter 'hum' zet, krijg je 'hummus' en dit past bij de definitie 'kikkererwtendip'.",  
+
+}, 
+
+     { 
+
+    date: "2026-08-01", 
+
+    clue: "Gelijk vind ik in de uwe, maar de wc wissel ik. (5)", 
+
+    answer: "deuce", 
+
+    hints: { 
+
+      definitie: ["Gelijk"], 
+
+      indicatoren: ["vind ik in", "wissel ik"],  
+
+      bouwstenen: ["de uwe", "wc"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel start met een simpele verborgen-woordindicator, namelijk 'vind ik in'. De twee woorden die erna komen, bevat dus het antwoord, 'de uwe' wordt dan 'deuwe'. We moeten daar wel nog twee letters uit wisselen zoals beschreven door het gedeelte 'wc wissel ik'. Als je de 'w' uit het woord vervangt voor een 'c', krijg je 'deuce' en dit past bij de definitie 'gelijk' want het is een gelijke stand met tennis.",  
+
+},         { 
+
+    date: "2026-08-02", 
+
+    clue: "Stoelendans bij feest Co is iets erg zakelijks. (10)", 
+
+    answer: "objectiefs", 
+
+    hints: { 
+
+      definitie: ["is iets erg zakelijks"], 
+
+      indicatoren: ["Stoelendans"],  
+
+      bouwstenen: ["bij feest Co"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft maar een indicator, namelijk 'stoelendans' die aangeeft dat we een anagram moeten maken van de letters erna. De letters in 'bij feest Co' worden gehusseld tot 'objectiefs' en dit past bij de definitie, want dit 'is iets erg zakelijks'.",  
+
 }, 
 
  
