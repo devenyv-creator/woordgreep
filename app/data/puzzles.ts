@@ -1514,6 +1514,28 @@ credit: "💜 Ingestuurd door Joey",
 
       "Deze puzzel heeft maar een indicator, namelijk 'stoelendans' die aangeeft dat we een anagram moeten maken van de letters erna. De letters in 'bij feest Co' worden gehusseld tot 'objectiefs' en dit past bij de definitie, want dit 'is iets erg zakelijks'.",  
 
+},     { 
+
+    date: "2026-08-03", 
+
+    clue: "Stuk stof is in stal apartgezet. (3)", 
+
+    answer: "lap", 
+
+    hints: { 
+
+      definitie: ["Stuk stof"], 
+
+      indicatoren: ["in"],  
+
+      bouwstenen: ["stal apartgezet"], 
+
+    }, 
+
+    explanation: 
+
+      "In deze puzzel is de enige indicator het woord 'in'. Deze kan meerdere betekenissen hebben, maar in dit geval betekent het als verborgen-woordindicator dat het antwoord middenin een bouwsteen te vinden is. Als je vanaf de laatste letter van stal doorleest krijg je opeenvolgend de letters 'lap' en dit past bij de definitie 'stuk stof'.",  
+
 }, 
 
  
