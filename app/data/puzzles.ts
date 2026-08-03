@@ -1536,6 +1536,28 @@ credit: "💜 Ingestuurd door Joey",
 
       "In deze puzzel is de enige indicator het woord 'in'. Deze kan meerdere betekenissen hebben, maar in dit geval betekent he, als verborgen-woordindicator, dat het antwoord middenin een bouwsteen te vinden is. Als je vanaf de laatste letter van stal doorleest krijg je opeenvolgend de letters 'lap' en dit past bij de definitie 'stuk stof'.",  
 
+},      { 
+
+    date: "2026-08-04", 
+
+    clue: "Balen, Harrie's opwekkende ochtendshow begint al voor 1. (4)", 
+
+    answer: "hooi", 
+
+    hints: { 
+
+      definitie: ["Balen"], 
+
+      indicatoren: ["begint", "voor"],  
+
+      bouwstenen: ["Harrie's opwekkende ochtendshow", "1"], 
+
+    }, 
+
+    explanation: 
+
+      "In deze puzzel hebben we één indicator om een woordspeling aan te geven en één indicator om de volgorde van de letters aan te geven. De indicator 'begint' geeft aan dat we de beginletters van de naastliggende bouwsteen moeten gebruiken en van het stukje 'Harrie's opwekkende ochtendshow' houdt je dus de letters 'hoo' over. Deze moeten 'voor' de '1', die we vervangen voor het Romeinse cijfer, namelijk de 'i'. Dan houden we we over 'hooi' en dit past bij de definitie 'balen'.",  
+
 }, 
 
  
