@@ -1534,7 +1534,7 @@ credit: "💜 Ingestuurd door Joey",
 
     explanation: 
 
-      "In deze puzzel is de enige indicator het woord 'in'. Deze kan meerdere betekenissen hebben, maar in dit geval betekent het als verborgen-woordindicator dat het antwoord middenin een bouwsteen te vinden is. Als je vanaf de laatste letter van stal doorleest krijg je opeenvolgend de letters 'lap' en dit past bij de definitie 'stuk stof'.",  
+      "In deze puzzel is de enige indicator het woord 'in'. Deze kan meerdere betekenissen hebben, maar in dit geval betekent he, als verborgen-woordindicator, dat het antwoord middenin een bouwsteen te vinden is. Als je vanaf de laatste letter van stal doorleest krijg je opeenvolgend de letters 'lap' en dit past bij de definitie 'stuk stof'.",  
 
 }, 
 
