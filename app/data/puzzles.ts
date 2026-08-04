@@ -1558,6 +1558,26 @@ credit: "💜 Ingestuurd door Joey",
 
       "In deze puzzel hebben we één indicator om een woordspeling aan te geven en één indicator om de volgorde van de letters aan te geven. De indicator 'begint' geeft aan dat we de beginletters van de naastliggende bouwsteen moeten gebruiken en van het stukje 'Harrie's opwekkende ochtendshow' houdt je dus de letters 'hoo' over. Deze moeten 'voor' de '1', die we vervangen voor het Romeinse cijfer, namelijk de 'i'. Dan houden we we over 'hooi' en dit past bij de definitie 'balen'.",  
 
+},      { 
+
+    date: "2026-08-05", 
+
+    clue: "1001 keer door elkaar gehaald. (3)", 
+
+    answer: "mix", 
+
+    hints: { 
+
+      definitie: ["door elkaar gehaald"], 
+
+      indicatoren: [""],  
+
+      bouwstenen: ["1001 keer"], 
+
+    }, 
+
+    explanation: "Bij deze puzzel hebben we geen indicatoren, alleen maar een definitie en bouwstenen. De bouwstenen zijn '1001', wat we vervangen voor de Romeinse cijfers 'MI' en 'keer', wat we vervangen voor het wiskundige symbool 'X'. Samen vormt dit 'mix' en dit past bij de definitie 'door elkaar gehaald'.",  
+
 }, 
 
  
