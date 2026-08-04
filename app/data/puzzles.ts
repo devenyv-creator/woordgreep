@@ -1560,7 +1560,7 @@ credit: "💜 Ingestuurd door Joey",
 
 },      { 
 
-    date: "2026-08-05", 
+    date: "2026-08-06", 
 
     clue: "1001 keer door elkaar gehaald. (3)", 
 
@@ -1578,7 +1578,31 @@ credit: "💜 Ingestuurd door Joey",
 
     explanation: "Bij deze puzzel hebben we geen indicatoren, alleen maar een definitie en bouwstenen. De bouwstenen zijn '1001', wat we vervangen voor de Romeinse cijfers 'MI' en 'keer', wat we vervangen voor het wiskundige symbool 'X'. Samen vormt dit 'mix' en dit past bij de definitie 'door elkaar gehaald'.",  
 
+},           { 
+
+    date: "2026-08-05", 
+
+    clue: "Naamsverandering Nauru: 't gaat terug naar de oorsprong. (6)", 
+
+    answer: "natuur", 
+
+    hints: { 
+
+      definitie: ["gaat terug naar de oorsprong"], 
+
+      indicatoren: ["Naamsverandering"],  
+
+      bouwstenen: ["Nauru", "'t"], 
+
+    }, 
+
+    explanation: 
+
+      "Het land wat eerst Nauru heette, heet sindskort Naoero om afstand te doen van het koloniale verleden. Deze puzzel is verder redelijk simpel, het heeft een anagramindicator 'naamsverandering die aangeeft dat we de letters erna 'Nauru' en 't' moeten husselen om een nieuw woord te vormen. Dit leidt tot 'natuur' en dit past bij de definitie 'gaat terug naar de oorsprong'.",  
+
 }, 
+
+ 
 
  
 
