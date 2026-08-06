@@ -1606,13 +1606,13 @@ credit: "💜 Ingestuurd door Joey",
 
     clue: "Zitten er geen vleugels aan een vogel, retourneer ik. (3)", 
 
-    answer: "hummus", 
+    answer: "ego", 
 
     hints: { 
 
       definitie: ["ik"], 
 
-      indicatoren: ["zitten er geen vleugels aan", "draai"],  
+      indicatoren: ["Zitten er geen vleugels aan", "draai"],  
 
       bouwstenen: ["vogel"], 
 
