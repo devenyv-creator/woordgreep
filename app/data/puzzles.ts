@@ -1600,6 +1600,28 @@ credit: "💜 Ingestuurd door Joey",
 
       "Het land wat eerst Nauru heette, heet sindskort Naoero om afstand te doen van het koloniale verleden. Deze puzzel is verder redelijk simpel, het heeft een anagramindicator 'naamsverandering die aangeeft dat we de letters erna 'Nauru' en 't' moeten husselen om een nieuw woord te vormen. Dit leidt tot 'natuur' en dit past bij de definitie 'gaat terug naar de oorsprong'.",  
 
+},   { 
+
+    date: "2026-08-07", 
+
+    clue: "Zitten er geen vleugels aan een vogel, retourneer ik. (3)", 
+
+    answer: "hummus", 
+
+    hints: { 
+
+      definitie: ["ik"], 
+
+      indicatoren: ["zitten er geen vleugels aan", "draai"],  
+
+      bouwstenen: ["vogel"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we te maken met een indicator die we niet veel tegenkomen, namelijk de omdraai-indicator 'retourneer', er zijn drie letters die we om moeten draaien om bij ons antwoord te komen. Deze letter krijgen we door de 'vleugels' van de 'vogel' af te halen, want 'er zitten geen vleugels aan een vogel'. De vleugels zijn de zijkanten, en als je die letters weghaalt, krijg je 'oge', als je dit omdraait, krijg je 'ego' en dit is een ander woord voor de definitie 'ik'.",  
+
 }, 
 
  
