@@ -1612,7 +1612,7 @@ credit: "💜 Ingestuurd door Joey",
 
       definitie: ["ik"], 
 
-      indicatoren: ["Zitten er geen vleugels aan", "draai"],  
+      indicatoren: ["Zitten er geen vleugels aan", "retourneer"],  
 
       bouwstenen: ["vogel"], 
 
