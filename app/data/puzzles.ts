@@ -1623,7 +1623,196 @@ credit: "💜 Ingestuurd door Joey",
       "Bij deze puzzel hebben we te maken met een indicator die we niet veel tegenkomen, namelijk de omdraai-indicator 'retourneer', er zijn drie letters die we om moeten draaien om bij ons antwoord te komen. Deze letter krijgen we door de 'vleugels' van de 'vogel' af te halen, want 'er zitten geen vleugels aan een vogel'. De vleugels zijn de zijkanten, en als je die letters weghaalt, krijg je 'oge', als je dit omdraait, krijg je 'ego' en dit is een ander woord voor de definitie 'ik'.",  
 
 }, 
+    { 
 
+    date: "2026-08-08", 
+
+    clue: "Het einde staat na 3 uur, tijd om naar bed te gaan. (4)", 
+
+    answer: "laat", 
+
+    hints: { 
+
+      definitie: ["tijd om naar bed te gaan"], 
+
+      indicatoren: ["Het einde", "na"],  
+
+      bouwstenen: ["staat", "3 uur"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft één moeilijk element, namelijk wat te doen met '3 uur'. Om daarmee te beginnen: als je 3 uur op een klok ziet, wijst de grote wijzer omhoog en de kleine wijzer naar rechts, de wijzers vormen daarmee de letter 'L', dus voeren we daar een substitutie uit. Na deze 'L' komt nog 'het einde' van 'staat'. We hebben nog drie letters nodig, dus pakken we de 'aat' en dan hebben we als antwoord 'laat' en dit past bij de definitie 'tijd om naar bed te gaan'.",  
+
+},     
+
+    { 
+
+    date: "2026-08-09", 
+
+    clue: "Nul, één, één, twee, drie, vijf, acht is aanstaande, deze reeks uit volgorde is geweldig. (11)", 
+
+    answer: "fantastisch", 
+
+    hints: { 
+
+      definitie: ["is dit misschien de fibonacci reeks?"], 
+
+      indicatoren: ["één", "één", "drie", "wat gek"],  
+
+      bouwstenen: ["nul", "twee", "vijf", "acht is aanstaande"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel is een van de moeilijkste puzzels die we gehad hebben. Er zijn namelijk heel veel mogelijkheden van wat de indicatoren en wat de bouwstenen zijn. Met zoveel opties is het een kwestie van proberen en afstrepen wat niet werkt. Om je daarmee een handje op weg te helpen kan je beginnen met de hints op de website te gebruiken. Uit bouwsteen 'nul' pakken we de eerste letter 'n' vanwege indicator 'één'. Uit bouwsteen twee pakken we de eerste letter 't' vanwege indicator 'één'. Uit bouwsteen 'vijf' pakken we de derde letter 'f' vanwege indicator 'drie' (in puzzels telt de 'ij' namelijk als één letter). Dan pakken we daarna alle letters van 'acht', 'is', en de afkorting van 'aanstaande', namelijk 'as'. Dan hebben we elf letters 'ntfachtisas' en hier moeten we een anagram voor vinden zoals aangegeven door de indicator 'deze reeks uit volgorde'. Hieruit komt het antwoord 'fantastisch' en dit past bij de definitie 'is geweldig'.",  
+
+}, 
+     { 
+
+    date: "2026-08-10", 
+
+    clue: "Nieuwsgierige indringer vliegt weg. (4)", 
+
+    answer: "gier", 
+
+    hints: { 
+
+      definitie: ["vliegt weg"], 
+
+      indicatoren: ["indringer"],  
+
+      bouwstenen: ["Nieuwsgierige"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we alleen een verborgen-woordindicator met 'indringer'. Deze geeft aan dat we in 'nieuwsgierige' en woord met vier letters moeten vinden. Dit is het woord 'gier' en dit past bij de definitie 'vliegt weg'.",  
+
+},      { 
+
+    date: "2026-08-11", 
+
+    clue: "Ah, zie je, veel lawaai bij onze buren? (4)", 
+
+    answer: "Azie", 
+
+    hints: { 
+
+      definitie: ["onze buren?"], 
+
+      indicatoren: ["veel lawaai"],  
+
+      bouwstenen: ["Ah, zie je"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een homofonie-indicator aangegeven door 'veel lawaai'. Je moet dan dus een bouwsteen die naast die indicator staat uitspreken om tot een antwoord vier letters te komen. Je kan het rechter gedeelte proberen, maar daar komt geen logisch antwoord uit, dus pakken we de linkerkant. 'Ah, zie je' klinkt namelijk hetzelfde als 'Azië' en dat is ons antwoord. Dit past bij de definitie 'onze buren?'.",  
+
+},      { 
+
+    date: "2026-08-12", 
+
+    clue: "Opmerkzame is Cher in spe. (7)", 
+
+    answer: "scherpe", 
+
+    hints: { 
+
+      definitie: ["Opmerkzame"], 
+
+      indicatoren: ["in"],  
+
+      bouwstenen: ["Cher", "spe"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we weer eens een insluitindicator. Dat houdt in dat de ene bouwsteen binnen de andere bouwsteen moet. 'In' geeft aan dat 'cher' binnen 'spe' moet, en dan krijg je 'scherpe'. Dit past bij de definitie 'opmerkzame'.",  
+
+},         { 
+
+    date: "2026-08-12", 
+
+    clue: "Is er geen dokter? Hardloper in elkaar geslagen door chauffeur. (7)", 
+
+    answer: "ophaler", 
+
+    hints: { 
+
+      definitie: ["chauffeur"], 
+
+      indicatoren: ["geen", "in elkaar geslagen"],  
+
+      bouwstenen: ["dokter", "Hardloper"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel moeten we drie stappen uitvoeren. Als eerste zien we de indicator 'geen', dit is in deze puzzel een weglaatindicator en we moeten dus letters uit een bouwsteen verwijderen. De letters die we moeten weglaten, achterhalen we door een substitutie toe te passen. Het woord 'dokter' korten we af naar 'dr' en deze letters halen we uit bouwsteen 'hardloper'. De overige letters worden 'in elkaar geslagen' en dus moeten we een anagram maken van die letters. Daaruit komt het woord 'ophaler' en dit past bij de definitie 'chauffeur'.",  
+
+}, 
+
+  { 
+
+    date: "2026-08-14", 
+
+    clue: "Leiding doet ui in Bulgaarse salade als voorgerecht. (4)", 
+
+    answer: "buis", 
+
+    hints: { 
+
+      definitie: ["Leiding"], 
+
+      indicatoren: ["in", "voorgerecht"],  
+
+      bouwstenen: ["ui", "Bulgaarse salade"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel zijn er een paar instinkers: woorden die verschillende functies kunnen hebben. Je zou bijvoorbeeld Bulgaarse kunnen substitueren voor de landcode, maar dat moet bij deze puzzel niet. Je zou 'salade' kunnen interpreteren als een anagramindicator, maar dat moet bij deze puzzel niet. 'voorgerecht' is een selectieindicator die aangeeft dat je de voorste letter moet pakken van de bouwstenen 'Bulgaarse salade', dus 'bs'. 'in' geeft aan dat de bouwsteen 'ui' in deze letters moet, dan krijg je 'buis' en dit past bij de definitie 'leiding'.",  
+
+},  
+
+ 
+
+ 
+
+    { 
+
+    date: "2026-08-15", 
+
+    clue: "Mo's broer schrikt zich een hoedje. (8)", 
+
+    answer: "sombrero", 
+
+    hints: { 
+
+      definitie: ["een hoedje"], 
+
+      indicatoren: ["schrikt zich"],  
+
+      bouwstenen: ["Mo's broer"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een anagramindicator in 'schrikt zich' en die geeft aan dat we de letters van 'Mo's broer' moeten husselen. Als je dat doet, krijg je 'sombrero' en dit past bij de definitie 'een hoedje'.",  
+
+}, 
+
+ 
  
 
  
