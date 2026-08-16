@@ -1813,6 +1813,29 @@ credit: "💜 Ingestuurd door Joey",
 }, 
 
  
+    { 
+
+    date: "2026-08-17", 
+
+    clue: "School is plots begonnen, ik ben niet blij. (3)", 
+
+    answer: "sip", 
+
+    hints: { 
+
+      definitie: ["ik ben niet blij"], 
+
+      indicatoren: ["begonnen"],  
+
+      bouwstenen: ["School is plots"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een selectie-indicator in 'begonnen', dit geeft aan dat je de beginletters van de bouwstenen ernaast moet pakken. Als je de eerste letters van 'school is plots' pakt, krijg je 'sip' en dit past bij de definitie 'ik ben niet blij'.",  
+
+}, 
  
 
  
