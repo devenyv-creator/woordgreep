@@ -1738,7 +1738,7 @@ credit: "💜 Ingestuurd door Joey",
 
 },         { 
 
-    date: "2026-08-12", 
+    date: "2026-08-13", 
 
     clue: "Is er geen dokter? Hardloper in elkaar geslagen door chauffeur. (7)", 
 
