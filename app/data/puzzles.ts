@@ -1837,7 +1837,29 @@ credit: "💜 Ingestuurd door Joey",
 
 }, 
  
+     { 
 
+    date: "2026-08-18", 
+
+    clue: "Na maandag een atje mijn vriend. (6)", 
+
+    answer: "maatje", 
+
+    hints: { 
+
+      definitie: ["mijn vriend"], 
+
+      indicatoren: ["Na"],  
+
+      bouwstenen: ["atje", "maandag"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft geen standaard indicatoren, alleen een positie-indicator. 'na' geeft namelijk aan dat de bouwsteen 'atje' in het antwoord na bouwsteen 'maandag' moet. Van die 'maandag' moeten we alleen nog een woord maken van twee letters, dus korten we het met een substitutie af naar 'ma'. Als antwoord krijg je dan 'maatje' en dit past bij de definitie 'mijn vriend'.",  
+
+}, 
  
 
 ]
