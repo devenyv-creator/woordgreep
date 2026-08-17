@@ -1812,6 +1812,32 @@ credit: "💜 Ingestuurd door Joey",
 
 }, 
 
+{ 
+
+    date: "2026-08-16", 
+
+    clue: "Na ochtend in Amerika met Nintendo spelcomputer, krijgt kunstmatige intelligentie op z'n kop voor geheugenverlies. (7)", 
+
+    answer: "amnesia", 
+
+    hints: { 
+
+      definitie: ["chips"], 
+
+      indicatoren: ["tussen", "soufflés", "volgt"],  
+
+      bouwstenen: ["De eetlepel", "kaas", "het Chinese bereiden van"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel zijn er vooral veel substituties, waarvan er een aantal ook verschillende opties kunnen hebben. Als ik zo'n puzzel oplos en ik kom er niet uit, probeer ik soms vanaf de definitie terug te werken. Bij het eerste gedeelte 'na ochtend in Amerika' zat ik lang te denken aan de letters 'PM', dit is hoe ze in Amerika aangeven dat een tijd na twaalven 's middags is, dus 'na de ochtend'. Echter bleek dat 'na' en positie-indicator is en de substitutie moet plaatsvinden voor 'ochtend in Amerika' en dat is dan 'AM'. Voor de 'Nintendo spelcomputer' dacht ik eerst aan 'DS', maar toen kwam ik niet uit met het aantal letters. De juiste substitutie is 'NES'. Als laatste de afkorting van 'kunstmatige intelligentie', 'ai', maar dit moet 'op z'n kop' en dus andersom: 'ia'. Als je alle stukjes achter elkaar zet, krijg je 'amnesia' en dit past bij de definitie 'geheugenverlies'.",  
+credit: "💜 Ingestuurd door Max",
+}, 
+
+ 
+
  
     { 
 
