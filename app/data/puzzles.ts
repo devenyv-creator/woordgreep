@@ -1886,6 +1886,32 @@ credit: "💜 Ingestuurd door Max",
       "Deze puzzel heeft geen standaard indicatoren, alleen een positie-indicator. 'na' geeft namelijk aan dat de bouwsteen 'atje' in het antwoord na bouwsteen 'maandag' moet. Van die 'maandag' moeten we alleen nog een woord maken van twee letters, dus korten we het met een substitutie af naar 'ma'. Als antwoord krijg je dan 'maatje' en dit past bij de definitie 'mijn vriend'.",  
 
 }, 
+
+     { 
+
+    date: "2026-08-19", 
+
+    clue: "Ik bereid kleine hapjes van pastasalade. (5)", 
+
+    answer: "tapas", 
+
+    hints: { 
+
+      definitie: ["Ik bereid kleine hapjes"], 
+
+      indicatoren: ["salade"],  
+
+      bouwstenen: ["pasta"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een indicator en bouwsteen in hetzelfde woord. 'Salade' is namelijk een anagramindicator die aangeeft dat we de letters van bouwsteen 'pasta' moeten husselen. Als je dat doet, krijg je 'tapas' en dit past bij de definitie 'ik bereid kleine hapjes'.",  
+
+}, 
+
+ 
  
 
 ]
