@@ -1911,6 +1911,30 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+         { 
+
+    date: "2026-08-20", 
+
+    clue: "Loeiend bezoek gaat om en om en om. (3)", 
+
+    answer: "koe", 
+
+    hints: { 
+
+      definitie: ["Loeiend"], 
+
+      indicatoren: ["bezoek"],  
+
+      bouwstenen: ["om en om", "om"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we het stuk 'om en om en om' waarbij het misschien niet helemaal duidelijk is wat we er mee moeten. We gaan dat stuk splitsen in 'om en om' en 'om'. Het eerste geeft aan dat we om en om letters moeten halen uit bouwsteen 'bezoek', dit kan zijn 'bze' of 'eok'. We pakken het tweede want de tweede indicator geeft aan dat we de letters om moeten draaien. Dan krijg je 'koe' en dit past bij definitie 'loeiend'.",  
+
+}, 
+
  
  
 
