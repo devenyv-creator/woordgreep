@@ -1935,6 +1935,32 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+ { 
+
+    date: "2026-08-21", 
+
+    clue: "Groot zoogdier gevangen in verhoorkamer. (4)", 
+
+    answer: "orka", 
+
+    hints: { 
+
+      definitie: ["Groot zoogdier"], 
+
+      indicatoren: ["gevangen in"],  
+
+      bouwstenen: ["verhoorkamer"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we alleen een verborgen-woordindicator, namelijk 'gevangen in' en dit verborgen woord zit in bouwsteen 'verhoorkamer'. Hierin zit namelijk het woord 'orka' en dit past bij de definitie 'groot zoogdier'.",  
+
+}, 
+
+ 
+
  
  
 
