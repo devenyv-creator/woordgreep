@@ -1959,7 +1959,53 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
- 
+     { 
+
+    date: "2026-08-22", 
+
+    clue: "Dans van beginnende charlatan twee keer herhaald. (9)", 
+
+    answer: "chachacha", 
+
+    hints: { 
+
+      definitie: ["Dans"], 
+
+      indicatoren: ["beginnende", "twee keer herhaald"],  
+
+      bouwstenen: ["charlatan"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel gebruikt een indicator die we niet in de standaard categorieën zouden indelen. 'twee keer herhaald' vertelt ons namelijk dat we een stuk bouwsteen drie keer moeten gebruiken. Ons antwoord is 9 letters lang, dus we weten dat we een bouwsteen van drie letters moeten hebben. Het woord 'beginnende' is een selectie-indicator die aangeeft dat we de beginnende letters van een bouwsteen moeten gebruiken. Als we de eerste drie letters pakken en die herhalen we twee keer, krijg je 'chachacha' en dit past bij de definitie 'dans'.",  
+
+},     
+
+     { 
+
+    date: "2026-08-23", 
+
+    clue: "Bokser heeft er gedanst voor 5 cent. (7)", 
+
+    answer: "stuiver", 
+
+    hints: { 
+
+      definitie: ["5 cent"], 
+
+      indicatoren: ["in", "gedanst"],  
+
+      bouwstenen: ["Bokser", "er"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel is moeilijk omdat het gebruik maakt van een handelend zelfstandig naamwoord, ookwel hetgene wat een actie uitvoert. Dit is 'bokser'. Een substitutie die we moeten maken voor bokser is 'vuist', want je vuist is hetgene wat bokst. De indicator 'gedanst' geeft aan dat we die bouwsteen samen met bouwsteen 'er' moeten husselen tot een antwoord. Je krijgt dan 'stuiver' en dit past bij de definitie '5 cent'.",  
+
+}, 
 
  
  
