@@ -2032,6 +2032,30 @@ credit: "💜 Ingestuurd door Max",
       "Deze puzzel heeft geen indicatoren, wat betekent dat het antwoord het in principe al staat. Je ziet alleen dat het er nog niet staat, dus je moet wel nog iets doen. Er is één type actie die je altijd met bouwstenen mag doen, namelijk substities. Het woord 'max' houden we zo, we gaan het cijfer 1 substitueren voor het Romeinse cijfer 'i' en we gaan 'keer' vervangen voor een synoniem, namelijk 'maal'. Als je dit achter elkaar zet, krijg je 'maximaal' en dit past bij de definitie 'niet meer'.",  
 
 }, 
+
+     { 
+
+    date: "2026-08-25", 
+
+    clue: "Zeg eens 'aa', hmm, dat gaat alleen. (7)", 
+
+    answer: "Eenzaam", 
+
+    hints: { 
+
+      definitie: ["dat gaat alleen"], 
+
+      indicatoren: ["eens 'aa', hmm"],  
+
+      bouwstenen: ["zeg"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft alleen een homofonie-indicator, namelijk 'zeg' en dit geeft aan dat je de woorden ernaast uit moet spreken en dan zou het moeten klinken als een woord. Als je 'eens aa hmm' uitspreekt, klinkt dat als 'eenzaam' en dit past bij de definitie 'dat gaat alleen'.",  
+
+}, 
  
 
 ]
