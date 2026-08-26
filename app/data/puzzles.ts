@@ -2080,5 +2080,27 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
  
+     { 
 
+    date: "2026-08-26", 
+
+    clue: "Sporter komt in actie en jaagt op de prijs. (7)",
+
+    answer: "Stroper", 
+
+    hints: { 
+
+      definitie: ["jaagt op de prijs"], 
+
+      indicatoren: ["komt in actie"],  
+
+      bouwstenen: ["Sporter"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is er alleen een anagram-indicator, namelijk 'komt in actie'. Dit in een anagram-indicator omdat het beweging suggereert, het komt in actie, dus het verplaats zich. In dit geval verplaatsten de letters van 'sporter' zich om het woord 'stroper' te vormen en dit past bij de definitie 'jaagt op de prijs'.",  
+
+}, 
 ]
