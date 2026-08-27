@@ -2128,4 +2128,30 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+    { 
+
+    date: "2026-08-29", 
+
+    clue: "Stigma nietig verklaard door gekke gemeenschap. (4)", 
+
+    answer: "stam", 
+
+    hints: { 
+
+      definitie: ["gemeenschap"], 
+
+      indicatoren: ["niet", "gekke"],  
+
+      bouwstenen: ["Stigma", "ig"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een weglaatindicator, namelijk 'niet' van het woord 'nietig' die aangeeft dat je de bouwsteen 'ig', die ook in 'nietig' staat, moet verwijderen uit een andere bouwsteen. Als je 'ig' weghaalt uit 'stigma', houdt je nog 'stma' over. Deze letters moeten nog gehusseld worden, zoals aangegeven door indicator 'gekke'. Als antwoord krijg je dan 'stam' en dit past bij de definitie 'gemeenschap'.",  
+
+},     
+
+ 
+
 ]
