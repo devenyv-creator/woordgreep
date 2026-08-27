@@ -2080,27 +2080,52 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
  
-     { 
+        { 
 
-    date: "2026-08-26", 
+    date: "2026-08-27", 
 
-    clue: "Sporter komt in actie en jaagt op de prijs. (7)",
+    clue: "Bravo! De borden vlogen in het rond en dreven in de vijver. (9)",
 
-    answer: "Stroper", 
+    answer: "Dobberden", 
 
     hints: { 
 
-      definitie: ["jaagt op de prijs"], 
+      definitie: ["dreven in de vijver"], 
 
-      indicatoren: ["komt in actie"],  
+      indicatoren: ["vlogen in het rond"],  
 
-      bouwstenen: ["Sporter"], 
+      bouwstenen: ["Bravo! De borden"], 
 
     }, 
 
     explanation: 
 
-      "Bij deze puzzel is er alleen een anagram-indicator, namelijk 'komt in actie'. Dit in een anagram-indicator omdat het beweging suggereert, het komt in actie, dus het verplaats zich. In dit geval verplaatsten de letters van 'sporter' zich om het woord 'stroper' te vormen en dit past bij de definitie 'jaagt op de prijs'.",  
+      "Bij deze puzzel moeten we een substitutie maken, we vervangen 'bravo' voor de letter 'b' zoals in het NAVO-alfabet, en daarna is er alleen maar een anagram-indicator, namelijk 'vlogen in het rond'. Als je de letters van 'b de borden' husselt, krijg je 'dobberden' en dit past bij de definitie 'dreven in de vijver'.",  
 
 }, 
+
+ { 
+
+    date: "2026-08-28", 
+
+    clue: "Tien keer tien, zo win je boter, kaas en eieren? (3)", 
+
+    answer: "xxx", 
+
+    hints: { 
+
+      definitie: ["zo win je boter, kaas en eieren?"], 
+
+      indicatoren: [""],  
+
+      bouwstenen: ["Tien keer tien"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel ligt de moeilijkheid vooral in de speling bij de definitie. Het vraagteken geeft aan dat de definitie wat losser opgevat mag worden dan normaal, neem de definitie dan niet letterlijk, er zal waarschijnlijk een woordspeling of raadsel in de definitie zitten en creativiteit is nodig. In deze puzzel is er verder geen indicator, dus moeten we alleen maar substituties toepassen. 'Tien' is als Romeinse cijfer een 'x' en 'keer' is in rekenkundige notatie een 'x'. De eerste drie woorden vormen dus 'xxx', en als je met boter, kaas en eieren drie x'en op rij hebt, hebt je gewonnen.",  
+
+}, 
+
 ]
