@@ -2152,6 +2152,31 @@ credit: "💜 Ingestuurd door Max",
 
 },     
 
+   { 
+
+    date: "2026-08-30", 
+
+    clue: "Vanbinnen vond ik het abnormaal, die toets. (3)", 
+
+    answer: "tab", 
+
+    hints: { 
+
+      definitie: ["die toets"], 
+
+      indicatoren: ["Vanbinnen vond ik"],  
+
+      bouwstenen: ["het abnormaal"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft alleen een simpele verborgen-woordindicator, namelijk 'vanbinnen vond ik'. Als je dan zoekt in de bouwstenen ernaast 'het abnormaal', dan vind je opeenvolgend de letters van het woord 'tab' en dit past bij de definitie 'die toets', want tab is een toets op je toetsenbord.",  
+
+}, 
+
+ 
  
 
 ]
