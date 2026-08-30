@@ -2176,7 +2176,29 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
- 
+      { 
+
+    date: "2026-08-31", 
+
+    clue: "Oeps, 't foutje wordt schoongemaakt. (5)", 
+
+    answer: "poets", 
+
+    hints: { 
+
+      definitie: ["schoongemaakt"], 
+
+      indicatoren: ["foutje"],  
+
+      bouwstenen: ["Oeps, 't"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we alleen een anagramindicator met 'foutje'. Deze geeft aan dat we de letters van bouwsteen 'oeps t' moeten husselen tot het woord 'poets', dit past bij de definitie 'schoongemaakt'.",  
+
+}, 
  
 
 ]
