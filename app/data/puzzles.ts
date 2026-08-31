@@ -2198,6 +2198,28 @@ credit: "💜 Ingestuurd door Max",
 
       "Bij deze puzzel hebben we alleen een anagramindicator met 'foutje'. Deze geeft aan dat we de letters van bouwsteen 'oeps t' moeten husselen tot het woord 'poets', dit past bij de definitie 'schoongemaakt'.",  
 
+},      { 
+
+    date: "2026-09-01", 
+
+    clue: "De inzet is een potje zonder jou. (3)", 
+
+    answer: "pot", 
+
+    hints: { 
+
+      definitie: ["De inzet"], 
+
+      indicatoren: ["zonder"],  
+
+      bouwstenen: ["potje", "jou"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een weglaatindicator met 'zonder', deze geeft aan dat we bouwsteen 'jou' moeten weglaten uit bouwsteen 'potje'. Dit kan niet zomaar, dus zoeken we eerst een substitutie voor 'jou' en dat is 'je'. Dit kan je wel uit 'potje' halen en dan krijg je 'pot'. Dit past bij de definitie 'de inzet', want met bijvoorbeeld poker speel je voor de 'pot', de inzet.",  
+
 }, 
  
 
