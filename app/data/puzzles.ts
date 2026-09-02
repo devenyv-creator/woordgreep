@@ -2220,7 +2220,53 @@ credit: "💜 Ingestuurd door Max",
 
       "Deze puzzel heeft een weglaatindicator met 'zonder', deze geeft aan dat we bouwsteen 'jou' moeten weglaten uit bouwsteen 'potje'. Dit kan niet zomaar, dus zoeken we eerst een substitutie voor 'jou' en dat is 'je'. Dit kan je wel uit 'potje' halen en dan krijg je 'pot'. Dit past bij de definitie 'de inzet', want met bijvoorbeeld poker speel je voor de 'pot', de inzet.",  
 
+},      { 
+
+    date: "2026-09-02", 
+
+    clue: "Schrijver zit vast in kippenhok. (3)", 
+
+    answer: "pen", 
+
+    hints: { 
+
+      definitie: ["Schrijver"], 
+
+      indicatoren: ["zit vast in"],  
+
+      bouwstenen: ["kippenhok"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is er alleen een verborgen-woordindicator, dit is 'zit vast in' en geeft aan dat we in de de bouwsteen ernaast het antwoord vinden. In 'kippenhok' zit het woord 'pen' en dit past bij de definitie 'schrijver'.",  
+
+},         { 
+
+    date: "2026-09-03", 
+
+    clue: "Doorgewinterde schipper mag met ere overvaren. (8)", 
+
+    answer: "Ervarene", 
+
+    hints: { 
+
+      definitie: ["Doorgewinterde schipper"], 
+
+      indicatoren: ["over"],  
+
+      bouwstenen: ["ere", "varen"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel moeten we het woord 'overvaren' splitsen, want 'over' is namelijk een insluitindicator. Dit geeft aan dat de ene bouwsteen 'over' de andere moet. Het woord 'ere' moet dus om het woord 'varen'. Dan krijg je 'ervarene' en dit past bij de definitie 'doorgewinterde schipper'.",  
+
 }, 
+
+ 
  
 
 ]
