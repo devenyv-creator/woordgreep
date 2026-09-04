@@ -2265,6 +2265,29 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel moeten we het woord 'overvaren' splitsen, want 'over' is namelijk een insluitindicator. Dit geeft aan dat de ene bouwsteen 'over' de andere moet. Het woord 'ere' moet dus om het woord 'varen'. Dan krijg je 'ervarene' en dit past bij de definitie 'doorgewinterde schipper'.",  
 
 }, 
+    { 
+
+    date: "2026-09-04", 
+
+    clue: "Oorsprong van gestamel ligt in het hart. (4)", 
+
+    answer: "stam", 
+
+    hints: { 
+
+      definitie: ["Oorsprong"], 
+
+      indicatoren: ["ligt in het hart"],  
+
+      bouwstenen: ["gestamel"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een verborgen-woordindicator met 'ligt in het hart'. Deze geeft aan dat het antwoord verorgen ligt in het midden van bouwsteen 'gestamel'. Als antwoord krijg je dan 'stam' en dit past bij de definitie 'oorsprong'.",  
+
+},     
 
  
  
