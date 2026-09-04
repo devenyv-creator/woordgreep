@@ -2287,7 +2287,29 @@ credit: "💜 Ingestuurd door Max",
 
       "Deze puzzel heeft een verborgen-woordindicator met 'ligt in het hart'. Deze geeft aan dat het antwoord verorgen ligt in het midden van bouwsteen 'gestamel'. Als antwoord krijg je dan 'stam' en dit past bij de definitie 'oorsprong'.",  
 
-},     
+},      { 
+
+    date: "2026-09-05", 
+
+    clue: "Elvis Presley debuteert met een muziekuitgave van een paar nummers. (2)", 
+
+    answer: "ep", 
+
+    hints: { 
+
+      definitie: ["een muziekuitgave van een paar nummers"], 
+
+      indicatoren: ["debuteert"],  
+
+      bouwstenen: ["Elvis Presley"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is de definitie langer dan normaal, wat verwarrend kan zijn. De woordspeling is namelijk erg simpel. 'debuteert' geeft namelijk aan dat we de eerste letters van bouwsteen 'Elvis Presley' moeten pakken. Je krijgt dan 'ep' en dit past bij de definitie 'een muziekuitgave van een paar nummers.",  
+
+}, 
 
  
  
