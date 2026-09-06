@@ -2335,6 +2335,31 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+     { 
+
+    date: "2026-09-07", 
+
+    clue: "Ik begin zaterdag dronken. (3)", 
+
+    answer: "zat", 
+
+    hints: { 
+
+      definitie: ["dronken"], 
+
+      indicatoren: ["begin"],  
+
+      bouwstenen: ["zaterdag"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we alleen een selectieindicator 'begin' die aangeeft dat we de beginletters van de bouwsteen 'zaterdag' nodig hebben, je krijg dan 'zat' en dit past bij de definitie 'dronken'.",  
+
+}, 
+
+ 
  
  
 
