@@ -2311,6 +2311,30 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+    { 
+
+    date: "2026-09-06", 
+
+    clue: "Het was harteloos gewrapt, maar overdatum, dus hij at het niet en gooide het weg. (7)", 
+
+    answer: "gedumpt", 
+
+    hints: { 
+
+      definitie: ["gooide het weg"], 
+
+      indicatoren: ["harteloos", "over", "niet"],  
+
+      bouwstenen: ["gewrapt", "datum", "at"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een aantal moeilijke stukken. Als eerst pakken we het stukje 'harteloos gewrapt', hierbij moeten we het hart, dus de middelste letters uit 'gewrapt' halen. We weten nog niet hoeveel letters we moeten weghalen, maar dat wordt later duidelijk. Deze letters moeten 'over' 'datum', dus om bouwsteen 'datum' heen, maar hieruit moeten we nog de letters 'at' weghalen, vanwege het stukje 'at het niet'. Je houdt dan nog over de letters 'dum' en omdat we nog vier letters nodig hebben, weet je dat je de vier buitenste letters van 'gewrapt' nodig hebt, dus 'gept'. Die letters moeten om 'dum' en dan krijg je 'gedumpt'. Dit past bij de definitie 'gooide het weg'.",  
+
+}, 
+
  
  
 
