@@ -2359,7 +2359,53 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
- 
+      { 
+
+    date: "2026-09-08", 
+
+    clue: "Toon respect en tutoyeer de laatsten. (3)", 
+
+    answer: "eer", 
+
+    hints: { 
+
+      definitie: ["Toon respect"], 
+
+      indicatoren: ["de laatsten"],  
+
+      bouwstenen: ["tutoyeer"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een selectieindicator 'laatsten' die aangeeft dat je de laatste letters van bouwsteen 'tutoyeer' moet pakken. Je krijgt dan 'eer' en dit past bij de definitie 'toon respect'.",  
+
+}, 
+
+     { 
+
+    date: "2026-09-09", 
+
+    clue: " 'n acteur speelt een mytisch wezen. (7)", 
+
+    answer: "centaur", 
+
+    hints: { 
+
+      definitie: ["een mytisch wezen"], 
+
+      indicatoren: ["speelt"],  
+
+      bouwstenen: ["'n acteur"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel is er alleen een anagramindicator, namelijk 'speelt', dit is een werkwoord die aangeeft dat er actie is, dus dat de letters in beweging zijn. Als we de letters van bouwsteen 'n acteur' husselen, krijg je 'centaur' en dit past bij de definitie 'een mytisch wezen'.",  
+
+}, 
  
  
 
