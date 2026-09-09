@@ -2406,6 +2406,54 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel is er alleen een anagramindicator, namelijk 'speelt', dit is een werkwoord die aangeeft dat er actie is, dus dat de letters in beweging zijn. Als we de letters van bouwsteen 'n acteur' husselen, krijg je 'centaur' en dit past bij de definitie 'een mytisch wezen'.",  
 
 }, 
+
+        { 
+
+    date: "2026-09-10", 
+
+    clue: "De beginnende medici draaiden zich om en zagen hetzelfde. (4)", 
+
+    answer: "idem", 
+
+    hints: { 
+
+      definitie: ["zagen hetzelfde"], 
+
+      indicatoren: ["beginnende", "draaiden zich om"],  
+
+      bouwstenen: ["medici"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel moeten we twee dingen doen met het woord 'medici'. Als eerste pakken we de 'beginnende' letters, namelijk 'medi' en daarna draaien we die om, je krijgt dan 'idem' en dit past bij de definitie 'zagen hetzelfde'.",  
+
+}, 
+
+  { 
+
+    date: "2026-09-11", 
+
+    clue: "Laat maar, hij at geen -zeker niet in Argentinië- hoefdieren. (4)", 
+
+    answer: "lama", 
+
+    hints: { 
+
+      definitie: ["hoefdieren"], 
+
+      indicatoren: ["geen", "zeker niet in"],  
+
+      bouwstenen: ["Laat maar", "at", "Argentinië"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel beginnen we met bouwsteen 'laat maar' en daar moeten we twee keer iets uithalen. Als eerst 'at geen', dus halen we de letters 'at' eruit. Daarna 'zeker niet in Argentinië'. Argentinië heeft als landcode 'ar', dus als we daar een substitutie doen, kunnen we zeggen dat 'ag' ook verwijderd moet worden. Je houdt dan alleen nog 'la ma' of dus 'lama' over en dit past bij de definitie 'hoefdieren'.",  
+
+}, 
  
  
 
