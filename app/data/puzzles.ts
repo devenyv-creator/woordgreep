@@ -2454,6 +2454,29 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel beginnen we met bouwsteen 'laat maar' en daar moeten we twee keer iets uithalen. Als eerst 'at geen', dus halen we de letters 'at' eruit. Daarna 'zeker niet in Argentinië'. Argentinië heeft als landcode 'ar', dus als we daar een substitutie doen, kunnen we zeggen dat 'ag' ook verwijderd moet worden. Je houdt dan alleen nog 'la ma' of dus 'lama' over en dit past bij de definitie 'hoefdieren'.",  
 
 }, 
+    { 
+
+    date: "2026-09-12", 
+
+    clue: "Vriezer bevat een hard ei en een soes, maar oh jee! Luidruchtig worden ze gewisseld. (5)", 
+
+    answer: "ijsjes", 
+
+    hints: { 
+
+      definitie: ["Vriezer bevat"], 
+
+      indicatoren: ["hard", "Luidruchtig", "worden ze gewisseld"],  
+
+      bouwstenen: ["ei", "soes", "oh jee"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een aantal stappen. Als eerst spreken we 'ei' uit vanwege homofonie indicator 'hard' en kunnen we dus de 'ei' luisteren alsof het 'ij' is. Dan pakken we 'soes', maar daar moeten we eerst nog iets mee doen. 'oh jee' wordt namelijk luidruchtig gewisseld. 'oh jee' klinkt als de letters 'o' en 'j' als ze luidruchtig zijn en we wisselen dus de 'o' uit 'soes' voor je 'j'. De 'sjes' die je dan overhoudt, zetten we achter de 'ij' die we al hadden en dan krijg je 'ijsjes', dit past bij de definitie 'vriezer bevat'.",  
+
+},     
  
  
 
