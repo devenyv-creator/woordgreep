@@ -2476,7 +2476,32 @@ credit: "💜 Ingestuurd door Max",
 
       "Deze puzzel heeft een aantal stappen. Als eerst spreken we 'ei' uit vanwege homofonie indicator 'hard' en kunnen we dus de 'ei' luisteren alsof het 'ij' is. Dan pakken we 'soes', maar daar moeten we eerst nog iets mee doen. 'oh jee' wordt namelijk luidruchtig gewisseld. 'oh jee' klinkt als de letters 'o' en 'j' als ze luidruchtig zijn en we wisselen dus de 'o' uit 'soes' voor je 'j'. De 'sjes' die je dan overhoudt, zetten we achter de 'ij' die we al hadden en dan krijg je 'ijsjes', dit past bij de definitie 'vriezer bevat'.",  
 
-},     
+},{ 
+
+    date: "2026-09-13", 
+
+    clue: "Erg chique is Ilse de Lange van binnen. (4)", 
+
+    answer: "edel", 
+
+    hints: { 
+
+      definitie: ["Erg chique"], 
+
+      indicatoren: ["van binnen"],  
+
+      bouwstenen: ["Ilse de Lange"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een verborgen-woordindicator, namelijk 'van binnen'. Deze geeft aan dat we in bouwsteen 'Ilse de Lange' en ander woord kunnen vinden. Als de begint bij de eerste 'e', krijg je 'e de L', oftewel 'edel' en dit past bij de definitie 'chique'.",  
+
+}, 
+
+ 
+
  
  
 
