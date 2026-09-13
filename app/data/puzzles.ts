@@ -2500,9 +2500,170 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
- 
+  { 
 
+    date: "2026-09-14", 
+
+    clue: "Vreemdgenoeg spaar ik lavendel. (5)", 
+
+    answer: "paars", 
+
+    hints: { 
+
+      definitie: ["lavendel"], 
+
+      indicatoren: ["Vreemdgenoeg"],  
+
+      bouwstenen: ["spaar"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een anagramindicator 'vreemdgenoeg' die aangeeft dat je de letters van bouwsteen 'spaar' moet husselen. Eigenlijk hoef je alleen maar de eerste letter op het eind te zetten, dan krijg je 'paars' in dit past bij de definitie 'lavendel' omdat dit naast een bloem ook een kleurnaam is.",  
+
+}, 
+
+     { 
+
+    date: "2026-09-15", 
+
+    clue: "De vogel en ik draaien het bord van de parkeerplaats. (3)", 
+
+    answer: "kip", 
+
+    hints: { 
+
+      definitie: ["De vogel"], 
+
+      indicatoren: ["draaien"],  
+
+      bouwstenen: ["ik", "het bord van de parkeerplaats"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we twee bouwstenen waar we iets mee moeten doen. Als eerst hebben we bouwsteen 'ik' en die moeten we 'draaien' zodat je 'ki' krijgt. Dan hebben we als bouwsteen 'het bord van de parkeerplaats' en bij deze kunnen we een substitutie maken, namelijk de letter 'P' omdat dat altijd op het bord staat. Als je dit samenvoegt, krijg je 'kip' en dat past bij de definitie 'De vogel'.",  
+
+}, 
+        { 
+
+    date: "2026-09-16", 
+
+    clue: "Dubbele echo klinkt in emmer water. (4)", 
+
+    answer: "meer", 
+
+    hints: { 
+
+      definitie: ["water"], 
+
+      indicatoren: ["Dubbele", "klinkt in"],  
+
+      bouwstenen: ["echo", "emmer"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel moeten we drie stappen doorlopen. Als eerste 'dubbele echo', hierbij substitueren we 'echo' volgens het NAVO-alfabet voor de letter 'e' en verdubbelen we deze naar 'ee'. Dan 'klinkt in' is een combinatie van een homofonie-indicator en een insluitindicator. Als je 'emmer' uitspreekt, klinkt het als 'mr' en daar moeten dan de letters die we eerder hebben gevonden middenin. Dan krijg je 'meer' en dit past bij de definitie 'water'.",  
+
+}, 
  
+ { 
+
+    date: "2026-09-17", 
+
+    clue: "Ekster is in de war van wesp. (6)", 
+
+    answer: "steker", 
+
+    hints: { 
+
+      definitie: ["wesp"], 
+
+      indicatoren: ["is in de war van"],  
+
+      bouwstenen: ["Ekster"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we eigenlijk alleen maar een anagramindicator. 'is in de war van' geeft aan dat we de letters van 'ekster' moeten husselen. Dan krijg je 'steker' en dit past bij de definitie 'wesp'.",  
+
+}, 
  
+    { 
+
+    date: "2026-09-18", 
+
+    clue: "Gekke ekster is er niet op vaste plek. (4)", 
+
+    answer: "stek", 
+
+    hints: { 
+
+      definitie: ["op vaste plek"], 
+
+      indicatoren: ["gekke", "niet"],  
+
+      bouwstenen: ["ekster", "er"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een anagramindicator 'gekke' die aangeeft dat we de letters van bouwsteen 'ekster' moeten husselen, maar eerst moeten we twee letters weghalen. Weglaatindicator 'niet' geeft aan dat we bouwsteen 'er' moeten weghalen uit 'ekster', dat laat 'ekst' over. Als je dit husselt, krijg je 'stek' en dit past bij de definitie 'vaste plek'.",  
+
+},     
+ 
+     { 
+
+    date: "2026-09-19", 
+
+    clue: "Actieve ekster heet mister prik. (5)", 
+
+    answer: "steek", 
+
+    hints: { 
+
+      definitie: ["prik"], 
+
+      indicatoren: ["actieve", "heet", "mist"],  
+
+      bouwstenen: ["ekster", "er"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel begint met een anagramindicator 'actieve', we weten dus dat we bouwsteen 'ekster' moeten husselen, maar eerst moet er nog een letter weg. 'Heet' is een homofonieindicator die aangeeft dat een woord klinkt als een ander woord. 'Mister' klinkt als 'mist er' en 'mist r'. Dit is nu een weglaatindicator geworden en die geeft aan dat we de letter 'r' moeten weglaten uit 'ekster'. Als je 'ekste' husselt, krijg je 'steek' en dit past bij de definitie 'prik'.",  
+
+}, 
+   { 
+
+    date: "2026-09-20", 
+
+    clue: "Het was harteloos gewrapt, maar overdatum, dus hij at het niet en gooide het weg. (7)", 
+
+    answer: "gedumpt", 
+
+    hints: { 
+
+      definitie: ["gooide het weg"], 
+
+      indicatoren: ["harteloos", "over", "niet"],  
+
+      bouwstenen: ["gewrapt", "datum", "at"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een aantal moeilijke stukken. Als eerst pakken we het stukje 'harteloos gewrapt', hierbij moeten we het hart, dus de middelste letters uit 'gewrapt' halen. We weten nog niet hoeveel letters we moeten weghalen, maar dat wordt later duidelijk. Deze letters moeten 'over' 'datum', dus om bouwsteen 'datum' heen, maar hieruit moeten we nog de letters 'at' weghalen, vanwege het stukje 'at het niet'. Je houdt dan nog over de letters 'dum' en omdat we nog vier letters nodig hebben, weet je dat je de vier buitenste letters van 'gewrapt' nodig hebt, dus 'gept'. Die letters moeten om 'dum' en dan krijg je 'gedumpt'. Dit past bij de definitie 'gooide het weg'.",  
+
+}, 
 
 ]
