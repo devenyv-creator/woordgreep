@@ -2665,5 +2665,32 @@ credit: "💜 Ingestuurd door Max",
       "Deze puzzel heeft een aantal moeilijke stukken. Als eerst pakken we het stukje 'harteloos gewrapt', hierbij moeten we het hart, dus de middelste letters uit 'gewrapt' halen. We weten nog niet hoeveel letters we moeten weghalen, maar dat wordt later duidelijk. Deze letters moeten 'over' 'datum', dus om bouwsteen 'datum' heen, maar hieruit moeten we nog de letters 'at' weghalen, vanwege het stukje 'at het niet'. Je houdt dan nog over de letters 'dum' en omdat we nog vier letters nodig hebben, weet je dat je de vier buitenste letters van 'gewrapt' nodig hebt, dus 'gept'. Die letters moeten om 'dum' en dan krijg je 'gedumpt'. Dit past bij de definitie 'gooide het weg'.",  
 
 }, 
+   
+
+ 
+
+{ 
+
+    date: "2026-09-21", 
+
+    clue: "44 luide feesten geven. (6)", 
+
+    answer: "vieren", 
+
+    hints: { 
+
+      definitie: ["feesten geven"], 
+
+      indicatoren: ["luide"],  
+
+      bouwstenen: ["44"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een homofonie-indicator, namelijk 'luide'. Deze geeft aan dat we bouwsteen '44' hardop moeten uitspreken. Dit doet je echter niet als 'vierenveertig' maar als je zegt wat je ziet zijn het 'vieren' en dit past bij de definitie 'feesten geven'.",  
+
+}, 
 
 ]
