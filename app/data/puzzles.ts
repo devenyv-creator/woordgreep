@@ -2667,8 +2667,6 @@ credit: "💜 Ingestuurd door Max",
 }, 
    
 
- 
-
 { 
 
     date: "2026-09-21", 
@@ -2692,5 +2690,31 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel hebben we een homofonie-indicator, namelijk 'luide'. Deze geeft aan dat we bouwsteen '44' hardop moeten uitspreken. Dit doet je echter niet als 'vierenveertig' maar als je zegt wat je ziet zijn het 'vieren' en dit past bij de definitie 'feesten geven'.",  
 
 }, 
+
+     { 
+
+    date: "2026-09-22", 
+
+    clue: "Klas start zonder meester, wat een chaos. (6)", 
+
+    answer: "eerste", 
+
+    hints: { 
+
+      definitie: ["Klas"], 
+
+      indicatoren: ["start zonder", "wat een chaos"],  
+
+      bouwstenen: ["meester"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft twee indicatoren. Als eerste 'start zonder', dit houdt in dat we de start van een bouwsteen moeten afhalen en dat doen we bij 'meester', dit wordt dan dus 'eester'. 'wat een chaos' geeft aan dat we die letters moeten husselen. Dan krijg je het woord 'eerste' en dit past bij de definitie 'klas'.",  
+
+}, 
+
+ 
 
 ]
