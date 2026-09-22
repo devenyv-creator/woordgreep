@@ -2715,6 +2715,28 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
- 
+     { 
+
+    date: "2026-09-23", 
+
+    clue: "Brainstormsessie begint met uitgesproken idee dat ik om hulp vraag. (3)", 
+
+    answer: "bid", 
+
+    hints: { 
+
+      definitie: ["dat ik om hulp vraag"], 
+
+      indicatoren: ["begint met uitgespoken"],  
+
+      bouwstenen: ["Brainstormsessie", "idee"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we twee bouwstenen. Bij bouwsteen 'brainstormsessie' pakken we de eerste letter 'b' vanwege de indicator 'begint met'. Bouwsteen 'idee' moeten we hardop uitspreken vanwege homofonie-indicator 'uitgesproken', dan klinkt het als 'id'. Als je deze samenvoegt, krijg je 'bid' en dit past bij de definitie 'dat ik om hulp vraag'.",  
+
+}, 
 
 ]
