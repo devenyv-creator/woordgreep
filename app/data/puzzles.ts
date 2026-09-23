@@ -2739,4 +2739,52 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+        { 
+
+    date: "2026-09-24", 
+
+    clue: "Stierenvechters bij evenementen gooien er na Charlie twee in de roos. (6)", 
+
+    answer: "rodeos", 
+
+    hints: { 
+
+      definitie: ["Stierenvechters bij evenementen"], 
+
+      indicatoren: ["in de", "na", "twee"],  
+
+      bouwstenen: ["Charlie", "roos"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel gebruiken we het woord 'Charlie' en dat staat in het NAVO-alfabet voor de letters 'c'. Het woord 'na' geeft aan dat we letters na de letter 'c' nodig hebben en 'twee' geeft aan dat we de twee letters erna nodig hebben, dit zijn dus de letters 'de'. Deze letters moeten 'in de' 'roos', als we dat doen, krijg je 'rodeos' en dit past bij de definitie 'stierenvechters bij evenementen'.",  
+
+}, 
+
+ { 
+
+    date: "2026-09-25", 
+
+    clue: "Goede plottwist: Luxemburg bestaat niet meer. (3)", 
+
+    answer: "top", 
+
+    hints: { 
+
+      definitie: ["Goede"], 
+
+      indicatoren: ["twist", "bestaat niet meer"],  
+
+      bouwstenen: ["plot", "Luxemburg"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een woord die een indicator en een bouwsteen in één heeft. Bij 'plottwist' is 'plot' de bouwsteen en 'twist' geeft als indicator aan dat we die moeten omdraaien, dan krijg je 'tolp'. Daarna voeren we een substitutie uit, 'Luxemburg' wordt vervangen door de landcode 'L'. Dan staat er in het laatste stukje dus 'L bestaat niet meer'. We moeten dus de letter 'l' verwijder uit 'tolp' en dan krijg je 'top'. Dit past bij de definitie 'goede'.",  
+
+}, 
+
 ]
