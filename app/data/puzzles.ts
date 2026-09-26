@@ -2786,5 +2786,32 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel hebben we een woord die een indicator en een bouwsteen in één heeft. Bij 'plottwist' is 'plot' de bouwsteen en 'twist' geeft als indicator aan dat we die moeten omdraaien, dan krijg je 'tolp'. Daarna voeren we een substitutie uit, 'Luxemburg' wordt vervangen door de landcode 'L'. Dan staat er in het laatste stukje dus 'L bestaat niet meer'. We moeten dus de letter 'l' verwijder uit 'tolp' en dan krijg je 'top'. Dit past bij de definitie 'goede'.",  
 
 }, 
+    { 
+
+    date: "2026-09-26", 
+
+    clue: "De vijf witte strepen van de zebra's zijn nieuw. (4)", 
+
+    answer: "vers", 
+
+    hints: { 
+
+      definitie: ["zijn nieuw"], 
+
+      indicatoren: ["witte strepen van de"],  
+
+      bouwstenen: ["vijf", "zebra's"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel begint met het getal 'vijf' die we gelijk kunnen vervangen voor het Romeinse cijfer 'v'. Daarna is er een selectie-indicator 'witte strepen'. Een zebra is zwart met wit, dus houdt deze indicator in dat we om en om een letters van bouwsteen 'zebras' moeten pakken beginnend bij de tweede letter. Dit zijn 'ers'. Samen met de 'v' die we eerder vonden, wordt dit 'vers' en dit past bij de definitie 'zijn nieuw'.",  
+
+},     
+
+ 
+
+ 
 
 ]
