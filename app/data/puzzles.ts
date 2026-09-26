@@ -2810,6 +2810,30 @@ credit: "💜 Ingestuurd door Max",
 
 },     
 
+   { 
+
+    date: "2026-09-27", 
+
+    clue: "Bouwsteen voor tijdperk in actie om te versnellen. (11)", 
+
+    answer: "acceleratie", 
+
+    hints: { 
+
+      definitie: ["om te versnellen"], 
+
+      indicatoren: ["voor", "in"],  
+
+      bouwstenen: ["Bouwsteen", "tijdperk", "actie"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft twee bouwstenen waar we een substitutie moeten toepassen. Dit geldt voor 'bouwsteen' wat we veranderen in 'cel' en 'tijdperk' veranderen we in 'era'. 'Voor' geeft aan dat we 'cel' voor 'era' moeten plaatsen, dan krijg je 'celera'. Dit moet 'in' bouwsteen 'actie', als we het na de 'c' plaatsen, krijg je 'acceleratie' en dit past bij de definitie 'om te versnellen'.",  
+
+}, 
+
  
 
  
