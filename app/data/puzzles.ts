@@ -2834,6 +2834,58 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+   
+
+ 
+
+{ 
+
+    date: "2026-09-28", 
+
+    clue: "Harteloze zeiler heeft pijn. (4)", 
+
+    answer: "zeer", 
+
+    hints: { 
+
+      definitie: ["heeft pijn"], 
+
+      indicatoren: ["Harteloze"],  
+
+      bouwstenen: ["zeiler"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een weglaatindicator, namelijk 'harteloze'. Deze geeft aan dat we het hart van bouwsteen 'zeiler', dus de middelste letters,  moeten verwijderen. Je houdt dan nog 'zeer' over en dit past bij de definitie 'heeft pijn'.",  
+
+}, 
+
+     { 
+
+    date: "2026-09-29", 
+
+    clue: "Zotte vliegen zien wazig. (7)", 
+
+    answer: "nevelig", 
+
+    hints: { 
+
+      definitie: ["zien wazig"], 
+
+      indicatoren: ["Zotte"],  
+
+      bouwstenen: ["vliegen"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft als indicator 'zotte'. Dit geeft aan dat we een anagram moeten maken van een bouwsteen. Als we de letters in 'viegen' husselen, krijg je 'nevelig' en dit past bij de definitie 'zien wazig'.",  
+
+}, 
+
  
 
  
