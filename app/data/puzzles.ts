@@ -2886,6 +2886,53 @@ credit: "💜 Ingestuurd door Max",
 
 }, 
 
+     { 
+
+    date: "2026-09-30", 
+
+    clue: "Het zijn twee maandagen, moeder. (4)", 
+
+    answer: "mama", 
+
+    hints: { 
+
+      definitie: ["moeder"], 
+
+      indicatoren: ["Het zijn twee"],  
+
+      bouwstenen: ["maandagen"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we één bouwsteen, namelijk maandagen. Dit kan je afkorten naar 'ma'. Dit moeten we twee keer gebruiken zoals aangegeven door 'het zijn twee'. Dan krijg je 'mama' en dit past bij de definitie 'moeder'.",  
+
+}, 
+
+        { 
+
+    date: "2026-10-01", 
+
+    clue: "Nieuwe musical over zijn reusachtige kasteel eindigt in chaos met opstootjes. (6)", 
+
+    answer: "rellen", 
+
+    hints: { 
+
+      definitie: ["opstootjes"], 
+
+      indicatoren: ["eindigt", "chaos"],  
+
+      bouwstenen: ["Nieuwe musical over zijn reusachtige kasteel"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we indicator 'eindigt' die aangeeft dat we de uiteindes van de bouwstenen moeten gebruiken. De eerste zes woorden van de puzzel eindigen in 'elrnel'. 'Chaos' geeft aan dat we een anagram zoeken van deze letters. Dit leidt tot 'rellen' en dat past bij de definitie 'opstootjes'.",  
+
+}, 
  
 
  
