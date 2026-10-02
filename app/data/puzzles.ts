@@ -2933,6 +2933,29 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel hebben we indicator 'eindigt' die aangeeft dat we de uiteindes van de bouwstenen moeten gebruiken. De eerste zes woorden van de puzzel eindigen in 'elrnel'. 'Chaos' geeft aan dat we een anagram zoeken van deze letters. Dit leidt tot 'rellen' en dat past bij de definitie 'opstootjes'.",  
 
 }, 
+ { 
+
+    date: "2026-10-02", 
+
+    clue: "Karretje gaat zonder Romeo door looping als een vuurpijltje. (7)", 
+
+    answer: "raketje", 
+
+    hints: { 
+
+      definitie: ["als een vuurpijltje"], 
+
+      indicatoren: ["zonder", "door looping"],  
+
+      bouwstenen: ["karretje", "Romeo"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we als bouwsteen 'karretje', deze gaat 'zonder Romeo', en omdat Romeo in het NAVO-alfabet staat voor de letter 'r'. Verwijderen we één 'r' van 'karretje'. Daarna gaat 'karetje' door een looping en wordt het dus helemaal door elkaar geschud. Als je de letters husselt, krijg je 'raketje' en dit past bij de definitie 'als een vuurpijltje'.",  
+
+}, 
  
 
  
