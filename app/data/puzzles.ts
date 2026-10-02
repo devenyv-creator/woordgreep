@@ -2956,6 +2956,32 @@ credit: "💜 Ingestuurd door Max",
       "Bij deze puzzel hebben we als bouwsteen 'karretje', deze gaat 'zonder Romeo', en omdat Romeo in het NAVO-alfabet staat voor de letter 'r'. Verwijderen we één 'r' van 'karretje'. Daarna gaat 'karetje' door een looping en wordt het dus helemaal door elkaar geschud. Als je de letters husselt, krijg je 'raketje' en dit past bij de definitie 'als een vuurpijltje'.",  
 
 }, 
+
+    { 
+
+    date: "2026-10-03", 
+
+    clue: "Als sanctie geeft Franse arts je op je kop. (5)", 
+
+    answer: "straf", 
+
+    hints: { 
+
+      definitie: ["Als sanctie"], 
+
+      indicatoren: ["je op je kop"],  
+
+      bouwstenen: ["Franse", "arts"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft bouwsteen 'Franse' die we gaan vervangen voor de landcode van Frankrijk, namelijk 'f'. Deze voegen we samen met bouwsteen 'arts' en die gaan'op je kop', dus worden ze gehusseld. Een anagram van 'f arts' is 'straf' en dit past bij de definitie 'als sanctie'.",  
+
+},     
+
+ 
  
 
  
