@@ -2981,7 +2981,29 @@ credit: "💜 Ingestuurd door Max",
 
 },     
 
- 
+    { 
+
+    date: "2026-10-04", 
+
+    clue: "Hoe kan Duitse tango weleens medisch gebruikt worden? (4)", 
+
+    answer: "wiet", 
+
+    hints: { 
+
+      definitie: ["weleens medisch gebruikt worden?"], 
+
+      indicatoren: ["kan Duitse"],  
+
+      bouwstenen: ["Hoe", "tango"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft een indicator die weinig gebruikt wordt. 'Duitse' geeft namelijk aan dat we bouwsteen 'hoe' moeten vertalen naar het Duits, dit is 'wie'. Daar voegen we bouwsteen 'tango' aan toe, die we eerst vervangen voor de letter 't' zoals in het NAVO-alfabet. Je krijgt dan 'wiet' en dit past bij de definitie want dit wordt weleens medisch gebruikt.",  
+
+}, 
  
 
  
