@@ -3003,6 +3003,32 @@ credit: "💜 Ingestuurd door Max",
 
       "Deze puzzel heeft een indicator die weinig gebruikt wordt. 'Duitse' geeft namelijk aan dat we bouwsteen 'hoe' moeten vertalen naar het Duits, dit is 'wie'. Daar voegen we bouwsteen 'tango' aan toe, die we eerst vervangen voor de letter 't' zoals in het NAVO-alfabet. Je krijgt dan 'wiet' en dit past bij de definitie want dit wordt weleens medisch gebruikt.",  
 
+},  
+
+ 
+
+{ 
+
+    date: "2026-10-05", 
+
+    clue: "Op dit moment is snuiter verstopt. (2)", 
+
+    answer: "nu", 
+
+    hints: { 
+
+      definitie: ["Op dit moment"], 
+
+      indicatoren: ["verstopt"],  
+
+      bouwstenen: ["snuiter"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we een verborgen-woordindicator, namelijk 'verstopt'. Deze geeft aan dat we in bouwsteen 'snuiter', een woord kunnen vinden. Dit is 'nu' en dit past bij de definitie 'Op dit moment'.",  
+
 }, 
  
 
