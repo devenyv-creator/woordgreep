@@ -3029,6 +3029,28 @@ credit: "💜 Ingestuurd door Max",
 
       "Bij deze puzzel hebben we een verborgen-woordindicator, namelijk 'verstopt'. Deze geeft aan dat we in bouwsteen 'snuiter', een woord kunnen vinden. Dit is 'nu' en dit past bij de definitie 'Op dit moment'.",  
 
+},    { 
+
+    date: "2026-10-06", 
+
+    clue: "Robin Hood heeft achterban die 't in zich heeft. (7)", 
+
+    answer: "bandiet", 
+
+    hints: { 
+
+      definitie: ["Robin Hood"], 
+
+      indicatoren: ["in zich"],  
+
+      bouwstenen: ["achterban die 't"] 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft als indicator 'in zich'. Dit geeft aan dat we een verborgen woord kunnen vinden 'in' de bouwsteen. Als we beginnen bij de 'b' van 'achterban', krijg je 'bandiet' en dit past bij de definitie 'Robin Hood'.",  
+
 }, 
  
 
