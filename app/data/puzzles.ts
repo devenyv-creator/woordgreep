@@ -3051,6 +3051,50 @@ credit: "💜 Ingestuurd door Max",
 
       "Deze puzzel heeft als indicator 'in zich'. Dit geeft aan dat we een verborgen woord kunnen vinden 'in' de bouwsteen. Als we beginnen bij de 'b' van 'achterban', krijg je 'bandiet' en dit past bij de definitie 'Robin Hood'.",  
 
+},      { 
+
+    date: "2026-10-07", 
+
+    clue: "Volgers: "we hebben niet een zwemboei en zijn in paniek." (6)", 
+
+    answer: "zombie", 
+
+    hints: { 
+
+      definitie: ["Volgers"], 
+
+      indicatoren: ["hebben niet", "en zijn in paniek"],  
+
+      bouwstenen: ["we", "zwemboei"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we als bouwsteen 'zwemboei' en daar moeten we twee acties mee uitvoeren. Als eerste halen we de letters 'we' weg, vanwege het stukje 'we hebben niet'. Je houdt dan nog 'zmboei' over en 'paniek' geeft aan dat we de letters moeten husselen. Je krijgt dan 'zombie' en dit past bij de definitie 'volgers'.",  
+
+},         { 
+
+    date: "2026-10-08", 
+
+    clue: "Het hoofd hangt vooral op de gang. (3)", 
+
+    answer: "hal", 
+
+    hints: { 
+
+      definitie: ["de gang"], 
+
+      indicatoren: ["hoofd", "voor"],  
+
+      bouwstenen: ["Het", "al"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we indicator 'hoofd' die aangeeft dat we de hoofdletter, dus de eerste letter van bouwsteen 'het' nodig hebben. Deze hangt 'voor' de letters 'al'. Je krijg dan 'hal' en dit past bij de definitie 'de gang'.",  
+
 }, 
  
 
