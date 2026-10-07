@@ -3055,7 +3055,7 @@ credit: "💜 Ingestuurd door Max",
 
     date: "2026-10-07", 
 
-    clue: "Volgers: "we hebben niet een zwemboei en zijn in paniek." (6)", 
+    clue: "Volgers: 'we hebben niet een zwemboei en zijn in paniek.' (6)", 
 
     answer: "zombie", 
 
