@@ -3095,6 +3095,28 @@ credit: "💜 Ingestuurd door Max",
 
       "Bij deze puzzel hebben we indicator 'hoofd' die aangeeft dat we de hoofdletter, dus de eerste letter van bouwsteen 'het' nodig hebben. Deze hangt 'voor' de letters 'al'. Je krijg dan 'hal' en dit past bij de definitie 'de gang'.",  
 
+},  { 
+
+    date: "2026-10-09", 
+
+    clue: "Scherpe schil van pistachenootje twee keer voor Romeo. (5)", 
+
+    answer: "peper", 
+
+    hints: { 
+
+      definitie: ["Scherpe"], 
+
+      indicatoren: ["schil van", "twee keer", "voor"],  
+
+      bouwstenen: ["pistachenootje", "Romeo"], 
+
+    }, 
+
+    explanation: 
+
+      "Bij deze puzzel hebben we als bouwsteen 'pistachenootje', hiervan moeten we de 'schil', dus de buitenste letters, 'twee keer' gebruiken. Dan krijg je 'pepe'. Deze gaat 'voor' 'Romeo', wat we kunnen vervangen voor de letter 'r' uit het NAVO alfabet. Je krijg dan 'peper' en dit past bij de definitie 'scherpe'.",  
+
 }, 
  
 
