@@ -3117,7 +3117,31 @@ credit: "💜 Ingestuurd door Max",
 
       "Bij deze puzzel hebben we als bouwsteen 'pistachenootje', hiervan moeten we de 'schil', dus de buitenste letters, 'twee keer' gebruiken. Dan krijg je 'pepe'. Deze gaat 'voor' 'Romeo', wat we kunnen vervangen voor de letter 'r' uit het NAVO alfabet. Je krijg dan 'peper' en dit past bij de definitie 'scherpe'.",  
 
-}, 
+},     { 
+
+    date: "2026-10-10", 
+
+    clue: "Love is Blind begint weer met achterwerk. (3)", 
+
+    answer: "bil", 
+
+    hints: { 
+
+      definitie: ["achterwerk"], 
+
+      indicatoren: ["begint weer"],  
+
+      bouwstenen: ["Love is Blind"], 
+
+    }, 
+
+    explanation: 
+
+      "Deze puzzel heeft bouwsteen 'Love is Blind' en 'begint' geeft aan dat we daar de beginletters van moeten gebruiken, 'lib'. Dit moet 'weer', dus omgedraaid. Je krijgt dan 'bil' en dit past bij de definitie 'achterwerk'.",  
+
+},     
+
+ 
  
 
  
